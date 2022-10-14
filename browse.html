@@ -17,16 +17,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <style>
-  form.search input[type="text"] {
-    padding: 10px;
-    font-size: 15px;
-    border: 1px solid #414141;
-    color: silver;
-    border-radius: 8px;
-    width: 300px;
-    background: #272727;
-    font-family: "Roboto";
-  }
   #myUL {
     list-style-type: none;
     display: none;
@@ -38,6 +28,8 @@
     background-color: rgb(24, 24, 24, 0.98);
     border-radius: 20px;
     z-index: 10;
+    height:40%;
+    overflow-x: hidden;
   }
   
   #myUL li a {
@@ -59,6 +51,16 @@
     left: 50%;
     transform: translateX(-50%);
   }
+  .search input {
+    padding: 10px;
+    font-size: 11pt;
+    border: 1px solid #414141;
+    color: silver;
+    border-radius: 8px;
+    width: 300px;
+    background: #272727;
+    font-family: "Roboto";
+  }
   </style>
 
 <body onload="remove();result();refresh()">
@@ -70,7 +72,7 @@
 
   <div class="content">
 
-  <ul class="blockscroll" style="height:50%;overflow-x: hidden;" id="myUL">
+  <ul class="blockscroll" id="myUL">
     <script src="list.js"></script>
   </ul>
   
@@ -131,16 +133,28 @@
     <div id="recent" class="recent" style="top: 30px;">
       <script src="overview.js"></script>
     </div>
+    <div class="noresults">No results found :(</div>
   </div>
 </div>
   <p id="browseres">Results for:</p>
   <div class="banner"></div>
-  <a id="requests"
-    href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link"
-    target="_blank" style="left:90%;" class="homebuttons">Requests </a>
-  <a id="browse" href="browse.html" style="left:80%" class="homebuttons">Browse </a>
-  <a id="home" href="index.html" style="left:70%" class="homebuttons">Home </a>
-  <a href="index.html" style="left:60%" class="browsebutton">Home </a>
+  <nav class="homebuttons">
+    <a href="index.html">Home </a>
+    <a href="browse.html">Browse </a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests </a> 
+  </nav>
+  <div class="browsebutton">
+    <div id="nav-icon4" onclick="menu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="index.html">Home</a>
+    <a href="browse.html">Browse</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a>
+  </div>
   <footer class="footer">&copy;Copyright 2022 RT-Productions</footer>
   <a href="index.html" class="title">FL<span style="
     background-image: linear-gradient(5deg, #111010, #ca3025);
@@ -151,16 +165,22 @@
     -moz-text-fill-color: transparent;
     filter: drop-shadow(0 0mm 1mm rgb(0, 0, 0));"
     >U</span>X</a>
-  <img class="logo" style="position:fixed;top: 15px; left:12px; height: 40px; width: 40px;" src="logo 2.0.png">
+  <img class="logo" src="logo 2.0.png">
   <form class="search" autocomplete="off">
     <input id="myInput" onkeyup="search()" type="text" placeholder="search">
   </form>
   <div class="shadow"></div>
-  <a class="form"
-    href="https://docs.google.com/forms/d/e/1FAIpQLSeDwzTaWZXFKM8wFAJj5uINJbr0LSCCy9lbH4nnpviGJeCoNw/viewform?usp=sf_link"
-    target="_blank">Feedback</a>
+  <div class="bottomcontainer">
+    <a class="form" href="https://docs.google.com/forms/d/e/1FAIpQLSeDwzTaWZXFKM8wFAJj5uINJbr0LSCCy9lbH4nnpviGJeCoNw/viewform?usp=sf_link" target="_blank">
+    Feedback</a>
+    <footer class="footer">&copy;Copyright 2022 RT-Productions</footer>
+    <section>
+      <p>contact</p>
+      <p>info</p>
+      <p>donate</p>
+    </section>
+    </div>
   </div>
-  <div class="bottom"></div>
   <script>
     $(window).on('load',function(){
       $(".loader").fadeOut(500);

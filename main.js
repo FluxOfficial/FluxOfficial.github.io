@@ -24,7 +24,7 @@ function search() {
       document.getElementById("myUL").style.height = "70px";
     }else{
       document.getElementById("notfound").style.display = "none";
-      document.getElementById("myUL").style.height = "50%";
+      document.getElementById("myUL").style.height = "40%";
     }
   }
 }
@@ -81,7 +81,7 @@ function result(filter, type) {
   }
   var search = (localStorage.getItem("input")).toLowerCase();
   var numb = ((document.getElementById("recent").childElementCount) * 2) - 2;
-  var title, genre, quality, year;
+  var title, genre, quality, year, counter;
   if (type == "quality") {
     localStorage.setItem("qualitylast", filter);
   }
@@ -91,11 +91,21 @@ function result(filter, type) {
   if (type == "year") {
     localStorage.setItem("yearlast", filter);
   }
+  if (localStorage.getItem("qualitylast") == undefined){
+    localStorage.setItem("qualitylast", "");
+  }
+  if (localStorage.getItem("genrelast") == undefined){
+    localStorage.setItem("genrelast", "");
+  }
+  if (localStorage.getItem("yearlast") == undefined){
+    localStorage.setItem("yearlast", "");
+  }
   //if (type == undefined) {
   //  for (let i = 0; i < numb; i += 2) {
   //    ((document.getElementById("recent")).getElementsByTagName("div"))[i].style.display = "block"
   //  }
   //}
+  counter = 0;
   for (let i = 0; i < numb; i += 2) {
     title = ((((document.getElementById("recent")).getElementsByTagName("div"))[i]).getElementsByClassName("movienames")[0].innerText).toLowerCase();
     genre = ((((document.getElementById("recent")).getElementsByTagName("div"))[i]).getElementsByClassName("genres")[0].innerText).toLowerCase();
@@ -117,6 +127,19 @@ function result(filter, type) {
     else {
       ((document.getElementById("recent")).getElementsByTagName("div"))[i].style.display = "none"
     }
+    if (((document.getElementById("recent")).getElementsByTagName("div"))[i].style.display == "none") {
+      counter += 1;
+    }
+  }
+  if (counter == (numb/2)) {
+    document.getElementsByClassName("noresults")[0].style.visibility = "visible"
+    document.getElementsByClassName("noresults")[0].style.opacity = 1
+    document.getElementsByClassName("noresults")[0].style.transform = "translateY(0)"
+  }
+  else {
+    document.getElementsByClassName("noresults")[0].style.visibility = "hidden"
+    document.getElementsByClassName("noresults")[0].style.opacity = 0
+    document.getElementsByClassName("noresults")[0].style.transform = "translateY(100%)"
   }
 }
 function specify(element){
@@ -178,3 +201,20 @@ function quality(element){
     (document.getElementById("player")).getElementsByTagName("iframe")[0].setAttribute("sandbox","allow-scripts")
   }
 }
+function menu () {
+  if (document.getElementsByClassName("dropdown")[0].style.visibility == "hidden" || document.getElementsByClassName("dropdown")[0].style.visibility == ""){
+  document.getElementsByClassName("dropdown")[0].style.visibility = "visible"
+  document.getElementsByClassName("dropdown")[0].style.opacity = 1
+  document.getElementsByClassName("dropdown")[0].style.transform = "translateY(0)"
+  }
+  else {
+  document.getElementsByClassName("dropdown")[0].style.visibility = "hidden"
+  document.getElementsByClassName("dropdown")[0].style.opacity = 0
+  document.getElementsByClassName("dropdown")[0].style.transform = "translateY(-100%)"
+  }
+}
+$(document).ready(function(){
+  $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
+    $(this).toggleClass('open');
+  });
+});

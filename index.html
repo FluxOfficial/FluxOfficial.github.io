@@ -5,6 +5,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <head>
@@ -25,24 +26,15 @@
   #myUL {
     width: 50% !important;
   }
-  form.search input[type="text"] {
-    display: none;
-    width: 100px !important;
-  }
 }
-form.search input[type="text"] {
+.search {
   padding: 10px;
   font-size: 15px;
   border: 1px solid #414141;
   color: silver;
   border-radius: 8px;
-  width: 19%;
   background: #272727;
-  position: fixed;
-  right: -8%;
-  transform: translateX(-50%);
-  top: 15px;
-  z-index: 11;
+  width: 20vw;
   font-family: "Roboto";
 }
 #myUL {
@@ -50,12 +42,13 @@ form.search input[type="text"] {
   display: none;
   position: fixed;
   top: 58px;
-  right: -8%;
-  transform: translateX(-50%);
-  width: 19%;
+  right: 1.9%;
+  width: calc(20vw + 6px);
   background-color: rgb(24, 24, 24);
   border-radius: 10px;
   z-index: 11;
+  overflow-x: hidden;
+  height: 40%;
 }
 
 #myUL li a {
@@ -63,7 +56,7 @@ form.search input[type="text"] {
   padding-bottom: 15px;
   padding-left: 10px;
   text-decoration: none;
-  font-size: 12pt;
+  font-size: 11pt;
   color: white;
   display: block;
   font-family: "Roboto";
@@ -92,18 +85,30 @@ form.search input[type="text"] {
   </div>
   </div>
   
-  <ul class="blockscroll" style="height:50%;overflow-x: hidden;" id="myUL">
+  <ul class="blockscroll" id="myUL">
     <script src="list.js"></script>
   </ul>
   <div class="banner"></div>
-  <a id="requests"
-    href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link"
-    target="_blank" style="left:65%;" class="homebuttons">Requests </a>
-  <a id="browse" href="browse.html" style="left:55%" class="homebuttons">Browse </a>
-  <a id="home" href="index.html" style="left:45%" class="homebuttons">Home </a>
-  <a href="browse.html" style="left:60%" class="browsebutton">Browse </a>
-  <footer class="footer">&copy;Copyright 2022 RT-Productions</footer>
-
+  <nav class="homebuttons">
+    <a href="index.html">Home</a>
+    <a href="browse.html">Browse</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a>
+    <form autocomplete="off">
+      <input id="myInput" class="search" onkeyup="search()" onkeypress="keypress(event)" type="text" placeholder="search">
+    </form>
+  </nav>
+  <div class="browsebutton">
+    <div id="nav-icon4" onclick="menu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="index.html">Home</a>
+    <a href="browse.html">Browse</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a>
+  </div>
   <a href="index.html" class="title">FL<span style="
   background-image: linear-gradient(5deg, #111010, #ca3025);
   background-size: 100%;
@@ -113,17 +118,22 @@ form.search input[type="text"] {
   -moz-text-fill-color: transparent;
   filter: drop-shadow(0 0mm 1mm rgb(0, 0, 0));"
   >U</span>X</a>
-
-  <img class="logo" style="position:fixed;top: 15px; left:12px; height: 40px; width: 40px;" src="logo 2.0.png">
-  <form class="search" autocomplete="off">
-    <input id="myInput" onkeyup="search()" onkeypress="keypress(event)" type="text" placeholder="search">
-  </form>
+  <img class="logo" src="logo 2.0.png">
   <div class="shadow"></div>
-  <a class="form"
-    href="https://docs.google.com/forms/d/e/1FAIpQLSeDwzTaWZXFKM8wFAJj5uINJbr0LSCCy9lbH4nnpviGJeCoNw/viewform?usp=sf_link"
-    target="_blank">Feedback</a>
+  
+  <div class="bottomcontainer">
+    <a class="form" href="https://docs.google.com/forms/d/e/1FAIpQLSeDwzTaWZXFKM8wFAJj5uINJbr0LSCCy9lbH4nnpviGJeCoNw/viewform?usp=sf_link" target="_blank">
+    Feedback</a>
+    <footer class="footer">&copy;Copyright 2022 RT-Productions</footer>
+    <section>
+      <p>contact</p>
+      <p>info</p>
+      <p>donate</p>
+    </section>
+    </div>
 </div>
-<div class="bottom"></div>
+
+
 <script>
 $(window).on('load',function(){
   $(".loader").fadeOut(500);
