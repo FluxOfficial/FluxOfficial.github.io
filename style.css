@@ -256,13 +256,13 @@ padding-bottom: 10px;
   display: block;
 }
 .item .viewdetails {
-  display: hidden;
+  display: none;
 }
 .item:hover .genre {
   display: block;
 }
 .item .genre {
-  display: hidden;
+  display: none;
 }
 .viewdetails {
   font-size: 10pt;
@@ -286,17 +286,19 @@ padding-bottom: 10px;
 }
 /*MOVIEINFO*/
 .genre {
-  color: white;
   position: absolute;
   top: 30%;
   left: 50%;
   transform: translateX(-50%);
+  display: none;
+  height: 80px;
+  overflow: hidden;
   text-align: center;
   text-decoration: none;
   font-family: "Roboto";
   font-weight: 700;
-  display: none;
   font-size: 17pt;
+  color: white;
 }
 .containerbox {
   width: 80%;
@@ -814,22 +816,22 @@ h2 {
   height: 45px;
   position: fixed;
   right: 5%;
-  top: 15px;
+  top: 13px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
-  transform: rotate(0deg) scale(0.47);
+  transform: rotate(0deg) scale(0.45);
   -webkit-transition: .5s ease-in-out;
   -moz-transition: .5s ease-in-out;
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   cursor: pointer;
-  opacity: 0.5;
+  filter: brightness(1);
   transition: 200ms;
 }
 #nav-icon4:hover {
   transition: 200ms;
-  opacity: 1;
+  filter: brightness(0.4);
 }
 #nav-icon4 span {
   display: block;

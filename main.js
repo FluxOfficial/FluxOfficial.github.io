@@ -108,9 +108,9 @@ function result(filter, type) {
   counter = 0;
   for (let i = 0; i < numb; i += 2) {
     title = ((((document.getElementById("recent")).getElementsByTagName("div"))[i]).getElementsByClassName("movienames")[0].innerText).toLowerCase();
-    genre = ((((document.getElementById("recent")).getElementsByTagName("div"))[i]).getElementsByClassName("genres")[0].innerText).toLowerCase();
+    genre = ((((document.getElementById("recent")).getElementsByTagName("div"))[i]).getElementsByClassName("genre")[0].innerText).toLowerCase();
     quality = ((((document.getElementById("recent")).getElementsByTagName("div"))[i]).getElementsByClassName("quality")[0].innerText).toLowerCase();
-    year = ((((document.getElementById("recent")).getElementsByTagName("div"))[i]).getElementsByClassName("year")[0].innerText).toLowerCase();
+    year = ((((((document.getElementById("recent")).getElementsByTagName("div"))[i]).getElementsByClassName("movienames")[0].innerText).toLowerCase()).slice(-5)).slice(0, -1);
     if (title.includes(search)) {
       if (genre.includes(localStorage.getItem("genrelast")) && quality.includes(localStorage.getItem("qualitylast"))) {
         if (year >= Number(localStorage.getItem("yearlast")) && year < (Number(localStorage.getItem("yearlast")) + 10) || localStorage.getItem("yearlast") == "") {
