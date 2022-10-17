@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html onclick="remove()">
+<html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,9 +63,10 @@
   text-align: left;
   transition: 200ms;
   border-radius: 8px;
+  cursor: pointer;
 }
 </style>
-<body onload="remove();">
+<body>
 
 <div class="loader">
   <svg class="ring" viewBox="25 25 50 50" stroke-width="5">
@@ -86,7 +87,7 @@
   </div>
   
   <ul class="blockscroll" id="myUL">
-    <script src="list.js"></script>
+    <div id="notfound">No Results</div>
   </ul>
   <div class="banner"></div>
   <nav class="homebuttons">

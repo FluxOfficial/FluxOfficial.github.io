@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html onclick="remove()">
+<html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,6 +44,7 @@
     text-align: left;
     transition: 200ms;
     border-radius: 8px;
+    cursor: pointer;
   }
   .search {
     top: 110px;
@@ -63,7 +64,7 @@
   }
   </style>
 
-<body onload="remove();result();refresh()">
+<body onload="result()">
   <div class="loader">
     <svg class="ring" viewBox="25 25 50 50" stroke-width="5">
       <circle cx="50" cy="50" r="20" />
@@ -73,7 +74,7 @@
   <div class="content">
 
   <ul class="blockscroll" id="myUL">
-    <script src="list.js"></script>
+    <div id="notfound">No Results</div>
   </ul>
   
   <div class="container2" style="top: 200px;">

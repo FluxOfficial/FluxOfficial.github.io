@@ -28,19 +28,8 @@ function search() {
     }
   }
 }
-function remove() {
-  document.getElementById("notfound").style.display = "none";
+window.onclick = function() {
   document.getElementById("myUL").style.display = "none";
-  var input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("myUL");
-  li = ul.getElementsByTagName("li");
-  for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("a")[0];
-    txtValue = a.textContent || a.innerText;
-    li[i].style.display = "none";
-  }
 }
 function keypress(e) {
   if(e.keyCode === 13){
@@ -55,11 +44,6 @@ function keypress(e) {
       }
   } 
 }
-}
-function refresh() {
-  localStorage.setItem("genrelast", "");
-  localStorage.setItem("qualitylast", "");
-  localStorage.setItem("yearlast", "");
 }
 
 function result(filter, type) {
@@ -100,11 +84,6 @@ function result(filter, type) {
   if (localStorage.getItem("yearlast") == undefined){
     localStorage.setItem("yearlast", "");
   }
-  //if (type == undefined) {
-  //  for (let i = 0; i < numb; i += 2) {
-  //    ((document.getElementById("recent")).getElementsByTagName("div"))[i].style.display = "block"
-  //  }
-  //}
   counter = 0;
   for (let i = 0; i < numb; i += 2) {
     title = ((((document.getElementById("recent")).getElementsByTagName("div"))[i]).getElementsByClassName("movienames")[0].innerText).toLowerCase();
@@ -218,3 +197,41 @@ $(document).ready(function(){
     $(this).toggleClass('open');
   });
 });
+function alldata(element) {
+  var moviename, genre, poster, poster, sypnosis, trailer
+  moviename = element.getElementsByClassName("movienames")[0].innerText;
+  genre = (element.getElementsByClassName("genre")[0].innerText).replaceAll(' ', ' / ');
+  poster = element.getElementsByClassName("thumbnail")[0].src;
+  sypnosis = element.getElementsByClassName("sypnosis")[0].innerText;
+  trailer = element.getElementsByClassName("trailer")[0].innerText;
+  localStorage.setItem("moviename", moviename);
+  localStorage.setItem("genre", genre);
+  localStorage.setItem("poster", poster);
+  localStorage.setItem("sypnosis", sypnosis);
+  localStorage.setItem("trailer", trailer);
+}
+function fetchalldata() {
+  document.getElementsByClassName("name")[0].innerText = (localStorage.getItem("moviename")).slice(0, -6);
+  document.title = localStorage.getItem("moviename");
+  document.getElementsByClassName("date")[0].innerHTML = ((localStorage.getItem("moviename")).slice(-5)).slice(0,-1) + "<br>" + localStorage.getItem("genre");
+  document.getElementsByClassName("poster")[0].src = localStorage.getItem("poster");
+  document.getElementsByClassName("syp")[0].innerText = localStorage.getItem("sypnosis");
+  document.getElementsByClassName("trailer")[0].src = localStorage.getItem("trailer");
+}
+window.onload = function() {
+  document.getElementById("myUL").style.display = "none";
+  localStorage.setItem("genrelast", "");
+  localStorage.setItem("qualitylast", "");
+  localStorage.setItem("yearlast", "");
+  var numb, list, title;
+  numb = (((document.getElementsByClassName("recent")[0].childElementCount) * 2) - 2) / 2;
+  list = document.getElementById("myUL")
+  for (let i = 0; i < numb; i ++) {
+    title = ((((document.getElementsByClassName("recent")[0]).getElementsByClassName("item"))[i]).getElementsByClassName("movienames")[0].innerText);
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.innerText = title;
+    a.setAttribute('onclick','((document.getElementsByClassName("recent")[0]).getElementsByClassName("item"))[' + i + '].click()');
+    (document.getElementById("myUL").appendChild(li)).appendChild(a);
+  }
+ }
