@@ -595,8 +595,7 @@ h2 {
   border-radius: 10px;
   cursor: pointer;
   display: inline-block;
-  margin: 15px 20px 15px 20px;
-  zoom: 1.2;
+  margin: 10px 20px 10px 20px;
 }
 .box div {
   visibility: hidden;
@@ -804,15 +803,16 @@ h2 {
   filter: brightness(0.7);
   justify-content: center;
   color: silver;
-  font-size: 20pt;
-  font-family:'Roboto' ;
+  font-size: 15pt;
+  font-weight: 100;
+  font-family:monospace ;
   visibility: visible;
   opacity: 0;
   margin-top: -30px;
-  top: -200px;
+  top: -220px;
   position: relative;
   transition: 800ms;
-  transform: translateY(100%);
+  transform: translateY(50%);
 }
 #nav-icon4 {
   width: 60px;
