@@ -185,7 +185,11 @@ function quality(element){
   }
   else {
     document.getElementsByClassName("videoplayer")[0].style.display = "block";
-    (document.getElementById("player")).getElementsByTagName("iframe")[0].setAttribute("sandbox","allow-scripts")
+    (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("div")[0].remove();
+    const video = document.createElement("video");
+    (document.getElementsByClassName("videoplayer")[0].appendChild(video));
+    (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("video")[0].setAttribute('src',localStorage.getItem(element.innerText));
+    (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("iframe")[0].setAttribute("sandbox","allow-scripts");
   }
 }
 function menu () {
@@ -206,12 +210,20 @@ $(document).ready(function(){
   });
 });
 function alldata(element) {
-  var moviename, genre, poster, poster, sypnosis, trailer
+  var moviename, genre, poster, poster, sypnosis, trailer,quality, hd, fullhd, qhd;
   moviename = element.getElementsByClassName("movienames")[0].innerText;
   genre = (element.getElementsByClassName("genre")[0].innerText).replaceAll(' ', ' / ');
   poster = element.getElementsByClassName("thumbnail")[0].src;
   sypnosis = element.getElementsByClassName("sypnosis")[0].innerText;
   trailer = element.getElementsByClassName("trailer")[0].innerText;
+  quality = (element.getElementsByClassName("quality")[0].innerText);
+  hd = (element.getElementsByClassName("720p")[0].innerText);
+  fullhd = (element.getElementsByClassName("1080p")[0].innerText);
+  qhd = (element.getElementsByClassName("4K")[0].innerText);
+  localStorage.setItem("quality", quality);
+  localStorage.setItem("720p", hd);
+  localStorage.setItem("1080p", fullhd);
+  localStorage.setItem("4K", qhd);
   localStorage.setItem("moviename", moviename);
   localStorage.setItem("genre", genre);
   localStorage.setItem("poster", poster);
@@ -225,6 +237,14 @@ function fetchalldata() {
   document.getElementsByClassName("poster")[0].src = localStorage.getItem("poster");
   document.getElementsByClassName("syp")[0].innerText = localStorage.getItem("sypnosis");
   document.getElementsByClassName("trailer")[0].src = localStorage.getItem("trailer");
+  for (let i = 0; i < localStorage.getItem("quality").split(" ").length; i ++) {
+    const button = document.createElement("button");
+    button.classList.add("button");
+    button.setAttribute('onclick',"quality(this)");
+    const span = document.createElement("span");
+    span.innerText = (localStorage.getItem("quality").split(" "))[i];
+    (document.getElementsByClassName("selector")[0].appendChild(button)).appendChild(span);
+  }
 }
 window.onload = function() {
   document.getElementById("myUL").style.display = "none";

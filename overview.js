@@ -6,7 +6,12 @@ document.write(`
       <a class="movienames">Cars 3 (2017)</a>
       <a class="viewdetails">View Details</a>
       <a class="genre">Sport Action Adventure Animation Comedy Family</a>
-      <a class="invisible quality">1080p</a>
+      <a class="invisible quality">720p 1080p</a>
+      <a class="invisible magnetURI">
+      <span class="720p">magnet:?xt=urn:btih:022590C8889C7DBFBD73697532221693692A0967&dn=Cars+3+%282017%29+%5B720p%5D+%5Byts.torrentbay.to%5D&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337</span>
+      <span class="1080p">magnet:?xt=urn:btih:F20D4989E9E0984135720708ABC75246CDCB25B8&dn=Cars+3+%282017%29+%5B1080p%5D+%5Byts.torrentbay.to%5D&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337</span>
+      <span class="4K"></span>
+      </a>
       <a class="invisible sypnosis">Blindsided by a new generation of blazing-fast racers, the legendary
       Lightning McQueen is suddenly pushed out of the sport he loves. To get back in the game, he will need the help
       of an eager young race technician with her own plan to win, inspiration from the late Fabulous Hudson Hornet,

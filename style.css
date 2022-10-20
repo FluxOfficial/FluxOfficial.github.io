@@ -596,6 +596,7 @@ h2 {
   cursor: pointer;
   display: inline-block;
   margin: 10px 20px 10px 20px;
+  zoom: 1.1;
 }
 .box div {
   visibility: hidden;
@@ -900,4 +901,13 @@ h2 {
   transform: rotate(-45deg);
   top: 39px;
   left: 8px;
+}
+.working {
+  position: fixed;
+  color: white;
+  font-size: 15pt;
+  z-index: 20;
+  left: 150px;
+  top: 27px;
+  font-family: 'Roboto';
 }
