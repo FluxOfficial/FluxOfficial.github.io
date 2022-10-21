@@ -181,15 +181,48 @@ function down() {
 }
 function quality(element){
   if (localStorage.getItem("last") == "download") {
-    document.getElementById("download").style.display = "block"
+    (document.getElementById("download")).getElementsByTagName("div")[0]?.remove();
+    (document.getElementById("download")).getElementsByTagName("script")[0]?.remove();
+    const a = document.createElement("a");
+    a.href = localStorage.getItem(element.innerText);
+    a.download = true;
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/npm/@webtor/embed-sdk-js/dist/index.min.js";
+    script.charset = "utf-8";
+    const p = document.createElement("p");
+    p.innerText = "loading";
+    (document.getElementById("download").appendChild(a));
+    (document.getElementById("download").appendChild(script));
+    (document.getElementById("download").prepend(p));
+    document.getElementById("download").style.display = "block";
+    (document.getElementById("download")).getElementsByTagName("svg")[0].style.display = "block";
+    setTimeout(async function() {
+      (document.getElementById("download")).getElementsByTagName("p")[0]?.remove();
+      (document.getElementById("download")).getElementsByTagName("svg")[0].style.display = "none";
+    }, 1300);
   }
   else {
-    document.getElementsByClassName("videoplayer")[0].style.display = "block";
-    (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("div")[0].remove();
+    (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("div")[0]?.remove();
+    (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("script")[0]?.remove();
+    (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("p")[0]?.remove();
     const video = document.createElement("video");
+    video.src = localStorage.getItem(element.innerText);
+    video.controls = true;
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/npm/@webtor/embed-sdk-js/dist/index.min.js";
+    script.charset = "utf-8";
+    const p = document.createElement("p");
+    p.innerText = "loading";
     (document.getElementsByClassName("videoplayer")[0].appendChild(video));
-    (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("video")[0].setAttribute('src',localStorage.getItem(element.innerText));
-    (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("iframe")[0].setAttribute("sandbox","allow-scripts");
+    (document.getElementsByClassName("videoplayer")[0].appendChild(script));
+    (document.getElementsByClassName("videoplayer")[0].prepend(p));
+    document.getElementsByClassName("videoplayer")[0].style.display = "block";
+    (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("svg")[0].style.display = "block";
+    setTimeout(async function() {
+      (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("p")[0].innerText = "Sometimes it can take a couple of minutes to load, if the movie does not want to load you can lower the resolution, sometimes 4K is not so well supported either. (720p loads the fastest)";
+      (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("p")[0].style.marginBottom = "10px";
+      (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("svg")[0].style.display = "none";
+    }, 1800);
   }
 }
 function menu () {

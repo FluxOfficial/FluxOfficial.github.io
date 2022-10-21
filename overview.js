@@ -27,7 +27,12 @@ document.write(`
       <a class="movienames">Encanto (2021)</a>
       <a class="viewdetails">View Details</a>
       <a class="genre">Adventure Animation Action Comedy Drama Family</a>
-      <a class="invisible quality">1080p</a>
+      <a class="invisible quality">720p 1080p 4K</a>
+      <a class="invisible magnetURI">
+      <span class="720p">magnet:?xt=urn:btih:2005339B73E4DA49B05DF2EF6D4F0BED50470676&dn=Encanto+%282021%29+%5B720p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="1080p">magnet:?xt=urn:btih:4CCDAB9846C32F941DC2D42E4E897D760FAF946E&dn=Encanto+%282021%29+%5B1080p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="4K">magnet:?xt=urn:btih:F82F1AB37BB1C8C46A61EF1F6052E98284F2A51B&dn=Encanto+%282021%29+%5B2160p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      </a>
       <a class="invisible sypnosis">Encanto tells the tale of an extraordinary family, the Madrigals, who
       live hidden in the mountains of Colombia, in a magical house, in a vibrant town, in a wondrous, charmed place
       called an Encanto. The magic of the Encanto has blessed every child in the family with a unique gift from
@@ -47,7 +52,12 @@ document.write(`
       <a class="movienames">Sing 2 (2021)</a>
       <a class="viewdetails">View Details</a>
       <a class="genre">Action Comedy Adventure Animation</a>
-      <a class="invisible quality">1080p</a>
+      <a class="invisible quality">720p 1080p 4K</a>
+      <a class="invisible magnetURI">
+      <span class="720p">magnet:?xt=urn:btih:F8E5B4B21A7B49B9285E685617DBD1ABEFB561FE&dn=Sing+2+%282021%29+%5B720p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="1080p">magnet:?xt=urn:btih:E1496F2C26D1BFA571FAA3B87FFD68063EF74F50&dn=Sing+2+%282021%29+%5B1080p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="4K">magnet:?xt=urn:btih:828A7482E72451C608E97DED0758B3597414265E&dn=Sing+2+%282021%29+%5B2160p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      </a>
       <a class="invisible sypnosis">With his theatrical company a local success, Buster Moon is dreaming of
       bigger things. Unfortunately, when a talent scout dismisses their work as inadequate for the big time, Buster
       is
@@ -71,7 +81,12 @@ document.write(`
       <a class="movienames">Five Feet Apart (2019)</a>
       <a class="viewdetails">View Details</a>
       <a class="genre">Drama Romance Action</a>
-      <a class="invisible quality">1080p</a>
+      <a class="invisible quality">720p 1080p</a>
+      <a class="invisible magnetURI">
+      <span class="720p">magnet:?xt=urn:btih:3EEE16B94B4602334DF9151D3E126C5786A91406&dn=Five+Feet+Apart+%282019%29+%5B720p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="1080p">magnet:?xt=urn:btih:3942473A449499AEC6A282B465898DC0DE0AB246&dn=Five+Feet+Apart+%282019%29+%5B1080p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="4K"></span>
+      </a>
       <a class="invisible sypnosis">Seventeen-year-old Stella spends most of her time in the hospital as a cystic fibrosis patient. Her life is
       full of routines, boundaries and self-control all of which get put to the test when she meets Will, an
       impossibly charming teen who has the same illness. There's an instant flirtation, though restrictions dictate
@@ -87,7 +102,12 @@ document.write(`
       <a class="movienames">The Fallout (2021)</a>
       <a class="viewdetails">View Details</a>
       <a class="genre">Drama</a>
-      <a class="invisible quality">1080p</a>
+      <a class="invisible quality">720p 1080p 4K</a>
+      <a class="invisible magnetURI">
+      <span class="720p">magnet:?xt=urn:btih:66E16DF0CD9CFEF3EAD2CE0D853D4575841D289C&dn=The+Fallout+%282021%29+%5B720p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="1080p">magnet:?xt=urn:btih:82E9101C2D6D7B098586B0D5069D3F0E71B840EE&dn=The+Fallout+%282021%29+%5B1080p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="4K">magnet:?xt=urn:btih:162230E31866C52EEFF933D79A82FED95F111178&dn=The+Fallout+%282021%29+%5B2160p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      </a>
       <a class="invisible sypnosis">'The Fallout' is a film about the unseen faces of a tragedy, those who
       can't turn their pain into effecting positive change in the world because they are too afraid to leave their
       bedrooms. Three teenagers form a unique and dynamic bond as they navigate the never linear, often confusing
@@ -102,7 +122,12 @@ document.write(`
       <a class="movienames">Light Year (2022)</a>
       <a class="viewdetails">View Details</a>
       <a class="genre">Hero Fantasy Action Adventure Animation Comedy</a>
-      <a class="invisible quality">1080p</a>
+      <a class="invisible quality">720p 1080p 4K</a>
+      <a class="invisible magnetURI">
+      <span class="720p">magnet:?xt=urn:btih:823904213DAF65F1B80073BFC5AC268638DC13DF&dn=Lightyear+%282022%29+%5B720p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="1080p">magnet:?xt=urn:btih:5DFAE2F0AF412D7B0DBD8924348C30FD328D64FB&dn=Lightyear+%282022%29+%5B1080p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="4K">magnet:?xt=urn:btih:D55F4D7FFBAD9B3617F356896D028BFFC3689BD2&dn=Lightyear+%282022%29+%5B2160p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      </a>
       <a class="invisible sypnosis">The definitive origin story of Buzz Lightyear, the hero who inspired the toy, Lightyear follows the legendary Space Ranger after he is marooned on a hostile planet 4.2 million light-years from Earth alongside his commander and their crew. As Buzz tries to find a way back home through space and time, he is joined by a group of ambitious recruits and his charming robot companion cat, Sox. Complicating matters and threatening the mission is the arrival of Zurg, an imposing presence with an army of ruthless robots and a mysterious agenda.</a>
       <a class="invisible trailer">https://www.youtube.com/embed/BwZs3H_UN3k</a>
     </div>
