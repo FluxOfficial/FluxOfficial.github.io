@@ -1,7 +1,109 @@
 document.write(`
     <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
       <div style="width: 100%;">
-        <img class="thumbnail" loading="lazy" src="https://lumiere-a.akamaihd.net/v1/images/p_cars3_19643_3ab8aca1.jpeg" alt="Cars 3">
+        <img class="thumbnail" loading="lazy" src="https://img.yts.mx/assets/images/movies/f9_2021/medium-cover.jpg">
+      </div>
+      <a class="movienames">Fast & Furious 9 (2021)</a>
+      <a class="viewdetails">View Details</a>
+      <a class="genre">Action Crime Adventure Thriller</a>
+      <a class="invisible quality">720p 1080p 4K</a>
+      <a class="invisible magnetURI">
+      <span class="720p">magnet:?xt=urn:btih:B25176A88FF853CCC4A1ACBF8C5DDD011E444EEF&dn=F9%3A+The+Fast+Saga+%282021%29+%5B720p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="1080p">magnet:?xt=urn:btih:CA6BCAC2C8712370C9FCEA47B7FF4536568A3779&dn=F9%3A+The+Fast+Saga+%282021%29+%5B1080p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="4K">magnet:?xt=urn:btih:697B56F7855FE91195BA1B015338E9C27A1C733E&dn=F9%3A+The+Fast+Saga+%282021%29+%5B2160p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      </a>
+      <a class="invisible sypnosis">Dominic Toretto and the family are back for another bout of action and adventure in F9. And while Luke Hobbs and Deckard Shaw are missing from the crew, more have joined in their place, with both new characters and familiar faces entering the fray.</a>
+      <a class="invisible trailer">https://www.youtube.com/embed/FUK2kdPsBws</a>
+    </div>
+
+    <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
+      <div style="width: 100%;">
+        <img class="thumbnail" loading="lazy" src="https://img.yts.mx/assets/images/movies/the_good_dinosaur_2015/medium-cover.jpg">
+      </div>
+      <a class="movienames">The Good Dinosaur (2015)</a>
+      <a class="viewdetails">View Details</a>
+      <a class="genre">Animation Adventure Family Action Animation Comedy Drama Fantasy Historic</a>
+      <a class="invisible quality">720p 1080p</a>
+      <a class="invisible magnetURI">
+      <span class="720p">magnet:?xt=urn:btih:C2C7423D6AA2CA7E5575F7CA4E517028A1DD75E1&dn=The+Good+Dinosaur+%282015%29+%5B720p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337</span>
+      <span class="1080p">magnet:?xt=urn:btih:1F6BF1BDA08EC966D39279A30D0A0C325706B69E&dn=The+Good+Dinosaur+%282015%29+%5B1080p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337</span>
+      <span class="4K"></span>
+      </a>
+      <a class="invisible sypnosis">In a world where dinosaurs and humans live side-by-side, an Apatosaurus named Arlo makes an unlikely human friend.</a>
+      <a class="invisible trailer">https://www.youtube.com/embed/O-RgquKVTPE</a>
+    </div>
+
+    <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
+      <div style="width: 100%;">
+        <img class="thumbnail" loading="lazy" src="https://img.yts.mx/assets/images/movies/dora_and_the_lost_city_of_gold_2019/medium-cover.jpg">
+      </div>
+      <a class="movienames">Dora and the Lost City of Gold (2019)</a>
+      <a class="viewdetails">View Details</a>
+      <a class="genre">Action Mystery Comedy Adventure Family Fantasy</a>
+      <a class="invisible quality">720p 1080p</a>
+      <a class="invisible magnetURI">
+      <span class="720p">magnet:?xt=urn:btih:F61DE45FBAF4D495CB0D4EF53EC94C6257F5510B&dn=Dora+and+the+Lost+City+of+Gold+%282019%29+%5B720p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="1080p">magnet:?xt=urn:btih:D31BC629CD59A864F4A6646DD2A9900D60D8CDCF&dn=Dora+and+the+Lost+City+of+Gold+%282019%29+%5B1080p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="4K"></span>
+      </a>
+      <a class="invisible sypnosis">Dora, a teenage explorer, leads her friends on an adventure to save her parents and solve the mystery behind a lost city of gold.</a>
+      <a class="invisible trailer">https://www.youtube.com/embed/gUTtJjV852c</a>
+    </div>
+
+    <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
+      <div style="width: 100%;">
+        <img class="thumbnail" loading="lazy" src="https://img.yts.mx/assets/images/movies/the_matrix_resurrections_2021/medium-cover.jpg" >
+      </div>
+      <a class="movienames">The Matrix Resurrections (2021)</a>
+      <a class="viewdetails">View Details</a>
+      <a class="genre">Action Sci-Fi</a>
+      <a class="invisible quality">720p 1080p 4K</a>
+      <a class="invisible magnetURI">
+      <span class="720p">magnet:?xt=urn:btih:107FACDA1820DF8212022863FFFA19A971563595&dn=The+Matrix+Resurrections+%282021%29+%5B720p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="1080p">magnet:?xt=urn:btih:E9CC8CB56C01EDCB7E324A5B57A7B5D04520DD48&dn=The+Matrix+Resurrections+%282021%29+%5B1080p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="4K">magnet:?xt=urn:btih:C8B8584842A104F6CC90A55C545F98B04C165186&dn=The+Matrix+Resurrections+%282021%29+%5B2160p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      </a>
+      <a class="invisible sypnosis">Return to a world of two realities: one, everyday life; the other, what lies behind it. To find out if his reality is a construct, to truly know himself, Mr. Anderson will have to choose to follow the white rabbit once more.</a>
+      <a class="invisible trailer">https://www.youtube.com/embed/9ix7TUGVYIo</a>
+    </div>
+
+    <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
+      <div style="width: 100%;">
+        <img class="thumbnail" loading="lazy" src="https://img.yts.mx/assets/images/movies/Inception_2010/medium-cover.jpg">
+      </div>
+      <a class="movienames">Inception (2010)</a>
+      <a class="viewdetails">View Details</a>
+      <a class="genre">Thriller Crime Mystery Action Adventure Sci-Fi</a>
+      <a class="invisible quality">720p 1080p 4K</a>
+      <a class="invisible magnetURI">
+      <span class="720p">magnet:?xt=urn:btih:CE9156EB497762F8B7577B71C0647A4B0C3423E1&dn=Inception+%282010%29+%5B720p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337</span>
+      <span class="1080p">magnet:?xt=urn:btih:224BF45881252643DFC2E71ABC7B2660A21C68C4&dn=Inception+%282010%29+%5B1080p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337</span>
+      <span class="4K">magnet:?xt=urn:btih:43E3691DC6F4172841E32B25B349E2B7A980B9C5&dn=Inception+%282010%29+%5B2160p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      </a>
+      <a class="invisible sypnosis">A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.</a>
+      <a class="invisible trailer">https://www.youtube.com/embed/8hP9D6kZseM</a>
+    </div>
+
+    <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
+      <div style="width: 100%;">
+        <img class="thumbnail" loading="lazy" src="https://img.yts.mx/assets/images/movies/The_Hitchhiker_s_Guide_to_the_Galaxy_2005/medium-cover.jpg">
+      </div>
+      <a class="movienames">The Hitchhiker's Guide to the Galaxy (2005)</a>
+      <a class="viewdetails">View Details</a>
+      <a class="genre">Comedy Sci-Fi Action Adventure</a>
+      <a class="invisible quality">720p 1080p</a>
+      <a class="invisible magnetURI">
+      <span class="720p">magnet:?xt=urn:btih:B21360A9304F94A0C46E2CA727CE5EFD0046A209&dn=The+Hitchhiker%27s+Guide+to+the+Galaxy+%282005%29+%5B720p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337</span>
+      <span class="1080p">magnet:?xt=urn:btih:4469659E18335CDB85A42FB5506D1272265EF974&dn=The+Hitchhiker%27s+Guide+to+the+Galaxy+%282005%29+%5B1080p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337</span>
+      <span class="4K"></span>
+      </a>
+      <a class="invisible sypnosis">Mere seconds before the Earth is to be demolished by an alien construction crew, journeyman Arthur Dent is swept off the planet by his friend Ford Prefect, a researcher penning a new edition of "The Hitchhiker's Guide to the Galaxy."</a>
+      <a class="invisible trailer">https://www.youtube.com/embed/eLdiWe_HJv4</a>
+    </div>
+
+    <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
+      <div style="width: 100%;">
+        <img class="thumbnail" loading="lazy" src="https://lumiere-a.akamaihd.net/v1/images/p_cars3_19643_3ab8aca1.jpeg">
       </div>
       <a class="movienames">Cars 3 (2017)</a>
       <a class="viewdetails">View Details</a>

@@ -144,24 +144,31 @@ html {
   transition: 200ms;
 }
 .item {
-  opacity: 0;
   text-align: center;
   font-family: arial;
   border-radius: 14px;
   overflow: hidden;
   height: 105%;
   transition: all 700ms;
-  filter: blur(2px);
-  transform: scale(0.9);
   cursor: pointer;
   background-color: rgb(43, 43, 44);
   padding-top: 4.5%;
   box-shadow: 0 1px 16px rgba(0,0,0,0.5);
 }
 .show {
-  opacity: 1;
-  filter: blur(0);
-  transform: scale(1)
+  animation: appear 500ms;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+    filter: blur(2px);
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
 }
 @media only screen and (min-width: 1400px) {
   .recent {
@@ -291,13 +298,13 @@ padding-bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   display: none;
-  height: 80px;
+  height: 79px;
   overflow: hidden;
   text-align: center;
   text-decoration: none;
   font-family: "Roboto";
   font-weight: 700;
-  font-size: 17pt;
+  font-size: 16pt;
   color: white;
 }
 .containerbox {
@@ -439,6 +446,8 @@ h2 {
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 1px;
   font-size: 12pt;
+  display: inline-block;
+  width: 80%;
 }
 .syp br {
   display: none;
@@ -699,6 +708,9 @@ h2 {
   left: 50%;
   transform: translateX(-50%);
   width: 110%;
+}
+.videoplayer div {
+  display:  none;
 }
 .videoplayer {
   display: none;

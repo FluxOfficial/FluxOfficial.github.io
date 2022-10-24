@@ -222,6 +222,7 @@ function quality(element){
       (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("p")[0].innerText = "Sometimes it can take a couple of minutes to load, if the movie does not want to load you can lower the resolution, sometimes 4K is not so well supported either. (720p loads the fastest) It's also recommended to install and use an adblocker.";
       (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("p")[0].style.marginBottom = "10px";
       (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("svg")[0].style.display = "none";
+      (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("div")[0].style.display = "block";
     }, 1800);
   }
 }
@@ -280,6 +281,7 @@ function fetchalldata() {
   }
 }
 window.onload = function() {
+  result();
   document.getElementById("myUL").style.display = "none";
   localStorage.setItem("genrelast", "");
   localStorage.setItem("qualitylast", "");
