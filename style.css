@@ -136,19 +136,20 @@ html {
 }
 .movienames {
   position: relative;
-  top: 2%;
+  top: 5px;
   font-size: 12pt;
   font-family: 'Roboto';
-  line-height: 1px;
   color: rgb(211, 211, 211);
   transition: 200ms;
+  width: 85%;
+  display: inline-block;
 }
 .item {
   text-align: center;
   font-family: arial;
   border-radius: 14px;
-  overflow: hidden;
-  height: 105%;
+  /* overflow: hidden; */
+  height: 104%;
   transition: all 700ms;
   cursor: pointer;
   background-color: rgb(43, 43, 44);
