@@ -317,8 +317,21 @@ padding-bottom: 10px;
   font-size: 12pt;
   position: absolute;
   left: 50%;
-  top: 800px;
-  padding-bottom: 100px;
+  top: 90px;
+  padding-bottom: 250px;
+}
+.topcontent {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin-bottom: 50px;
+}
+.topcontent p {
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  /* width: 90%; */
 }
 .titles {
 position: relative;
@@ -328,31 +341,20 @@ text-align: center;
 margin-bottom: 50px;
 }
 .name {
-  top: 95px;
-  left: 50%;
-  transform: translateX(-50%);
   font-size: 25pt;
-  text-align: center;
-  width: 100%;
+  margin-bottom: 18px;
 }
 .date {
-  top: 160px;
-  left: 50%;
-  font-size: 12pt;
-  width: 80%;
-  font-weight: 100;
-  transform: translateX(-50%);
-  text-align: center;
+  font-size: 13pt;
+  font-weight: 200;
 }
 .buttona {
-  top: 660px;
-  left: 50%;
+  margin-top: 12px;
   display: grid;
-  position: absolute;
+  position: relative;
   justify-content: center;
   grid-template-columns: 270px;
-  grid-row-gap: 10px;
-  transform: translateX(-50%);
+  grid-row-gap: 7px;
 }
 .button {
   padding-top: 10px;
@@ -361,7 +363,6 @@ margin-bottom: 50px;
   font-family: "Roboto";
   appearance: none;
   background-color: rgb(139, 33, 33);
-  border-width: 0;
   box-sizing: border-box;
   color: #000000;
   cursor: pointer;
@@ -413,16 +414,15 @@ margin-bottom: 50px;
   z-index: 1;
   position: relative;
 }
-
 .poster {
-  position: absolute;
-  left: 50%;
-  top: 250px;
+  position: relative;
   border-radius: 10px;
   height: 300pt ;
   width: 200pt;
   transition: 300ms;
-  transform: translateX(-50%);
+  margin-top: 18px;
+  z-index: -10;
+  box-shadow: 0 0 10px 5px rgba(0,0,0,0.5);
 }
 .thumbnail {
   border-radius: 10px;
@@ -430,25 +430,12 @@ margin-bottom: 50px;
   width: 90%;
   transition: 200ms;
 }
-h1 {
-  position: absolute;
-  color: silver;
-  font-family: arial;
-  font-size: 2.5vw;
-}
-h2 {
-  position: absolute;
-  color: silver;
-  font-family: arial;
-  font-size: 1.2vw;
-}
 .syp {
   color: rgb(109, 109, 109);
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 1px;
   font-size: 12pt;
   display: inline-block;
-  width: 80%;
 }
 .syp br {
   display: none;
@@ -783,6 +770,9 @@ h2 {
 }
 .trailer {
   border-radius: 15px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .bottomcontainer {
   position: fixed;

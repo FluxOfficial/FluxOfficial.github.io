@@ -14,9 +14,6 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 
-<!-- <link rel="stylesheet" href="../fadein.css"> -->
-
-
 <body onload="fetchalldata()">
   <div class="loader">
     <svg class="ring" viewBox="25 25 50 50" stroke-width="5">
@@ -25,16 +22,6 @@
   </div>
 
   <div class="content">
-    <div style="position:absolute;width:100%;transition:500ms;">
-      <h1 class="name"></h1>
-      <h2 class="date"></h2>
-      <img class="poster"> 
-      <div class="buttona">
-        <a class="button" onclick="down()"><span>Download</span></a>
-        <a class="button" onclick="watch()"><span>Watch Online</span></a>
-      </div>
-    </div>
-
     <div id="overlay" onclick="off()">
     <div class="selector">
       <p>Select your preffered quality</p>
@@ -42,6 +29,16 @@
     </div>
 
     <div class="containerbox">
+      <div class="topcontent">
+        <p class="name"></p>
+        <p class="date"></p>
+        <img class="poster"> 
+        <div class="buttona">
+          <a class="button" onclick="down()"><span>Download</span></a>
+          <a class="button" onclick="watch()"><span>Watch Online</span></a>
+        </div>
+      </div>
+      
       <div id="download">
         <svg class="loadersvg" height="50px" version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#852a26" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"><animateTransform 
           attributeName="transform" 
