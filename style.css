@@ -277,7 +277,7 @@ padding-bottom: 10px;
   color: white;
   position: absolute;
   font-family: "Roboto";
-  top: 72%;
+  top: 230px;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgb(44, 44, 44);
@@ -343,6 +343,8 @@ margin-bottom: 50px;
 .name {
   font-size: 25pt;
   margin-bottom: 18px;
+  font-weight: bold;
+  font-family: arial;
 }
 .date {
   font-size: 13pt;
@@ -686,17 +688,12 @@ margin-bottom: 50px;
   from { -webkit-mask-position: 150%; }
   to { -webkit-mask-position: -50%; }
 }
-/*
-.videoplayer div:nth-of-type(1) {
-  display: none;
-}
-*/
 .videoplayer div iframe {
   margin-bottom: 20px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  width: 110%;
+  width: 90%;
 }
 .videoplayer div {
   display:  none;
@@ -712,6 +709,7 @@ margin-bottom: 50px;
   z-index: 20;
   font-size: 12pt;
   margin-bottom: -5px;
+  width: 85%;
 }
 #download iframe {
   margin-bottom: 20px;
@@ -740,20 +738,20 @@ margin-bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   position: fixed;
-  width: 350px;
+  width: 300px;
   text-align: center;
   background-color: rgb(17, 17, 17);
 }
 .selector p {
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 18px;
   color: silver;
   font-family: 'Roboto';
 }
 .selector button {
-  margin: 20px 10px 0px 10px;
+  margin: 20px 8px 0px 8px;
   border: none;
-  width: 80px;
+  width: 65px;
   font-size: 12pt;
 }
 #overlay {
@@ -933,6 +931,7 @@ margin-bottom: 50px;
   left: 145px;
   top: 31px;
   font-family: 'Roboto';
+  display: none;
 }
 .loadersvg {
   display: none;
