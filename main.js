@@ -29,15 +29,16 @@ function search() {
   }
 }
 window.onclick = function(e) {
-  document.getElementById("myUL").style.display = "none";
-  if (e.pageY > 122) {
-    if (document.getElementsByClassName("dropdown")[0].style.opacity == 1){
-      document.getElementById("nav-icon4").classList.toggle("open");
-    }
-    document.getElementsByClassName("dropdown")[0].style.visibility = "hidden"
-    document.getElementsByClassName("dropdown")[0].style.opacity = 0
-    document.getElementsByClassName("dropdown")[0].style.transform = "translateY(-100%)"
-  }
+  // setTimeout(() => { 
+  //   if (document.getElementsByClassName("dropdown")[0].style.opacity == 1){
+  //     alert("huts")
+  //     document.getElementById("nav-icon4").classList.toggle("open");
+  //     document.getElementsByClassName("dropdown")[0].style.visibility = "hidden"
+  //     document.getElementsByClassName("dropdown")[0].style.opacity = 0
+  //     document.getElementsByClassName("dropdown")[0].style.transform = "translateY(-100%)"
+  //     }
+  //     document.getElementById("myUL").style.display = "none";
+  //  }, 5000);
 }
 function keypress(e) {
   if(e.keyCode === 13){
