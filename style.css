@@ -55,7 +55,6 @@ html {
   transition: 400ms;
 }
 .title {
-  color: rgb(228, 228, 228);
   position: fixed;
   top: 12px;
   left: 60px;
@@ -63,6 +62,12 @@ html {
   font-size: 25pt;
   text-decoration: none;
   z-index: 10;
+  background-image: linear-gradient(30deg, #ffffff, #505050);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
 }
 .homebuttons {
   position: fixed;
@@ -114,6 +119,7 @@ html {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  filter: brightness(0.7);
 }
 /*CARDS*/
 .recent {
@@ -225,7 +231,7 @@ html {
   flex-direction: row;
   justify-content: center;
   gap:40px;
-  background-color: rgb(15, 15, 15);
+  background-color: rgb(8, 8, 8);
   width: 100%;
   position: fixed;
   top: 70px;
@@ -234,6 +240,8 @@ html {
   opacity: 0;
   transform: translateY(-100%);
   z-index: 5;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 .dropdown a {
   color: silver;
@@ -610,6 +618,12 @@ margin-bottom: 50px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   position: relative;
+}
+#genre, #year, #quality {
+  z-index: 1;
+}
+#genre:hover, #year:hover, #quality:hover {
+  z-index: 100;
 }
 #genre:hover div {
   visibility: visible;
