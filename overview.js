@@ -1,4 +1,22 @@
 document.write(`
+
+    <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
+      <div style="width: 100%;">
+        <img class="thumbnail" loading="lazy" src="https://img.yts.mx/assets/images/movies/my_policeman_2022/medium-cover.jpg">
+      </div>
+      <a class="movienames">My Policeman (2022)</a>
+      <a class="viewdetails">View Details</a>
+      <a class="genre">Drama Romance</a>
+      <a class="invisible quality">720p 1080p 4K</a>
+      <a class="invisible magnetURI">
+      <span class="720p">magnet:?xt=urn:btih:215BBAB67C1CBE51948A8B36491D0EB65AAD9DC3&dn=My+Policeman+%282022%29+%5B720p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="1080p">magnet:?xt=urn:btih:C3D91194190D9B473CE8959EA4B9759BCED33C2B&dn=My+Policeman+%282022%29+%5B1080p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="4K">magnet:?xt=urn:btih:C36F3B7090B996353EEA784972EA8DC19C5FF780&dn=My+Policeman+%282022%29+%5B2160p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      </a>
+      <a class="invisible sypnosis">A beautifully crafted story of forbidden love and changing social conventions, My Policeman follows three young people -- policeman Tom (Harry Styles), teacher Marion (Emma Corrin), and museum curator Patrick (David Dawson) -- as they embark on an emotional journey in 1950s Britain. Flashing forward to the 1990s, Tom (Linus Roache), Marion (Gina McKee), and Patrick (Rupert Everett) are still reeling with longing and regret, but now they have one last chance to repair the damage of the past. Based on the book by Bethan Roberts, director Michael Grandage carves a visually transporting, heart-stopping portrait of three people caught up in the shifting tides of history, liberty, and forgiveness. </a>
+      <a class="invisible trailer">https://www.youtube.com/embed/xAEgWXOH1mY</a>
+    </div>
+
     <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
       <div style="width: 100%;">
         <img class="thumbnail" loading="lazy" src="https://img.yts.mx/assets/images/movies/f9_2021/medium-cover.jpg">
