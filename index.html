@@ -127,15 +127,16 @@
     Feedback</a>
     <footer class="footer">&copy;Copyright 2022 RT-Productions</footer>
     <section>
-      <p>contact</p>
+      <p onclick='showcontact()'>contact</p>
       <p>info</p>
       <p>donate</p>
     </section>
     </div>
 </div>
-
-<div class="working">Under Construction!</div>
-
+<div id="overlay" onclick="off()">
+<form class="contact">
+  huts
+</form>
 <script>
 $(window).on('load',function(){
   $(".loader").fadeOut(500);

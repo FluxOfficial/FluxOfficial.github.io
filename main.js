@@ -37,7 +37,7 @@ window.onclick = function(e) {
   //     document.getElementsByClassName("dropdown")[0].style.opacity = 0
   //     document.getElementsByClassName("dropdown")[0].style.transform = "translateY(-100%)"
   //     }
-  //     document.getElementById("myUL").style.display = "none";
+      document.getElementById("myUL").style.display = "none";
   //  }, 5000);
 }
 function keypress(e) {
@@ -180,6 +180,10 @@ function down() {
   document.getElementsByClassName("videoplayer")[0].style.display = "none"
   document.getElementById("download").style.display = "none"
 }
+function showcontact() {
+  document.getElementById("overlay").style.display = "block"
+  document.getElementsByClassName("contact")[0].style.display = "block"
+}
 function quality(element){
   if (localStorage.getItem("last") == "download") {
     (document.getElementById("download")).getElementsByTagName("div")[0]?.remove();
@@ -282,7 +286,6 @@ function fetchalldata() {
   }
 }
 window.onload = function() {
-  result();
   document.getElementById("myUL").style.display = "none";
   localStorage.setItem("genrelast", "");
   localStorage.setItem("qualitylast", "");
@@ -298,4 +301,5 @@ window.onload = function() {
     a.setAttribute('onclick','((document.getElementsByClassName("recent")[0]).getElementsByClassName("item"))[' + i + '].click()');
     (document.getElementById("myUL").appendChild(li)).appendChild(a);
   }
+  result();
  }

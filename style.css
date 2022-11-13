@@ -11,8 +11,7 @@
 body {
   width: 100%;
   height: 100%;
-  background: rgb(32, 32, 32);
-  background-color: #202020;
+  background-color: #111111;
   background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23bfbfbf' fill-opacity='0.04' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 .content {
@@ -38,7 +37,7 @@ html {
   top: 0px;
   left: 0px;
   z-index: 10;
-  background: rgba(32, 32, 32, 0.97);
+  background: rgba(17, 17, 17, 0.98);
 }
 .logo {
   transition: 0.2s;
@@ -99,7 +98,7 @@ html {
   left: 0%;
   width: 100%;
   z-index: 10;
-  border-top: 2px solid rgb(51, 51, 51);
+  border-top: 2px solid rgb(26, 26, 26);
 }
 .subtitles {
   position: relative;
@@ -152,7 +151,7 @@ html {
   height: 104%;
   transition: all 700ms;
   cursor: pointer;
-  background-color: rgb(43, 43, 44);
+  background-color: rgb(26, 26, 26);
   padding-top: 4.5%;
   box-shadow: 0 1px 16px rgba(0,0,0,0.5);
 }
@@ -447,7 +446,10 @@ margin-bottom: 50px;
 #myUL li a:hover:not(.header) {
   background-color: rgb(43, 43, 43);
 }
-
+#myInput {
+  background: rgb(22, 22, 22);
+  border-color: rgb(43, 43, 43);
+}
 .blockscroll {
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
@@ -592,6 +594,7 @@ margin-bottom: 50px;
   width: 160px;
   padding-top: 5px;
   background-color: rgb(43, 43, 43);
+  filter: brightness(0.6);
   border-radius: 10px;
   cursor: pointer;
   display: inline-block;
@@ -763,7 +766,7 @@ margin-bottom: 50px;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(26, 26, 26, 0.9);
+  background-color: rgba(19, 19, 19, 0.9);
   cursor: pointer;
 }
 .trailer {
@@ -777,8 +780,8 @@ margin-bottom: 50px;
   bottom: 0;
   width: 100%;
   height: 70px;
-  background-color: #171717;
-  box-shadow: 0 -5mm 10mm rgb(15, 15, 15);
+  background-color: #0e0e0e;
+  box-shadow: 0 -5mm 10mm rgb(5, 5, 5);
   z-index: 2;
 }
 .bottomcontainer section {
@@ -921,16 +924,6 @@ margin-bottom: 50px;
   transform: rotate(-45deg);
   top: 39px;
   left: 8px;
-}
-.working {
-  position: fixed;
-  color: white;
-  font-size: 12pt;
-  z-index: 20;
-  left: 145px;
-  top: 31px;
-  font-family: 'Roboto';
-  display: none;
 }
 .loadersvg {
   display: none;
