@@ -2,7 +2,7 @@ document.write(`
 
     <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
       <div style="width: 100%;">
-        <img class="thumbnail" loading="lazy" src="https://img.yts.mx/assets/images/movies/my_policeman_2022/medium-cover.jpg">
+        <img class="thumbnail" src="https://img.yts.mx/assets/images/movies/my_policeman_2022/medium-cover.jpg">
       </div>
       <a class="movienames">My Policeman (2022)</a>
       <a class="viewdetails">View Details</a>
@@ -19,7 +19,7 @@ document.write(`
 
     <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
       <div style="width: 100%;">
-        <img class="thumbnail" loading="lazy" src="https://img.yts.mx/assets/images/movies/f9_2021/medium-cover.jpg">
+        <img class="thumbnail" src="https://img.yts.mx/assets/images/movies/f9_2021/medium-cover.jpg">
       </div>
       <a class="movienames">Fast & Furious 9 (2021)</a>
       <a class="viewdetails">View Details</a>
@@ -36,7 +36,7 @@ document.write(`
 
     <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
       <div style="width: 100%;">
-        <img class="thumbnail" loading="lazy" src="https://img.yts.mx/assets/images/movies/the_good_dinosaur_2015/medium-cover.jpg">
+        <img class="thumbnail" src="https://img.yts.mx/assets/images/movies/the_good_dinosaur_2015/medium-cover.jpg">
       </div>
       <a class="movienames">The Good Dinosaur (2015)</a>
       <a class="viewdetails">View Details</a>
@@ -53,7 +53,7 @@ document.write(`
 
     <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
       <div style="width: 100%;">
-        <img class="thumbnail" loading="lazy" src="https://img.yts.mx/assets/images/movies/dora_and_the_lost_city_of_gold_2019/medium-cover.jpg">
+        <img class="thumbnail" src="https://img.yts.mx/assets/images/movies/dora_and_the_lost_city_of_gold_2019/medium-cover.jpg">
       </div>
       <a class="movienames">Dora and the Lost City of Gold (2019)</a>
       <a class="viewdetails">View Details</a>
@@ -70,7 +70,7 @@ document.write(`
 
     <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
       <div style="width: 100%;">
-        <img class="thumbnail" loading="lazy" src="https://img.yts.mx/assets/images/movies/the_matrix_resurrections_2021/medium-cover.jpg" >
+        <img class="thumbnail" src="https://img.yts.mx/assets/images/movies/the_matrix_resurrections_2021/medium-cover.jpg" >
       </div>
       <a class="movienames">The Matrix Resurrections (2021)</a>
       <a class="viewdetails">View Details</a>
@@ -87,7 +87,7 @@ document.write(`
 
     <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
       <div style="width: 100%;">
-        <img class="thumbnail" loading="lazy" src="https://img.yts.mx/assets/images/movies/Inception_2010/medium-cover.jpg">
+        <img class="thumbnail" src="https://img.yts.mx/assets/images/movies/Inception_2010/medium-cover.jpg">
       </div>
       <a class="movienames">Inception (2010)</a>
       <a class="viewdetails">View Details</a>
@@ -104,7 +104,7 @@ document.write(`
 
     <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
       <div style="width: 100%;">
-        <img class="thumbnail" loading="lazy" src="https://img.yts.mx/assets/images/movies/The_Hitchhiker_s_Guide_to_the_Galaxy_2005/medium-cover.jpg">
+        <img class="thumbnail" src="https://img.yts.mx/assets/images/movies/The_Hitchhiker_s_Guide_to_the_Galaxy_2005/medium-cover.jpg">
       </div>
       <a class="movienames">The Hitchhiker's Guide to the Galaxy (2005)</a>
       <a class="viewdetails">View Details</a>
@@ -121,7 +121,7 @@ document.write(`
 
     <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
       <div style="width: 100%;">
-        <img class="thumbnail" loading="lazy" src="https://lumiere-a.akamaihd.net/v1/images/p_cars3_19643_3ab8aca1.jpeg">
+        <img class="thumbnail" src="https://lumiere-a.akamaihd.net/v1/images/p_cars3_19643_3ab8aca1.jpeg">
       </div>
       <a class="movienames">Cars 3 (2017)</a>
       <a class="viewdetails">View Details</a>
@@ -142,7 +142,7 @@ document.write(`
 
     <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)">
       <div style="width: 100%;">
-        <img class="thumbnail" loading="lazy" src="https://www.frontview-magazine.be/sites/default/files/news/166292-ontdek-de-nieuwe-trailer-en-poster-van-encanto-1337793.jpeg" alt="Encanto">
+        <img class="thumbnail" src="https://www.frontview-magazine.be/sites/default/files/news/166292-ontdek-de-nieuwe-trailer-en-poster-van-encanto-1337793.jpeg" alt="Encanto">
       </div>
       <a class="movienames">Encanto (2021)</a>
       <a class="viewdetails">View Details</a>
@@ -166,7 +166,7 @@ document.write(`
 
     <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)">
       <div style="width: 100%;">
-        <img class="thumbnail" loading="lazy" src="https://www.themoviedb.org/t/p/original/eIT8lxiyk1vYryawOt0dGBKwVJm.jpg"
+        <img class="thumbnail" src="https://www.themoviedb.org/t/p/original/eIT8lxiyk1vYryawOt0dGBKwVJm.jpg"
           alt="Sing 2">
       </div>
       <a class="movienames">Sing 2 (2021)</a>
@@ -194,7 +194,7 @@ document.write(`
 
     <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
       <div style="width: 100%;">
-        <img class="thumbnail" loading="lazy"
+        <img class="thumbnail"
           src="https://media.pathe.nl/nocropthumb/620x955/gfx_content/other/api/filmdepot/v1/movie/download/32863_109805_ps_sd-high.jpg"
           alt="Five Feet Apart">
       </div>
@@ -217,7 +217,7 @@ document.write(`
 
     <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)">
       <div style="width: 100%;">
-        <img class="thumbnail" loading="lazy" src="https://i0.wp.com/joshatthemovies.com/wp-content/uploads/2021/03/the-fallout-201074.jpeg?fit=800%2C1200&ssl=1" alt="The Fallout">
+        <img class="thumbnail" src="https://i0.wp.com/joshatthemovies.com/wp-content/uploads/2021/03/the-fallout-201074.jpeg?fit=800%2C1200&ssl=1" alt="The Fallout">
       </div>
       <a class="movienames">The Fallout (2021)</a>
       <a class="viewdetails">View Details</a>
@@ -237,7 +237,7 @@ document.write(`
 
     <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)">
       <div style="width: 100%;">
-        <img class="thumbnail" loading="lazy" src="https://lumiere-a.akamaihd.net/v1/images/image_3f5716f2.jpeg?region=0%2C0%2C540%2C810" alt="Light Year">
+        <img class="thumbnail" src="https://lumiere-a.akamaihd.net/v1/images/image_3f5716f2.jpeg?region=0%2C0%2C540%2C810" alt="Light Year">
       </div>
       <a class="movienames">Light Year (2022)</a>
       <a class="viewdetails">View Details</a>

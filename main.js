@@ -167,6 +167,7 @@ function specify(element){
 }
 function off() {
   document.getElementById("overlay").style.display = "none";
+  document.getElementsByClassName("contact")[0].style.display = "none"
 }
 function watch() {
   localStorage.setItem("last", "watch");
