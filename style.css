@@ -62,12 +62,7 @@ html {
   font-size: 25pt;
   text-decoration: none;
   z-index: 10;
-  background-image: linear-gradient(30deg, #ffffff, #505050);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
+  color: white;
 }
 .homebuttons {
   position: fixed;
@@ -107,7 +102,7 @@ html {
 }
 .subtitles {
   position: relative;
-  font-size: 12pt;
+  font-size: 11pt;
   color: rgb(228, 228, 228);
   font-family: Arial;
   left: 50%;
@@ -124,12 +119,14 @@ html {
 /*CARDS*/
 .recent {
   position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   display: grid;
   justify-content: center;
-  grid-template-columns: 200px 200px 200px 200px;
-  grid-column-gap: 80px;
-  grid-row-gap: 80px;
-  width: 100%;
+  grid-template-columns: repeat( auto-fit, 230px);
+  grid-column-gap: 75px;
+  grid-row-gap: 75px;
+  width: 95%;
   z-index: 1;
   margin-bottom: 300px;
   -webkit-touch-callout: none;
@@ -175,37 +172,8 @@ html {
     filter: blur(0);
     transform: scale(1);
   }
-}
-@media only screen and (min-width: 1400px) {
-  .recent {
-    grid-template-columns: 13% 13% 13% 13%;
-    grid-column-gap: 8%;
-  }
-
-}
-@media only screen and (max-width: 1080px) {
-  .recent {
-    grid-template-columns: 200px 200px 200px;
-  }
-}
-@media only screen and (max-width: 850px) {
-  .recent {
-    grid-template-columns: 200px 200px;
-    grid-column-gap: 70px;
-  }
-  .bottomcontainer footer {
-    right:auto !important;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .form {
-    display: none;
-  }
-}
+} 
 @media only screen and (max-width: 500px) {
-  .recent {
-    grid-template-columns: 200px;
-  }
   .homebuttons {
     display: none;
   }
@@ -260,7 +228,7 @@ padding-bottom: 10px;
 }
 .item:hover {
   transform: scale(1.03);
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.8);
+  box-shadow: 0 8px 15px 2px rgba(0,0,0,0.8);
   transition: 200ms;
 }
 .item:hover img {
@@ -684,6 +652,14 @@ margin-bottom: 50px;
     display: grid;
     grid-column: auto;
   }
+  .form {
+    display: none;
+  }
+  .bottomcontainer footer {
+    right:auto !important;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 .invisible {
   display: none;
@@ -776,12 +752,13 @@ margin-bottom: 50px;
   display: none;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(19, 19, 19, 0.9);
+  /* background-color: rgba(19, 19, 19, 0.9); */
   cursor: pointer;
+  background: rgba(0, 0, 0, 0.48);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
 }
 .trailer {
   border-radius: 15px;
@@ -951,8 +928,9 @@ margin-bottom: 50px;
   left: 50%;
   top: 15vh;
   transform: translateX(-50%);
-  height: 550px;
+  height: 60vh;
   width: 20vw;
+  min-height: 500px;
   min-width: 300px;
   background-color: rgb(36, 36, 36);
   z-index: 30;
@@ -960,7 +938,6 @@ margin-bottom: 50px;
   border-radius: 20px;
   color: white;
   font-family: ARIAL;
-  
 }
 .contact h1 {
   margin-top: 20px;
@@ -977,7 +954,7 @@ margin-bottom: 50px;
   border-radius: 10px;
   padding: 10px;
   color: white;
-  margin-top: 25px;
+  margin-top: 5%;
   width: 120px;
   transition: 200ms;
   cursor: pointer;
@@ -990,7 +967,7 @@ margin-bottom: 50px;
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-top: 50px ;
+  margin-top: 5vh ;
 }
 .inputcontainer input{
   background-color:rgb(29, 29, 29);
@@ -1015,4 +992,29 @@ margin-bottom: 50px;
   border-radius: 8px;
   resize: none;
   font-size: 10pt;
+}
+.topjumper {
+  bottom: 90px;
+  right: 13px;
+  border: none;
+  position: fixed;
+  display: none;
+  background: none;
+  padding: 15px;
+}
+.arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  scale: 3;
+  transition: 200ms;
+}
+.arrow:hover{
+  border: solid silver;
+  border-width: 0 3px 3px 0;
+}
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
 }

@@ -168,6 +168,7 @@ function specify(element){
 function off() {
   document.getElementById("overlay").style.display = "none";
   document.getElementsByClassName("contact")[0].style.display = "none"
+  document.getElementsByTagName("html")[0].style.overflowY = "scroll"
 }
 function watch() {
   localStorage.setItem("last", "watch");
@@ -184,6 +185,7 @@ function down() {
 function showcontact() {
   document.getElementById("overlay").style.display = "block"
   document.getElementsByClassName("contact")[0].style.display = "block"
+  document.getElementsByTagName("html")[0].style.overflowY = "hidden"
 }
 function quality(element){
   if (localStorage.getItem("last") == "download") {
@@ -304,3 +306,18 @@ window.onload = function() {
   }
   result();
  }
+
+let mybutton = document.getElementsByClassName("topjumper")[0];
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {
+  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+    mybutton.style.display = "block"
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
