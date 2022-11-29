@@ -812,6 +812,12 @@ margin-bottom: 50px;
   bottom: 9px;
   right: 12px;
   white-space: nowrap;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .noresults {
   display: flex;
@@ -999,19 +1005,20 @@ margin-bottom: 50px;
   border: none;
   position: fixed;
   display: none;
-  background: none;
   padding: 15px;
+  background: none;
 }
 .arrow {
-  border: solid white;
+  border: solid silver;
+  border-radius: 2px;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
-  scale: 3;
+  scale: 2.5;
   transition: 200ms;
 }
 .arrow:hover{
-  border: solid silver;
+  border: solid white;
   border-width: 0 3px 3px 0;
 }
 .up {
