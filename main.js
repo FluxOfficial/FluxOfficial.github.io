@@ -169,18 +169,26 @@ function off() {
   document.getElementById("overlay").style.display = "none";
   document.getElementsByClassName("contact")[0].style.display = "none"
   document.getElementsByTagName("html")[0].style.overflowY = "scroll"
+  document.getElementsByClassName("dropdown")[0].style.visibility = "hidden"
+  document.getElementsByClassName("dropdown")[0].style.opacity = 0
+  document.getElementsByClassName("dropdown")[0].style.transform = "translateY(-100%)"
+  document.getElementsByClassName("selector")[0].style.display = "none"
 }
 function watch() {
   localStorage.setItem("last", "watch");
   document.getElementById("overlay").style.display = "block"
+  document.getElementsByClassName("selector")[0].style.display = "block"
   document.getElementsByClassName("videoplayer")[0].style.display = "none"
   document.getElementById("download").style.display = "none"
+  document.getElementsByTagName("html")[0].style.overflowY = "hidden"
 }
 function down() {
   localStorage.setItem("last", "download");
   document.getElementById("overlay").style.display = "block"
+  document.getElementsByClassName("selector")[0].style.display = "block"
   document.getElementsByClassName("videoplayer")[0].style.display = "none"
   document.getElementById("download").style.display = "none"
+  document.getElementsByTagName("html")[0].style.overflowY = "hidden"
 }
 function showcontact() {
   document.getElementById("overlay").style.display = "block"
@@ -188,6 +196,7 @@ function showcontact() {
   document.getElementsByTagName("html")[0].style.overflowY = "hidden"
 }
 function quality(element){
+  off();
   if (localStorage.getItem("last") == "download") {
     (document.getElementById("download")).getElementsByTagName("div")[0]?.remove();
     (document.getElementById("download")).getElementsByTagName("script")[0]?.remove();
@@ -239,11 +248,11 @@ function menu () {
   document.getElementsByClassName("dropdown")[0].style.visibility = "visible"
   document.getElementsByClassName("dropdown")[0].style.opacity = 1
   document.getElementsByClassName("dropdown")[0].style.transform = "translateY(0)"
+  document.getElementById("overlay").style.display = "block"
+  document.getElementsByTagName("html")[0].style.overflowY = "hidden"
   }
   else {
-  document.getElementsByClassName("dropdown")[0].style.visibility = "hidden"
-  document.getElementsByClassName("dropdown")[0].style.opacity = 0
-  document.getElementsByClassName("dropdown")[0].style.transform = "translateY(-100%)"
+  off();
   }
 }
 $(document).ready(function(){

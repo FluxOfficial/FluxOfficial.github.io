@@ -1,7 +1,6 @@
 /*GENERAL*/
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&family=Roboto:wght@300&family=Secular+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -58,7 +57,8 @@ html {
   position: fixed;
   top: 12px;
   left: 60px;
-  font-family: "Secular One";
+  font-family: quicksand;
+  font-weight: bold;
   font-size: 25pt;
   text-decoration: none;
   z-index: 10;
@@ -81,7 +81,7 @@ html {
 .homebuttons a {
   margin-top: 3px;
   color: silver;
-  font-family: arial;
+  font-family: quicksand;
   font-size: 12pt;
   text-decoration: none;
   text-align: center;
@@ -140,23 +140,29 @@ html {
   position: relative;
   top: 5px;
   font-size: 12pt;
-  font-family: 'Roboto';
+  font-family: quicksand;
   color: rgb(211, 211, 211);
   transition: 200ms;
   width: 85%;
   display: inline-block;
+  transform: translateZ(15px);
 }
 .item {
   text-align: center;
   font-family: arial;
   border-radius: 14px;
-  /* overflow: hidden; */
   height: 104%;
-  transition: all 700ms;
+  transition: all 200ms;
   cursor: pointer;
   background-color: rgb(26, 26, 26);
   padding-top: 4.5%;
   box-shadow: 0 1px 16px rgba(0,0,0,0.5);
+  transform: perspective(1000px);
+  transform-style: preserve-3d;
+}
+.item:hover {
+  scale: 1.03;
+  box-shadow: 0 8px 15px 2px rgba(0,0,0,0.8);
 }
 .show {
   animation: appear 500ms;
@@ -165,12 +171,10 @@ html {
   0% {
     opacity: 0;
     filter: blur(2px);
-    transform: scale(0.95);
   }
   100% {
     opacity: 1;
     filter: blur(0);
-    transform: scale(1);
   }
 } 
 @media only screen and (max-width: 500px) {
@@ -199,7 +203,7 @@ html {
   flex-direction: row;
   justify-content: center;
   gap:40px;
-  background-color: rgb(8, 8, 8);
+  background-color: rgba(17, 17, 17);
   width: 100%;
   position: fixed;
   top: 70px;
@@ -210,10 +214,11 @@ html {
   z-index: 5;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
+  border: 1px solid rgb(31, 31, 31);
 }
 .dropdown a {
   color: silver;
-  font-family: 'Roboto';
+  font-family: quicksand;
   font-size: 14pt;
   text-decoration: none;
   transition: 150ms;
@@ -226,35 +231,27 @@ padding-bottom: 10px;
 .dropdown a:hover {
   color: rgb(124, 31, 31);
 }
-.item:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 15px 2px rgba(0,0,0,0.8);
-  transition: 200ms;
+.item > div:first-of-type {
+  transform: translateZ(5px);
 }
 .item:hover img {
   transition: 250ms;
   filter: brightness(0.35);
 }
-.item:hover .viewdetails {
+.item:hover .genre,.item:hover .viewdetails  {
   display: block;
 }
-.item .viewdetails {
-  display: none;
-}
-.item:hover .genre {
-  display: block;
-}
-.item .genre {
+.item .viewdetails .genre {
   display: none;
 }
 .viewdetails {
   font-size: 10pt;
   color: white;
   position: absolute;
-  font-family: "Roboto";
+  font-family: quicksand;
   top: 230px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateZ(15px);
   background-color: rgb(44, 44, 44);
   display: none;
   text-decoration: none;
@@ -270,16 +267,15 @@ padding-bottom: 10px;
 /*MOVIEINFO*/
 .genre {
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateZ(15px);
   display: none;
   height: 79px;
   overflow: hidden;
   text-align: center;
   text-decoration: none;
-  font-family: "Roboto";
-  font-weight: 700;
+  font-family: quicksand;
   font-size: 16pt;
   color: white;
 }
@@ -409,7 +405,7 @@ margin-bottom: 50px;
 }
 .syp {
   color: rgb(109, 109, 109);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: quicksand;
   letter-spacing: 1px;
   font-size: 12pt;
   display: inline-block;
@@ -438,7 +434,7 @@ margin-bottom: 50px;
 /*INFO*/
 .welcome {
   color: silver;
-  font-family: 'Montserrat';
+  font-family: quicksand;
   font-weight: 500;
   font-size: 30pt;
   top: 0;
@@ -463,7 +459,7 @@ margin-bottom: 50px;
 
 .info {
   color: silver;
-  font-family: 'Roboto';
+  font-family: quicksand;
   font-size: 14pt;
   width: 80%;
   text-align: center;
@@ -510,7 +506,7 @@ margin-bottom: 50px;
 }
 #browseres {
   color: silver;
-  font-family: "Roboto";
+  font-family: quicksand;
   font-size: 12pt;
   left: 50%;
   top: 165px;
@@ -617,7 +613,7 @@ margin-bottom: 50px;
   margin-bottom: 0;
 }
 .box div p:hover {
-  color: #000;
+  color: white;
   transition: 200ms;
 }
 .box div p:last-child {
@@ -669,7 +665,7 @@ margin-bottom: 50px;
   text-decoration: none;
   text-transform: uppercase;
   color: white;
-  letter-spacing: 6px;
+  letter-spacing: 5px;
   font-weight: 200 !important;
   font-family: 'Montserrat';
   -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
@@ -683,6 +679,7 @@ margin-bottom: 50px;
 }
 .videoplayer div iframe {
   margin-bottom: 20px;
+  border-radius: 20px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -733,6 +730,8 @@ margin-bottom: 50px;
   width: 300px;
   text-align: center;
   background-color: rgb(17, 17, 17);
+  display: none;
+  z-index: 10;
 }
 .selector p {
   margin-top: 20px;
@@ -747,7 +746,7 @@ margin-bottom: 50px;
   font-size: 12pt;
 }
 #overlay {
-  z-index: 8;
+  z-index: 4;
   position: fixed;
   display: none;
   width: 100%;
@@ -791,7 +790,7 @@ margin-bottom: 50px;
   opacity: 0.4;
   color: silver;
   font-size: 14pt;
-  font-family: 'Roboto';
+  font-family: quicksand;
   text-align: center;
   transition: 200ms;
   cursor: pointer;

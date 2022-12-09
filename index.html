@@ -59,7 +59,7 @@
   font-size: 11pt;
   color: white;
   display: block;
-  font-family: "Roboto";
+  font-family: quicksand;
   text-align: left;
   transition: 200ms;
   border-radius: 8px;
@@ -145,6 +145,13 @@
   </div>
   <button type="submit" onclick="off();">Send</button>
 </form>
+<script type="text/javascript" src="vanilla-tilt.js"></script>
+<script type="text/javascript">
+	VanillaTilt.init(document.querySelectorAll(".item"), {
+		max: 15,
+		speed: 400
+	});
+</script>
 <script>
 $(window).on('load',function(){
   $(".loader").fadeOut(500);
