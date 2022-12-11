@@ -198,6 +198,7 @@ function showcontact() {
   document.getElementsByTagName("html")[0].style.overflowY = "hidden"
 }
 function quality(element){
+  scrollBy(0,500)
   off();
   if (localStorage.getItem("last") == "download") {
     (document.getElementById("download")).getElementsByTagName("div")[0]?.remove();
