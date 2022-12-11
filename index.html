@@ -94,7 +94,7 @@
     <a href="index.html">Home</a>
     <a href="browse.html">Browse</a>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a>
-    <form autocomplete="off">
+    <form autocomplete="off" onSubmit="return false;">
       <input id="myInput" class="search" onkeyup="search()" onkeypress="keypress(event)" type="text" placeholder="search">
     </form>
   </nav>
@@ -139,11 +139,11 @@
   <h1>Contact Us</h1>
   <p>We'd Love To Hear From You!</p>
   <div class="inputcontainer">
-    <input type="text" id="name" name="Name" placeholder="Name">
-    <input type="text" id="mail" name="E-mail" placeholder="E-mail">
-    <textarea type="text" id="msg" name="Message" placeholder="Message"></textarea>
+    <input type="text" id="name" name="Name" placeholder="Name" required>
+    <input type="text" id="mail" name="E-mail" placeholder="E-mail" required>
+    <textarea type="text" id="msg" name="Message" placeholder="Message" required></textarea>
   </div>
-  <button type="submit" onclick="off();">Send</button>
+  <button type="submit">Send</button>
 </form>
 <script type="text/javascript" src="vanilla-tilt.js"></script>
 <script type="text/javascript">

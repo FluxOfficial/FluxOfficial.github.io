@@ -47,14 +47,13 @@ function keypress(e) {
     li = ul.getElementsByTagName('li');
     for (i = 0; i < li.length; i++) {
       if (li[i].style.display != "none") {
-       var el = ul.querySelectorAll("a")[i].href;
-       window.open(el);
-       break;
+        let el = li[i].getElementsByTagName("a")[0];
+        el.click();
+        break;
       }
   } 
 }
 }
-
 function result(filter, type) {
   if (filter == undefined){
     filter = "";
@@ -164,6 +163,9 @@ function specify(element){
       result((element.innerText).toLowerCase(),src);
     }
   }
+}
+window.onblur = function() {
+  off();
 }
 function off() {
   document.getElementById("overlay").style.display = "none";

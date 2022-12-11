@@ -1,6 +1,10 @@
 /*GENERAL*/
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&family=Roboto:wght@300&family=Secular+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@font-face {
+  font-family: quicksand;
+  src:url(Quicksand-VariableFont_wght.ttf);
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -280,7 +284,6 @@ padding-bottom: 10px;
   color: white;
 }
 .containerbox {
-  width: 100%;
   transition: 300ms;
   transform: translateX(-50%);
   color: silver;
@@ -315,7 +318,7 @@ margin-bottom: 50px;
   font-size: 25pt;
   margin-bottom: 18px;
   font-weight: bold;
-  font-family: arial;
+  font-family: quicksand;
 }
 .date {
   font-size: 13pt;
@@ -333,7 +336,7 @@ margin-bottom: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 8px;
-  font-family: "Roboto";
+  font-family: quicksand;
   appearance: none;
   background-color: rgb(139, 33, 33);
   box-sizing: border-box;
@@ -754,7 +757,6 @@ margin-bottom: 50px;
   /* background-color: rgba(19, 19, 19, 0.9); */
   cursor: pointer;
   background: rgba(0, 0, 0, 0.48);
-  border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.5px);
   -webkit-backdrop-filter: blur(3.5px);
@@ -825,7 +827,7 @@ margin-bottom: 50px;
   color: silver;
   font-size: 15pt;
   font-weight: 100;
-  font-family:monospace ;
+  font-family:quicksand ;
   visibility: visible;
   opacity: 0;
   margin-top: -30px;
