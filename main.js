@@ -29,16 +29,7 @@ function search() {
   }
 }
 window.onclick = function(e) {
-  // setTimeout(() => { 
-  //   if (document.getElementsByClassName("dropdown")[0].style.opacity == 1){
-  //     alert("huts")
-  //     document.getElementById("nav-icon4").classList.toggle("open");
-  //     document.getElementsByClassName("dropdown")[0].style.visibility = "hidden"
-  //     document.getElementsByClassName("dropdown")[0].style.opacity = 0
-  //     document.getElementsByClassName("dropdown")[0].style.transform = "translateY(-100%)"
-  //     }
-      document.getElementById("myUL").style.display = "none";
-  //  }, 5000);
+ document.getElementById("myUL").style.display = "none";
 }
 function keypress(e) {
   if(e.keyCode === 13){
@@ -168,6 +159,7 @@ window.onblur = function() {
   off();
 }
 function off() {
+  document.getElementById("nav-icon4").classList.remove("open");
   document.getElementById("overlay").style.display = "none";
   document.getElementsByClassName("contact")[0].style.display = "none"
   document.getElementsByTagName("html")[0].style.overflowY = "scroll"
@@ -253,16 +245,12 @@ function menu () {
   document.getElementsByClassName("dropdown")[0].style.transform = "translateY(0)"
   document.getElementById("overlay").style.display = "block"
   document.getElementsByTagName("html")[0].style.overflowY = "hidden"
+  document.getElementById("nav-icon4").classList.add("open");
   }
   else {
   off();
   }
 }
-$(document).ready(function(){
-  $('#nav-icon4').click(function(){
-    $(this).toggleClass('open');
-  });
-});
 function alldata(element) {
   var moviename, genre, poster, poster, sypnosis, trailer,quality, hd, fullhd, qhd;
   moviename = element.getElementsByClassName("movienames")[0].innerText;
@@ -329,4 +317,5 @@ window.onscroll = function() {
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+  // document.getElementsByClassName('logo')[0].style.animation="logohyper 600ms";
 }

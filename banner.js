@@ -18,7 +18,15 @@ document.write(`
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a>
   </div>
   <button class="topjumper" onclick="topFunction()" title="Go to top"><i class="arrow up"></i></button>
-<a href="../index.html" class="title">FLUX</a>
+<a href="../index.html" class="title">FL<span style="
+    background-image: linear-gradient(5deg, #111010, #ca3025);
+    background-size: 100%;
+    -webkit-background-clip: text;
+  -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    filter: drop-shadow(0 0mm 1mm rgb(0, 0, 0));"
+    >U</span>X</a>
 <img class="logo" src="../logo 2.0.png">
 <div class="shadow"></div>
 <div class="bottomcontainer">
