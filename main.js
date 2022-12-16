@@ -326,6 +326,3 @@ $(".logo").bind("webkitAnimationEnd mozAnimationEnd animationEnd", function(){
 $(".logo").hover(function(){
   $(this).addClass("animated");     
 })
-setInterval(function() {
-  document.getElementsByClassName('logo')[0].classList.add("animated");
-}, 10000);

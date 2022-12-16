@@ -71,7 +71,6 @@ backdrop-filter: blur(9.6px);
   50% {
     scale: 0.5;
     border-radius: 50%;
-    filter: saturate(200%);
   }
   80% {
     scale: 1.2;
