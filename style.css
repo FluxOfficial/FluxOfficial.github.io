@@ -53,10 +53,11 @@ backdrop-filter: blur(9.6px);
   left:12px; 
   height: 40px; 
   width: 40px;
-  animation: logohyper 600ms;
 }
-.logo:hover {
-  animation: logohyper 600ms;
+.logo.animated { 
+  -moz-animation: logohyper 650ms;
+  -webkit-animation: logohyper 650ms;
+  animation: logohyper 650ms;
 }
 @keyframes logohyper {
   0% {
@@ -70,13 +71,14 @@ backdrop-filter: blur(9.6px);
   50% {
     scale: 0.5;
     border-radius: 50%;
+    filter: saturate(200%);
   }
   80% {
     scale: 1.2;
   }
   100% {
     scale: 1;
-    transform: rotate(-720deg);
+    transform: rotate(-1080deg);
     border-radius: 8px;
   }
 }

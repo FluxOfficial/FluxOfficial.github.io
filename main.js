@@ -289,6 +289,7 @@ function fetchalldata() {
   }
 }
 window.onload = function() {
+  document.getElementsByClassName('logo')[0].classList.add("animated");
   document.getElementById("myUL").style.display = "none";
   localStorage.setItem("genrelast", "");
   localStorage.setItem("qualitylast", "");
@@ -317,5 +318,14 @@ window.onscroll = function() {
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
-  // document.getElementsByClassName('logo')[0].style.animation="logohyper 600ms";
 }
+$(".logo").bind("webkitAnimationEnd mozAnimationEnd animationEnd", function(){
+  $(this).removeClass("animated")  
+})
+
+$(".logo").hover(function(){
+  $(this).addClass("animated");     
+})
+setInterval(function() {
+  document.getElementsByClassName('logo')[0].classList.add("animated");
+}, 10000);
