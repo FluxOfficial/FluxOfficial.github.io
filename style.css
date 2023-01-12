@@ -206,13 +206,37 @@ backdrop-filter: blur(9.6px);
     filter: blur(0);
   }
 } 
-@media only screen and (max-width: 500px) {
+@media (max-width: 500px) {
   .homebuttons {
     display: none;
   }
   .browsebutton {
     display: block !important;
   }
+  :is(#genre:hover div, #quality:hover div,  #year:hover div) {
+   display: none;
+  }
+}
+.list {
+  z-index: 10;
+  position: fixed;
+  left: 50%;
+  top: 180px;
+  transform: translateX(-50%);
+  height: 400px;
+  width: 80%;
+  display: none;
+  flex-direction: column;
+  overflow-y:scroll; 
+  overflow-x:hidden;
+  color: white;
+}
+.list p {
+  font-family: quicksand;
+  font-size: 25pt;
+  text-align: center;
+  padding: 13px 0 13px 0;
+  cursor: pointer;
 }
 .browsebutton {
   display: none;
@@ -444,8 +468,44 @@ margin-bottom: 50px;
   display: none;
 }
 /*SEARCH*/
-#myUL li a:hover:not(.header) {
+#myUL li:hover{
   background-color: rgb(43, 43, 43);
+  border-radius: 10px;
+  cursor: pointer;
+}
+#myUL li{
+  transition: 100ms;
+  height: 55px;
+  line-height: 50px;
+  text-align: left; 
+  text-decoration: none;
+}
+#myUL li a{
+  line-height: 1.4;
+  vertical-align: middle;
+  margin-left: 50px;
+  font-size: 10pt;
+  color: white;
+  display: inline-block;
+  font-family: quicksand;
+}
+#myUL li img {
+ position: absolute; 
+ margin-left: 10px;
+ width: 30px;
+ height: 40px;
+ border-radius: 4px;
+ margin-top: 7.5px;
+}
+#myUL {
+  list-style-type: none;
+  display: none;
+  position: fixed;
+  background-color: rgb(24, 24, 24);
+  overflow-x: hidden;
+  height: 40%;
+  border-radius: 10px;
+  z-index: 11;
 }
 #myInput {
   background: rgb(22, 22, 22);
@@ -603,7 +663,7 @@ margin-bottom: 50px;
   margin: 10px 20px 10px 20px;
   zoom: 1.1;
 }
-.box div {
+.listcontainer {
   visibility: hidden;
   transition: 200ms;
   filter: blur(5px);
@@ -619,34 +679,22 @@ margin-bottom: 50px;
 #genre:hover, #year:hover, #quality:hover {
   z-index: 100;
 }
-#genre:hover div {
+:is(#genre:hover div, #quality:hover div,  #year:hover div) {
   visibility: visible;
   opacity: 1;
   filter: blur(0);
 }
-#quality:hover div {
-  visibility: visible;
-  opacity: 1;
-  filter: blur(0);
-}
-#year:hover div {
-  visibility: visible;
-  opacity: 1;
-  filter: blur(0);
-}
-.box div p {
+.listcontainer p {
   margin-bottom: -10px;
   transition: 200ms;
-}
-.box:hover div p {
   padding: 5px 0 5px 8px;
   margin-bottom: 0;
 }
-.box div p:hover {
+.listcontainer p:hover {
   color: white;
   transition: 200ms;
 }
-.box div p:last-child {
+.listcontainer p:last-child {
   padding-bottom:10px;
 }
 .container {

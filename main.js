@@ -1,4 +1,3 @@
-
 function search() {
   document.getElementById("myUL").style.display = "block";
   var input, filter, ul, li, a, i, txtValue;
@@ -120,38 +119,38 @@ function result(filter, type) {
     document.getElementsByClassName("noresults")[0].style.transform = "translateY(50%)"
   }
 }
-function specify(element){
+function specify(element) {
   var src = element.parentNode.id;
-  (document.getElementById(src)).getElementsByTagName("a")[0].innerText = element.innerText;
-  if (element.innerText == "All") {
+  (document.getElementById(src)).getElementsByTagName("a")[0].innerHTML = element.innerHTML;
+  if (element.innerHTML == "All") {
     result("",src)
   }
   else {
     if (src == "year"){
-      if (element.innerText == "70s"){
+      if (element.innerHTML == "70s"){
         result(Number("1970"),src);
       }
-      else if (element.innerText == "80s") {
+      else if (element.innerHTML == "80s") {
         result(Number("1980"),src);
       }
-      else if (element.innerText == "90s") {
+      else if (element.innerHTML == "90s") {
         result(Number("1990"),src);
       }
-      else if (element.innerText == "2000s") {
+      else if (element.innerHTML == "2000s") {
         result(Number("2000"),src);
       }
-      else if (element.innerText == "2010s") {
+      else if (element.innerHTML == "2010s") {
         result(Number("2010"),src);
       }
-      else if (element.innerText == "2020s") {
+      else if (element.innerHTML == "2020s") {
         result(Number("2020"),src);
       }
-      else if (element.innerText == "New") {
+      else if (element.innerHTML == "New") {
         result(Number(new Date().getFullYear()),src);
       }
     }
     else {
-      result((element.innerText).toLowerCase(),src);
+      result((element.innerHTML).toLowerCase(),src);
     }
   }
 }
@@ -159,6 +158,8 @@ window.onblur = function() {
   off();
 }
 function off() {
+  document.getElementsByClassName("list")[0].innerHTML = '';
+  document.getElementsByClassName("list")[0].style.display = "none"
   document.getElementById("nav-icon4").classList.remove("open");
   document.getElementById("overlay").style.display = "none";
   document.getElementsByClassName("contact")[0].style.display = "none"
@@ -171,6 +172,7 @@ function off() {
 function watch() {
   localStorage.setItem("last", "watch");
   document.getElementById("overlay").style.display = "block"
+  document.getElementById("overlay").style.background = 'rgba(0, 0, 0, 0.48)'
   document.getElementsByClassName("selector")[0].style.display = "block"
   document.getElementsByClassName("videoplayer")[0].style.display = "none"
   document.getElementById("download").style.display = "none"
@@ -179,13 +181,29 @@ function watch() {
 function down() {
   localStorage.setItem("last", "download");
   document.getElementById("overlay").style.display = "block"
+  document.getElementById("overlay").style.background = 'rgba(0, 0, 0, 0.48)'
   document.getElementsByClassName("selector")[0].style.display = "block"
   document.getElementsByClassName("videoplayer")[0].style.display = "none"
   document.getElementById("download").style.display = "none"
   document.getElementsByTagName("html")[0].style.overflowY = "hidden"
 }
+function sort(element) {
+  if (window.innerWidth < 500) {
+    document.getElementsByClassName("list")[0].style.display = "flex"
+    document.getElementById("overlay").style.display = "block"
+    document.getElementById("overlay").style.background = 'rgba(0, 0, 0, 0.8)'
+    document.getElementsByTagName("html")[0].style.overflowY = "hidden"
+    for (let i = 0; i < (element.getElementsByClassName("listcontainer")[0]).getElementsByTagName("p").length; i ++) {
+      const p = document.createElement("p");
+      p.innerText = (element.getElementsByClassName("listcontainer")[0]).getElementsByTagName("p")[i].innerText;
+      p.setAttribute('onclick','((document.getElementById("' + element.id + '")).getElementsByClassName("listcontainer")[0]).getElementsByTagName("p")[' + i + '].click()');
+      document.getElementsByClassName("list")[0].append(p);
+    }
+  }
+}
 function showcontact() {
   document.getElementById("overlay").style.display = "block"
+  document.getElementById("overlay").style.background = 'rgba(0, 0, 0, 0.48)'
   document.getElementsByClassName("contact")[0].style.display = "block"
   document.getElementsByTagName("html")[0].style.overflowY = "hidden"
 }
@@ -244,6 +262,7 @@ function menu () {
   document.getElementsByClassName("dropdown")[0].style.opacity = 1
   document.getElementsByClassName("dropdown")[0].style.transform = "translateY(0)"
   document.getElementById("overlay").style.display = "block"
+  document.getElementById("overlay").style.background = 'rgba(0, 0, 0, 0.48)'
   document.getElementsByTagName("html")[0].style.overflowY = "hidden"
   document.getElementById("nav-icon4").classList.add("open");
   }
@@ -301,8 +320,11 @@ window.onload = function() {
     title = ((((document.getElementsByClassName("recent")[0]).getElementsByClassName("item"))[i]).getElementsByClassName("movienames")[0].innerText);
     const li = document.createElement("li");
     const a = document.createElement("a");
+    const img = document.createElement("img");
     a.innerText = title;
-    a.setAttribute('onclick','((document.getElementsByClassName("recent")[0]).getElementsByClassName("item"))[' + i + '].click()');
+    li.setAttribute('onclick','((document.getElementsByClassName("recent")[0]).getElementsByClassName("item"))[' + i + '].click()');
+    img.src = ((((document.getElementsByClassName("recent")[0]).getElementsByClassName("item"))[i]).getElementsByClassName("thumbnail")[0].src);
+    (document.getElementById("myUL").appendChild(li)).appendChild(img);
     (document.getElementById("myUL").appendChild(li)).appendChild(a);
   }
   result();
@@ -318,6 +340,9 @@ window.onscroll = function() {
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+}
+function alfabetical (){
+  
 }
 $(".logo").bind("webkitAnimationEnd mozAnimationEnd animationEnd", function(){
   $(this).removeClass("animated")  

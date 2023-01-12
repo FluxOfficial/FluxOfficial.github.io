@@ -18,33 +18,10 @@
 </head>
 <style>
   #myUL {
-    list-style-type: none;
-    display: none;
-    position: fixed;
     top: 152px;
     left: 50%;
     transform: translateX(-50%);
     width: 300px;
-    background-color: rgb(24, 24, 24, 0.98);
-    border-radius: 20px;
-    z-index: 10;
-    height:40%;
-    overflow-x: hidden;
-  }
-  
-  #myUL li a {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 10px;
-    text-decoration: none;
-    font-size: 12pt;
-    color: white;
-    display: block;
-    font-family: quicksand;
-    text-align: left;
-    transition: 200ms;
-    border-radius: 8px;
-    cursor: pointer;
   }
   .search {
     top: 110px;
@@ -64,7 +41,7 @@
   }
   </style>
 
-<body>
+<body onload="alfabetical()">
   <div class="loader">
     <svg class="ring" viewBox="25 25 50 50" stroke-width="5">
       <circle cx="50" cy="50" r="20" />
@@ -79,10 +56,10 @@
   
   <div class="container2" style="top: 190px;">
     <div class="container">
-      <div id="genre" class="box">&nbsp;&nbsp;Genre:
+      <div onclick="sort(this)" id="genre" class="box">&nbsp;&nbsp;Genre:
         <a>All</a>
         <i style="padding-left: 3px;" class="fa fa-sort"></i>
-        <div class="list" id="genre">
+        <div id="genre" class="listcontainer">
         <br>
         <p onclick="specify(this)">All</p>
         <p onclick="specify(this)">Action</p>
@@ -104,10 +81,10 @@
         </div>
       </div>
     
-      <div id="quality" class="box">&nbsp;&nbsp;Quality:
+      <div onclick="sort(this)" id="quality" class="box">&nbsp;&nbsp;Quality:
         <a>All</a>
         <i style="padding-left: 3px;" class="fa fa-sort"></i>
-        <div id="quality">
+        <div id="quality" class="listcontainer">
         <br>
         <p onclick="specify(this)">All</p>
         <p onclick="specify(this)">4K</p>
@@ -116,10 +93,10 @@
         </div>
       </div>
 
-      <div id="year" class="box">&nbsp;&nbsp;Year:
+      <div onclick="sort(this)" id="year" class="box">&nbsp;&nbsp;Year:
         <a>All</a>
         <i style="padding-left: 3px;" class="fa fa-sort"></i>
-        <div id="year">
+        <div id="year" class="listcontainer">
         <br>
         <p onclick="specify(this)">All</p>
         <p onclick="specify(this)">New</p>
@@ -186,6 +163,8 @@
     </div>
   </div>
   <div id="overlay" onclick="off()"></div>
+  <div class="list" onclick="off()">
+  </div>
   <form class="contact"  action="https://formsubmit.co/213153c9e78cadd2bd1a111bc371d0fd" method="POST" target="_blank" >
     <h1>Contact Us</h1>
     <p>We'd Love To Hear From You!</p>
