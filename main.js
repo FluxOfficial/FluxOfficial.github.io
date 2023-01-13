@@ -28,6 +28,7 @@ function search() {
   }
 }
 window.onclick = function(e) {
+  // should be fixed
  document.getElementById("myUL").style.display = "none";
 }
 function keypress(e) {
@@ -56,9 +57,11 @@ function result(filter, type) {
   }
   document.getElementById("myInput").value = localStorage.getItem("input");
   if (localStorage.getItem("count") == null){
+    // should be fixed
     document.getElementById("browseres").innerHTML = "Results for: ";
   }
   else {
+    // should be fixed
     document.getElementById("browseres").innerHTML = "Results for: " + '"' + localStorage.getItem("input") + '"' + " (" + localStorage.getItem("count") + ")";
   }
   var search = (localStorage.getItem("input")).toLowerCase();
@@ -158,8 +161,6 @@ window.onblur = function() {
   off();
 }
 function off() {
-  document.getElementsByClassName("list")[0].innerHTML = '';
-  document.getElementsByClassName("list")[0].style.display = "none"
   document.getElementById("nav-icon4").classList.remove("open");
   document.getElementById("overlay").style.display = "none";
   document.getElementsByClassName("contact")[0].style.display = "none"
@@ -167,6 +168,11 @@ function off() {
   document.getElementsByClassName("dropdown")[0].style.visibility = "hidden"
   document.getElementsByClassName("dropdown")[0].style.opacity = 0
   document.getElementsByClassName("dropdown")[0].style.transform = "translateY(-100%)"
+  if(document.getElementsByClassName("list")[0]){
+    document.getElementsByClassName("list")[0].innerHTML = '';
+    document.getElementsByClassName("list")[0].style.display = "none"
+  }
+  // should be fixed
   document.getElementsByClassName("selector")[0].style.display = "none"
 }
 function watch() {
