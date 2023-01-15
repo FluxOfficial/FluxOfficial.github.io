@@ -2,6 +2,167 @@ document.write(`
 
     <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
       <div style="width: 100%;">
+        <img class="thumbnail" src="https://img.yts.mx/assets/images/movies/Harry_Potter_and_the_Deathly_Hallows_Part_2_2011/medium-cover.jpg">
+      </div>
+      <a class="movienames">Harry Potter and the Deathly Hallows: Part 2 (2011)</a>
+      <a class="viewdetails">View Details</a>
+      <a class="genre">Action Adventure Family Fantasy Mystery</a>
+      <a class="invisible quality">720p 1080p 4K</a>
+      <a class="invisible magnetURI">
+      <span class="720p">magnet:?xt=urn:btih:EF9E954256B3965B3685940318CE7B7270A5D3E2&dn=Harry+Potter+and+the+Deathly+Hallows%3A+Part+2+%282011%29+%5B720p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="1080p">magnet:?xt=urn:btih:F08FFD1B898307A70600F5BCBCC95839804025D7&dn=Harry+Potter+and+the+Deathly+Hallows%3A+Part+2+%282011%29+%5B1080p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="4K">magnet:?xt=urn:btih:4B899C8B28285B722D56E451A2101BED874431D7&dn=Harry+Potter+and+the+Deathly+Hallows%3A+Part+2+%282011%29+%5B2160p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      </a>
+      <a class="invisible sypnosis">Harry Potter and the Deathly Hallows: Part 2 is the second and final part of the seventh and final book in the Harry Potter series by J.K. Rowling. The story picks up where the first part left off, with Harry, Ron and Hermione continuing on their journey to destroy the remaining Horcruxes and defeat Lord Voldemort once and for all. Along the way, they face their toughest challenges yet, including a final showdown with Voldemort and his Death Eaters at Hogwarts.
+      As the story progresses, the trio discovers the truth about the fabled Deathly Hallows and their own destinies, and must also confront the ultimate sacrifice they must make to defeat Voldemort. The story ends with a dramatic and emotional climax in which Harry and his friends must confront and defeat Voldemort in a final battle, leading to a shocking revelation about the true nature of Harry's power and the prophecy surrounding him.
+      The novel also explores deeper themes of love, sacrifice, and the nature of good and evil, and brings the series to a satisfying and emotional conclusion. The novel also includes the final confrontation between Harry and Voldemort, the death of major characters and the resolution of the love story between Harry and Ginny.</a>
+      <a class="invisible trailer">https://www.youtube.com/embed/5NYt1qirBWg</a>
+    </div>
+    
+    <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
+      <div style="width: 100%;">
+        <img class="thumbnail" src="https://img.yts.mx/assets/images/movies/Harry_Potter_and_the_Deathly_Hallows_Part_1_2010/medium-cover.jpg">
+      </div>
+      <a class="movienames">Harry Potter and the Deathly Hallows: Part 1 (2010)</a>
+      <a class="viewdetails">View Details</a>
+      <a class="genre">Action Adventure Family Fantasy Mystery</a>
+      <a class="invisible quality">720p 1080p 4K</a>
+      <a class="invisible magnetURI">
+      <span class="720p">magnet:?xt=urn:btih:D1766D6B7FE09E35C9A7471761D629B1EB7B34A4&dn=Harry+Potter+and+the+Deathly+Hallows%3A+Part+1+%282010%29+%5B720p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="1080p">magnet:?xt=urn:btih:0BFD93D4877D96DF612C3B720580519C4287BEDB&dn=Harry+Potter+and+the+Deathly+Hallows%3A+Part+1+%282010%29+%5B1080p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="4K">magnet:?xt=urn:btih:3E671514D5EFC1DC49F98023CF4B5619DF9BBFFC&dn=Harry+Potter+and+the+Deathly+Hallows%3A+Part+1+%282010%29+%5B2160p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      </a>
+      <a class="invisible sypnosis">Harry Potter and the Deathly Hallows: Part 1 is the first part of the seventh and final book in the Harry Potter series by J.K. Rowling. The story begins with Harry, Ron and Hermione leaving Hogwarts and going on a journey to find and destroy the remaining Horcruxes, objects containing a piece of Lord Voldemort's soul, in order to defeat him once and for all. Along the way, they face many challenges and dangers, and must also come to terms with the losses they have suffered and the sacrifices they must make.
+      As the story progresses, Harry, Ron and Hermione learn about the fabled Deathly Hallows and the true nature of Voldemort's power, and must also confront their own feelings for each other. The story ends with a dramatic climax in which Harry and his friends must confront and defeat Voldemort and his followers in a fierce battle at the Forbidden Forrest.
+      The novel also introduces new characters such as Xenophilius Lovegood, Luna Lovegood's father and Griphook, a goblin and a member of the Gringotts Wizarding Bank. The novel also explores deeper themes of love, sacrifice, and the nature of good and evil.</a>
+      <a class="invisible trailer">https://www.youtube.com/embed/MxqsmsA8y5k</a>
+    </div>
+
+    <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
+      <div style="width: 100%;">
+        <img class="thumbnail" src="https://img.yts.mx/assets/images/movies/Harry_Potter_and_the_Half_Blood_Prince_2009/medium-cover.jpg">
+      </div>
+      <a class="movienames">Harry Potter and the Half-Blood Prince (2009)</a>
+      <a class="viewdetails">View Details</a>
+      <a class="genre">Action Adventure Family Fantasy Mystery</a>
+      <a class="invisible quality">720p 1080p 4K</a>
+      <a class="invisible magnetURI">
+      <span class="720p">magnet:?xt=urn:btih:70B03F50A2AF3C19D5B7640E4F4B86764599DF9E&dn=Harry+Potter+and+the+Half-Blood+Prince+%282009%29+%5B720p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="1080p">magnet:?xt=urn:btih:25400BAD16959E82554540A7A941E9BE70A6C705&dn=Harry+Potter+and+the+Half-Blood+Prince+%282009%29+%5B1080p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="4K">magnet:?xt=urn:btih:1F5BF4CABF138BEAE6497CFAEC449B5807D315AC&dn=Harry+Potter+and+the+Half-Blood+Prince+%282009%29+%5B2160p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      </a>
+      <a class="invisible sypnosis">Harry Potter and the Half-Blood Prince is the sixth book in the Harry Potter series by J.K. Rowling. Harry returns to Hogwarts for his sixth year, where he finds the wizarding world on the brink of war. Harry is given a copy of an old textbook that once belonged to a mysterious wizard known as the Half-Blood Prince, which contains annotations and spells that make him excel in his potions class. Harry also starts to uncover the past of Lord Voldemort and his family through the memories of Professor Dumbledore. The story ends with a dramatic climax in which Harry, his friends, and members of the Order of Phoenix must confront and defeat Voldemort and his followers in a fierce battle at Hogwarts. The novel also delves deeper into the past of the characters and the motivations of Lord Voldemort and his followers, leading to a shocking revelation that changes Harry's understanding of his own past.</a>
+      <a class="invisible trailer">https://www.youtube.com/embed/ZgMIlFDIPNc</a>
+    </div>
+
+    <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
+      <div style="width: 100%;">
+        <img class="thumbnail" src="https://img.yts.mx/assets/images/movies/Harry_Potter_and_the_Order_of_the_Phoenix_2007/medium-cover.jpg">
+      </div>
+      <a class="movienames">Harry Potter and the Order of the Phoenix (2007)</a>
+      <a class="viewdetails">View Details</a>
+      <a class="genre">Action Adventure Family Fantasy Mystery</a>
+      <a class="invisible quality">720p 1080p 4K</a>
+      <a class="invisible magnetURI">
+      <span class="720p">magnet:?xt=urn:btih:9D70DBBF72C98E10C7909E4AB1DAAAF1D6FD4D94&dn=Harry+Potter+and+the+Order+of+the+Phoenix+%282007%29+%5B720p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="1080p">magnet:?xt=urn:btih:4627CE4D29D41D8D04113868F14F85216D7BC6DF&dn=Harry+Potter+and+the+Order+of+the+Phoenix+%282007%29+%5B1080p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="4K">magnet:?xt=urn:btih:B97206819E22A30CB738850BD1A6EAB870F18CC1&dn=Harry+Potter+and+the+Order+of+the+Phoenix+%282007%29+%5B2160p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      </a>
+      <a class="invisible sypnosis">Harry Potter and the Order of Phoenix is the fifth book in the Harry Potter series by J.K. Rowling. It follows Harry as he returns to Hogwarts for his fifth year and finds the wizarding world in denial about Voldemort's return. Harry and his friends Ron and Hermione form a secret group, "Dumbledore's Army," to teach their classmates real defense against the dark arts, as they believe the new teacher is not providing them with the right education. Along the way, Harry is plagued by visions, which he believes are connected to Voldemort's plan to return to power. The story ends with a dramatic climax in which Harry, his friends, and members of the Order of Phoenix must confront and defeat Voldemort and his followers in a fierce battle at the Ministry of Magic. New characters are introduced such as Luna Lovegood and Nymphadora Tonks.</a>
+      <a class="invisible trailer">https://www.youtube.com/embed/y6ZW7KXaXYk</a>
+    </div>
+
+    <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
+      <div style="width: 100%;">
+        <img class="thumbnail" src="https://img.yts.mx/assets/images/movies/Harry_Potter_and_the_Goblet_of_Fire_2005/medium-cover.jpg">
+      </div>
+      <a class="movienames">Harry Potter and the Goblet of Fire (2005)</a>
+      <a class="viewdetails">View Details</a>
+      <a class="genre">Action Adventure Family Fantasy Mystery</a>
+      <a class="invisible quality">720p 1080p 4K</a>
+      <a class="invisible magnetURI">
+      <span class="720p">magnet:?xt=urn:btih:08DF8516BBD3D6D37CFD3BF8D0DB7EEFC0F1B38F&dn=Harry+Potter+and+the+Goblet+of+Fire+%282005%29+%5B720p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="1080p">magnet:?xt=urn:btih:A3C6F308AD13D4F192DB1E3CBC3A4D6C72CE30B0&dn=Harry+Potter+and+the+Goblet+of+Fire+%282005%29+%5B1080p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="4K">magnet:?xt=urn:btih:A49A9C4FE044A5969D6D4DC113F83792EC1A30EB&dn=Harry+Potter+and+the+Goblet+of+Fire+%282005%29+%5B2160p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      </a>
+      <a class="invisible sypnosis">Harry Potter and the Goblet of Fire is the fourth novel in the Harry Potter series written by J.K. Rowling. The story begins with Harry returning to Hogwarts for his fourth year and the school is selected to host the prestigious Triwizard Tournament, an international competition between three wizarding schools. To Harry's surprise, his name is chosen as the fourth champion by the Goblet of Fire, despite him not having entered his own name.
+
+      As the tournament progresses, Harry must compete in dangerous tasks while also dealing with the return of Lord Voldemort who has regained his body and is searching for a way to return to full power. Harry also struggles with his growing feelings for his friend Hermione, and the arrival of a new Defense Against the Dark Arts teacher, Mad-Eye Moody. Along the way, Harry, Ron, and Hermione uncover a sinister plot by Voldemort and his Death Eaters to use the tournament to bring him back to power and put an end to it.
+      
+      The story ends with a dramatic climax in which Harry must confront and defeat Voldemort and his followers in a fierce battle at the Ministry of Magic, leading to a shocking revelation about the true identity of Voldemort's loyal follower, Barty Crouch Jr. The novel also introduces new characters such as Cedric Diggory, a Hogwarts student and a champion in the tournament, and Viktor Krum, a champion from Durmstrang Institute.</a>
+      <a class="invisible trailer">https://www.youtube.com/embed/3EGojp4Hh6I</a>
+    </div>
+
+    <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
+      <div style="width: 100%;">
+        <img class="thumbnail" src="https://img.yts.mx/assets/images/movies/Harry_Potter_and_the_Prisoner_of_Azkaban_2004/medium-cover.jpg">
+      </div>
+      <a class="movienames">Harry Potter and the Prisoner of Azkaban (2004)</a>
+      <a class="viewdetails">View Details</a>
+      <a class="genre">Action Adventure Family Fantasy Mystery</a>
+      <a class="invisible quality">720p 1080p</a>
+      <a class="invisible magnetURI">
+      <span class="720p">magnet:?xt=urn:btih:3566CE35C49F1DC9A3AD0C3B7A6389B6F59E5C41&dn=Harry+Potter+and+the+Prisoner+of+Azkaban+%282004%29+%5B720p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="1080p">magnet:?xt=urn:btih:5990096A2E13079C4B5C8AEC516F3FA660206E7A&dn=Harry+Potter+and+the+Prisoner+of+Azkaban+%282004%29+%5B1080p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="4K"></span>
+      </a>
+      <a class="invisible sypnosis">Harry Potter and the Prisoner of Azkaban is the third novel in the Harry Potter series written by J.K. Rowling. The story begins with Harry returning to Hogwarts for his third year, and soon learns that a dangerous prisoner named Sirius Black has escaped from the wizarding prison of Azkaban and is believed to be after him. As Harry, Ron, and Hermione investigate, they learn that Sirius Black is actually a close family friend and may have been falsely accused of a crime. Along the way, Harry discovers that his past and his family's past is more complex and dangerous than he ever imagined. He also discovers that the prison guards, Dementors, are stationed at Hogwarts to protect the students from Sirius Black, but their presence only makes the school feel more oppressive. As the story progresses, Harry learns about the mysterious "animagus" and "time-turner" and how they relate to Sirius Black, as well as more about his past and his connection to Lord Voldemort. The story ends with a thrilling climax in which Harry faces off against Sirius Black and learns the truth about his past and his family. The novel also introduces new characters such as Remus Lupin, a werewolf and the new Defense Against the Dark Arts teacher, and Peter Pettigrew, an old friend of Harry's father who is believed to have betrayed and killed Harry's parents.</a>
+      <a class="invisible trailer">https://www.youtube.com/embed/1ZdlAg3j8nI</a>
+    </div>
+
+    <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
+      <div style="width: 100%;">
+        <img class="thumbnail" src="https://img.yts.mx/assets/images/movies/Harry_Potter_and_the_Chamber_of_Secrets_2002/medium-cover.jpg">
+      </div>
+      <a class="movienames">Harry Potter and the Chamber of Secrets (2002)</a>
+      <a class="viewdetails">View Details</a>
+      <a class="genre">Action Adventure Family Fantasy Mystery</a>
+      <a class="invisible quality">720p 1080p</a>
+      <a class="invisible magnetURI">
+      <span class="720p">magnet:?xt=urn:btih:D08A27C44BF52B5CC5512C7BFDA1907483ED890D&dn=Harry+Potter+and+the+Chamber+of+Secrets+%282002%29+%5B720p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="1080p">magnet:?xt=urn:btih:F34FAF31510303BB9AA325F0B22187B1CD54E144&dn=Harry+Potter+and+the+Chamber+of+Secrets+%282002%29+%5B1080p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="4K"></span>
+      </a>
+      <a class="invisible sypnosis">Harry Potter and the Chamber of Secrets is the second novel in the Harry Potter series written by J.K. Rowling. The story picks up where the previous book left off, with Harry returning to Hogwarts for his second year. Shortly after his arrival, strange things begin to happen at the school and students are attacked by an unknown creature. Harry, Ron and Hermione soon discover that the Chamber of Secrets, a hidden chamber deep within the school, has been opened, and that the creature responsible for the attacks is a basilisk, controlled by the dark wizard, Tom Riddle, also known as Lord Voldemort. Together, the three friends set out to find the entrance to the chamber and put a stop to the attacks, uncovering a shocking secret about the school's past and Harry's own family in the process. Along the way, Harry also discovers that he has the ability to speak Parseltongue, the language of snakes, leading to suspicions that he may be connected to the chamber in some way. The story ends with a dramatic final confrontation with the basilisk and Voldemort's heir, revealing the truth behind the chamber and the true identity of the Heir of Slytherin.</a>
+      <a class="invisible trailer">https://www.youtube.com/embed/jBltxS8HfQ4</a>
+    </div>
+
+    <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
+      <div style="width: 100%;">
+        <img class="thumbnail" src="https://img.yts.mx/assets/images/movies/Harry_Potter_and_the_Sorcerers_Stone_2001/medium-cover.jpg">
+      </div>
+      <a class="movienames">Harry Potter and the Sorcerer's Stone (2001)</a>
+      <a class="viewdetails">View Details</a>
+      <a class="genre">Action Adventure Family Fantasy</a>
+      <a class="invisible quality">720p 1080p</a>
+      <a class="invisible magnetURI">
+      <span class="720p">magnet:?xt=urn:btih:D956BACD72C22B54989793B3E8839BD6122625E0&dn=Harry+Potter+and+the+Sorcerer%27s+Stone+%282001%29+%5B720p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="1080p">magnet:?xt=urn:btih:65D6A3734D00034ABD9BFFEF4EBE24C42F17BA48&dn=Harry+Potter+and+the+Sorcerer%27s+Stone+%282001%29+%5B1080p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      <span class="4K">magnet:?xt=urn:btih:C36F3B7090B996353EEA784972EA8DC19C5FF780&dn=My+Policeman+%282022%29+%5B2160p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce</span>
+      </a>
+      <a class="invisible sypnosis">Harry Potter and the Sorcerer's Stone is the first novel in the Harry Potter series written by J.K. Rowling. The story follows a young orphan boy named Harry Potter who discovers that he is a wizard and is invited to attend Hogwarts School of Witchcraft and Wizardry. At Hogwarts, Harry makes new friends and enemies and learns about the magical world. He also discovers that a powerful sorcerer, Lord Voldemort, is attempting to return to power and that he is connected to Voldemort in a way that makes him a target. Along with his friends Hermione Granger and Ron Weasley, Harry sets out to find the Sorcerer's Stone, a powerful object that could help Voldemort achieve immortality. Along the way, Harry must overcome obstacles and defeat Voldemort's followers, ultimately leading to a thrilling final confrontation.</a>
+      <a class="invisible trailer">https://www.youtube.com/embed/VyHV0BRtdxo</a>
+    </div>
+
+    <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
+      <div style="width: 100%;">
+        <img class="thumbnail" src="https://img.yts.mx/assets/images/movies/beautiful_boy_2018/medium-cover.jpg">
+      </div>
+      <a class="movienames">Beautiful Boy (2018)</a>
+      <a class="viewdetails">View Details</a>
+      <a class="genre">Drama Biography</a>
+      <a class="invisible quality">720p 1080p</a>
+      <a class="invisible magnetURI">
+      <span class="720p">magnet:?xt=urn:btih:63C3313252BF21CEADFC111F67382EB093F7155E&dn=Beautiful+Boy+%282018%29+%5B720p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337</span>
+      <span class="1080p">magnet:?xt=urn:btih:5CCB9B0E5C43C30D5E5452363165633C47D40CBF&dn=Beautiful+Boy+%282018%29+%5B1080p%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337</span>
+      <span class="4K"></span>
+      </a>
+      <a class="invisible sypnosis">Based on the best-selling pair of memoirs from father and son David and Nic Sheff, Beautiful Boy chronicles the heartbreaking and inspiring experience of survival, relapse and recovery in a family coping with addiction over many years.</a>
+      <a class="invisible trailer">https://www.youtube.com/embed/y23HyopQxEg</a>
+    </div>
+
+    <div class="item" onclick="location.href='./movies/dynamic.html'; alldata(this)" >
+      <div style="width: 100%;">
         <img class="thumbnail" src="https://img.yts.mx/assets/images/movies/my_policeman_2022/medium-cover.jpg">
       </div>
       <a class="movienames">My Policeman (2022)</a>

@@ -337,10 +337,24 @@ window.onload = function() {
  }
 window.onscroll = function() {
   let mybutton = document.getElementsByClassName("topjumper")[0];
+  let searchbar = document.getElementsByClassName("search")[0];
   if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
     mybutton.style.display = "block"
   } else {
     mybutton.style.display = "none";
+  }
+  if (document.title == "Flux - Browse") {
+    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+      searchbar.style.position = "fixed";
+      searchbar.style.top = "80px";
+      document.getElementById("myUL").style.position = "fixed";
+      document.getElementById("myUL").style.top = "122px";
+    } else {
+      searchbar.style.position = "absolute";
+      searchbar.style.top = "110px";
+      document.getElementById("myUL").style.position = "absolute";
+      document.getElementById("myUL").style.top = "152px";
+    } 
   }
 }
 function topFunction() {

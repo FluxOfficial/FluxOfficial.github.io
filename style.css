@@ -500,12 +500,10 @@ margin-bottom: 50px;
 #myUL {
   list-style-type: none;
   display: none;
-  position: fixed;
   background-color: rgb(24, 24, 24);
   overflow-x: hidden;
   height: 40%;
   border-radius: 10px;
-  z-index: 11;
 }
 #myInput {
   background: rgb(22, 22, 22);
@@ -521,6 +519,15 @@ margin-bottom: 50px;
   display: none; /* for Chrome, Safari, and Opera */
 }
 /*INFO*/
+.coming {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  min-width: 400px;
+  max-width: 800px;
+  margin-top: -2vw;
+}
 .welcome {
   color: silver;
   font-family: quicksand;
