@@ -92,6 +92,16 @@ backdrop-filter: blur(9.6px);
   z-index: 10;
   color: white;
 }
+.progress {
+  position: fixed;
+  top: 45px;
+  left: 62px;
+  font-family: quicksand;
+  font-size: 12pt;
+  text-decoration: none;
+  z-index: 10;
+  color: white;
+}
 .homebuttons {
   position: fixed;
   right: 2%;
@@ -199,11 +209,9 @@ backdrop-filter: blur(9.6px);
 @keyframes appear {
   0% {
     opacity: 0;
-    filter: blur(2px);
   }
   100% {
     opacity: 1;
-    filter: blur(0);
   }
 } 
 @media (max-width: 500px) {
@@ -215,6 +223,9 @@ backdrop-filter: blur(9.6px);
   }
   :is(#genre:hover div, #quality:hover div,  #year:hover div) {
    display: none;
+  }
+  .titles:last-of-type {
+    margin-bottom: 80px !important;
   }
 }
 .list {
@@ -363,6 +374,9 @@ left: 50%;
 transform: translateX(-50%);
 text-align: center;
 margin-bottom: 50px;
+}
+.titles:last-of-type {
+  margin-bottom: 180px;
 }
 .name {
   font-size: 25pt;
@@ -557,7 +571,7 @@ margin-bottom: 50px;
   color: silver;
   font-family: quicksand;
   font-size: 14pt;
-  width: 80%;
+  width: 85%;
   text-align: center;
   letter-spacing: 1px;
   filter: brightness(0.8);
@@ -567,6 +581,14 @@ margin-bottom: 50px;
   transform: translateX(-50%);
   display: inline-block;
   font-stretch: semi-condensed;
+}
+.info a{
+  text-decoration: underline;
+  color: white;
+}
+.info a:hover{
+  color: rgb(223, 43, 43);
+  cursor: pointer;
 }
 /*BUTTONS*/
 .form {
@@ -834,6 +856,10 @@ margin-bottom: 50px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  width: 80%;
+  max-width: 500px;
+  height: 45vw;
+  max-height: 300px;
 }
 .bottomcontainer {
   position: fixed;
