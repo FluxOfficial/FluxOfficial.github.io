@@ -685,7 +685,7 @@ margin-bottom: 50px;
   width: 160px;
   padding-top: 5px;
   background-color: rgb(43, 43, 43);
-  filter: brightness(0.6);
+  filter: brightness(0.7);
   border-radius: 10px;
   cursor: pointer;
   display: inline-block;
@@ -716,6 +716,8 @@ margin-bottom: 50px;
 .listcontainer p {
   margin-bottom: -10px;
   transition: 200ms;
+}
+.box:hover .listcontainer p {
   padding: 5px 0 5px 8px;
   margin-bottom: 0;
 }
