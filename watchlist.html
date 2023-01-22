@@ -4,12 +4,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> -->
 <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css">
 <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/sharp-solid.css">
 
 <head>
   <link rel="icon" type="image/x-icon" href="logo 2.0.ico">
-  <title>Flux - Home</title>
+  <title>Flux - Watchlist</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script defer src="main.js"></script>
@@ -54,18 +55,17 @@
 
 <div class="content">
   <div class="container2" style="top:85px">
-  <h3 class="welcome" style="margin-bottom: 10px;">Welcome to <span class="shine">FLUX</span></h3>
-  <p class="info" style="margin-bottom: 15px;">A safe place to download and watch all of your favorite movies with your friends and <br> family, it's
-    totally free and safe without any risks!</p>
-  <p style="margin-bottom: 15px; font-size: 9pt;" class="info">
+  <h3 class="welcome" style="margin-bottom: 8px;">My Watchlist</h3>
+  <p class="info" style="margin-bottom: 15px;">All your favorite movies will be listed here!</p>
+  <p style="margin-bottom: 45px; font-size: 9pt;" class="info">
     <i class="fa fa-info-circle" aria-hidden="true"></i>
     It is recommended to use an ad blocker to avoid pop ups and ads. (ad blockers are free) Click <a href="https://helpcenter.getadblock.com/hc/en-us/articles/9738517413523-How-do-I-install-AdBlock-How-do-I-uninstall-AdBlock-" target="_blank" >here</a> for a guide to install adblocker.
   </p>
-  <p style="text-decoration: underline;font-size: 18pt;" class="info">Coming soon!</p>
-  <img class="coming" src="https://kinepolis.be/nl/sites/kinepolis.be.nl/files/styles/general_item_big/public/general_page/image/avatar_header_nl.png?itok=MUxUSZtn">
-  <p style="margin-bottom: 6px;" class="subtitles">Recently Added</p>
+  <p style="margin-bottom: 6px;" class="subtitles">Favorite Movies</p>
   <div class="break-tag"></div>
   <div class="recent" style="top: 30px;">
+    <p style="left: 50%; transform: translateX(-50%); position: absolute; color: white; font-size: 25pt; font-family: 'Roboto'; margin-top: 10px; text-align: center;">Coming soon!</p>
+    <!-- <script src="overview.js"></script> -->
   </div>
   </div>
   
@@ -74,8 +74,8 @@
   </ul>
   <div class="banner"></div>
   <nav class="homebuttons">
+    <a href="index.html">Home</a>
     <a href="browse.html">Browse</a>
-    <a href="watchlist.html">Watchlist</a>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a>
     <form autocomplete="off" onSubmit="return false;">
       <input id="myInput" class="search" onkeyup="search()" onkeypress="keypress(event)" type="text" placeholder="search">
@@ -89,11 +89,11 @@
     </div>
   </div>
   <div class="dropdown">
+    <a href="index.html">Home</a>
     <a href="browse.html">Browse</a>
-    <a href="watchlist.html">Watchlist</a>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a>
   </div>
-  
+  <button class="topjumper" onclick="topFunction()" title="Go to top"><i class="arrow up"></i></button>
   <a href="index.html" class="title">FL<span style="
   background-image: linear-gradient(5deg, #111010, #ca3025);
   background-size: 100%;
@@ -129,8 +129,6 @@
   </div>
   <button type="submit">Send</button>
 </form>
-<button class="topjumper" onclick="topFunction()" title="Go to top"><i class="arrow up"></i></button>
-<iframe src="database.html" onload="loaddb()" id="database"></iframe>
 <!-- <script type="text/javascript" src="vanilla-tilt.js"></script>
 <script type="text/javascript">
 	VanillaTilt.init(document.querySelectorAll(".item"), {

@@ -3,6 +3,7 @@ document.write(`
 <nav class="homebuttons">
     <a href="../index.html">Home</a>
     <a href="../browse.html">Browse</a>
+    <a href="../watchlist.html">Watchlist</a>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a>
 </nav>
 <div class="browsebutton">
@@ -14,8 +15,8 @@ document.write(`
   </div>
   <div class="dropdown">
     <a href="../index.html">Home</a>
+    <a href="../watchlist.html">Watchlist</a>
     <a href="../browse.html">Browse</a>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a>
   </div>
   <button class="topjumper" onclick="topFunction()" title="Go to top"><i class="arrow up"></i></button>
 <a href="../index.html" class="title">FL<span style="

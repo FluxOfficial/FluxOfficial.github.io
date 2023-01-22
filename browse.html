@@ -4,17 +4,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css">
+<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/sharp-solid.css">
 
 <head>
   <link rel="icon" type="image/x-icon" href="logo 2.0.ico">
   <title>Flux - Browse</title>
+  <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script defer src="main.js"></script>
   <script defer src="app.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="style.css">
 </head>
 <style>
   #myUL {
@@ -41,7 +40,7 @@
     background: #272727;
     font-family: "Roboto";
   }
-  </style>
+</style>
 
 <body onload="alfabetical()">
   <div class="loader">
@@ -50,9 +49,9 @@
     </svg>
   </div>
 
-  <div class="content">
+<div class="content">
 
-  <ul class="blockscroll" id="myUL">
+  <ul id="myUL">
     <div id="notfound">No Results</div>
   </ul>
   
@@ -115,18 +114,16 @@
     </div>
     <p class="subtitles" style="margin-bottom: 6px;">Browse</p>
     <div class="break-tag"></div>
-    <div id="recent" class="recent" style="top: 30px;">
-      <script src="overview.js"></script>
+    <div class="recent" style="top: 30px;">
     </div>
     <div class="noresults">No results found :(</div>
   </div>
-</div>
   <p id="browseres">Results for:</p>
   <div class="banner"></div>
   <nav class="homebuttons">
-    <a href="index.html">Home </a>
-    <a href="browse.html">Browse </a>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests </a> 
+    <a href="index.html">Home</a>
+    <a href="watchlist.html">Watchlist</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a> 
   </nav>
   <div class="browsebutton">
     <div id="nav-icon4" onclick="menu()">
@@ -137,10 +134,9 @@
   </div>
   <div class="dropdown">
     <a href="index.html">Home</a>
-    <a href="browse.html">Browse</a>
+    <a href="watchlist.html">Watchlist</a>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a>
   </div>
-  <button class="topjumper" onclick="topFunction()" title="Go to top"><i class="arrow up"></i></button>
   <a href="index.html" class="title">FL<span style="
     background-image: linear-gradient(5deg, #111010, #ca3025);
     background-size: 100%;
@@ -167,10 +163,13 @@
     </section>
     </div>
   </div>
-  <div id="overlay" onclick="off()"></div>
-  <div class="list" onclick="off()">
   </div>
-  <form class="contact"  action="https://formsubmit.co/213153c9e78cadd2bd1a111bc371d0fd" method="POST" target="_blank" >
+
+<button class="topjumper" onclick="topFunction()" title="Go to top"><i class="arrow up"></i></button>
+<div id="overlay" onclick="off()"></div>
+<div class="list" onclick="off()">
+</div>
+<form class="contact"  action="https://formsubmit.co/213153c9e78cadd2bd1a111bc371d0fd" method="POST" target="_blank" >
     <h1>Contact Us</h1>
     <p>We'd Love To Hear From You!</p>
     <div class="inputcontainer">
@@ -179,7 +178,8 @@
       <textarea type="text" id="msg" name="Message" placeholder="Message" required></textarea>
     </div>
     <button type="submit">Send</button>
-  </form>
+</form>
+<iframe src="database.html" onload="loaddb()" id="database"></iframe>
   <!-- <script type="text/javascript" src="vanilla-tilt.js"></script>
 <script type="text/javascript">
 	VanillaTilt.init(document.querySelectorAll(".item"), {
@@ -187,11 +187,11 @@
 		speed: 400
 	});
 </script> -->
-  <script>
+<script>
     $(window).on('load',function(){
       $(".loader").fadeOut(500);
       $(".content").fadeIn(1000);
     });
-    </script>
+</script>
 </body>
 </html>

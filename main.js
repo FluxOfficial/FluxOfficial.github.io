@@ -23,7 +23,7 @@ function search() {
       document.getElementById("myUL").style.height = "70px";
     }else{
       document.getElementById("notfound").style.display = "none";
-      document.getElementById("myUL").style.height = "40%";
+      document.getElementById("myUL").style.height = "40vh";
     }
   }
 }
@@ -64,9 +64,10 @@ function result(filter, type) {
     // should be fixed
     document.getElementById("browseres").innerHTML = "Results for: " + '"' + localStorage.getItem("input") + '"' + " (" + localStorage.getItem("count") + ")";
   }
-  var search = (localStorage.getItem("input")).toLowerCase();
-  var numb = ((document.getElementById("recent").childElementCount) * 2) - 2;
-  var title, genre, quality, year, counter;
+  let search = (localStorage.getItem("input")).toLowerCase();
+  let numb = document.getElementsByClassName("recent")[0].childElementCount;
+  let children  = document.getElementsByClassName("recent")[0].children;
+  let title, genre, quality, year, counter;
   if (type == "quality") {
     localStorage.setItem("qualitylast", filter);
   }
@@ -86,32 +87,32 @@ function result(filter, type) {
     localStorage.setItem("yearlast", "");
   }
   counter = 0;
-  for (let i = 0; i < numb; i += 2) {
-    title = ((((document.getElementById("recent")).getElementsByTagName("div"))[i]).getElementsByClassName("movienames")[0].innerText).toLowerCase();
-    genre = ((((document.getElementById("recent")).getElementsByTagName("div"))[i]).getElementsByClassName("genre")[0].innerText).toLowerCase();
-    quality = ((((document.getElementById("recent")).getElementsByTagName("div"))[i]).getElementsByClassName("quality")[0].innerText).toLowerCase();
-    year = ((((((document.getElementById("recent")).getElementsByTagName("div"))[i]).getElementsByClassName("movienames")[0].innerText).toLowerCase()).slice(-5)).slice(0, -1);
+  for (let i = 0; i < numb; i ++) {
+    title = ((children.item(i)).getElementsByClassName("movienames")[0].innerText).toLowerCase();
+    genre = ((children.item(i)).getElementsByClassName("genre")[0].innerText).toLowerCase();
+    quality = ((children.item(i)).getElementsByClassName("quality")[0].innerText).toLowerCase();
+    year = ((((children.item(i)).getElementsByClassName("movienames")[0].innerText).toLowerCase()).slice(-5)).slice(0, -1);
     if (title.includes(search)) {
       if (genre.includes(localStorage.getItem("genrelast")) && quality.includes(localStorage.getItem("qualitylast"))) {
         if (year >= Number(localStorage.getItem("yearlast")) && year < (Number(localStorage.getItem("yearlast")) + 10) || localStorage.getItem("yearlast") == "") {
-          ((document.getElementById("recent")).getElementsByTagName("div"))[i].style.display = "block"
+          children.item(i).style.display = "block"
         }
         else {
-          ((document.getElementById("recent")).getElementsByTagName("div"))[i].style.display = "none"
+          children.item(i).style.display = "none"
         }
       }
       else {
-        ((document.getElementById("recent")).getElementsByTagName("div"))[i].style.display = "none"
+        children.item(i).style.display = "none"
       }
     }
     else {
-      ((document.getElementById("recent")).getElementsByTagName("div"))[i].style.display = "none"
+      children.item(i).style.display = "none"
     }
-    if (((document.getElementById("recent")).getElementsByTagName("div"))[i].style.display == "none") {
+    if (children.item(i).style.display == "none") {
       counter += 1;
     }
   }
-  if (counter == (numb/2)) {
+  if (counter == numb ) {
     document.getElementsByClassName("noresults")[0].style.visibility = "visible"
     document.getElementsByClassName("noresults")[0].style.opacity = 1
     document.getElementsByClassName("noresults")[0].style.transform = "translateY(0)"
@@ -124,36 +125,37 @@ function result(filter, type) {
 }
 function specify(element) {
   var src = element.parentNode.id;
-  (document.getElementById(src)).getElementsByTagName("a")[0].innerHTML = element.innerHTML;
-  if (element.innerHTML == "All") {
-    result("",src)
+  (document.getElementById(src)).getElementsByTagName("a")[0].innerText = element.innerHTML;
+  let innercontent = element.innerHTML
+  if (innercontent == "All") {
+    result("",src);
   }
   else {
     if (src == "year"){
-      if (element.innerHTML == "70s"){
+      if (innercontent == "70s"){
         result(Number("1970"),src);
       }
-      else if (element.innerHTML == "80s") {
+      else if (innercontent == "80s") {
         result(Number("1980"),src);
       }
-      else if (element.innerHTML == "90s") {
+      else if (innercontent == "90s") {
         result(Number("1990"),src);
       }
-      else if (element.innerHTML == "2000s") {
+      else if (innercontent == "2000s") {
         result(Number("2000"),src);
       }
-      else if (element.innerHTML == "2010s") {
+      else if (innercontent == "2010s") {
         result(Number("2010"),src);
       }
-      else if (element.innerHTML == "2020s") {
+      else if (innercontent == "2020s") {
         result(Number("2020"),src);
       }
-      else if (element.innerHTML == "New") {
+      else if (innercontent == "New") {
         result(Number(new Date().getFullYear()),src);
       }
     }
     else {
-      result((element.innerHTML).toLowerCase(),src);
+      result((innercontent).toLowerCase(),src);
     }
   }
 }
@@ -161,6 +163,7 @@ window.onblur = function() {
   off();
 }
 function off() {
+  document.getElementById("overlay").style.background = 'rgba(0, 0, 0, 0.48)'
   document.getElementById("nav-icon4").classList.remove("open");
   document.getElementById("overlay").style.display = "none";
   document.getElementsByClassName("contact")[0].style.display = "none"
@@ -268,7 +271,12 @@ function menu () {
   document.getElementsByClassName("dropdown")[0].style.opacity = 1
   document.getElementsByClassName("dropdown")[0].style.transform = "translateY(0)"
   document.getElementById("overlay").style.display = "block"
-  document.getElementById("overlay").style.background = 'rgba(0, 0, 0, 0.48)'
+  if (document.getElementById("overlay").style.background != 'rgba(0, 0, 0, 0.8)') {
+    document.getElementById("overlay").style.background = 'rgba(0, 0, 0, 0.48)'
+  }
+  // else {
+    
+  // }
   document.getElementsByTagName("html")[0].style.overflowY = "hidden"
   document.getElementById("nav-icon4").classList.add("open");
   }
@@ -319,22 +327,41 @@ window.onload = function() {
   localStorage.setItem("genrelast", "");
   localStorage.setItem("qualitylast", "");
   localStorage.setItem("yearlast", "");
-  var numb, list, title;
-  numb = (((document.getElementsByClassName("recent")[0].childElementCount) * 2) - 2) / 2;
-  list = document.getElementById("myUL")
-  for (let i = 0; i < numb; i ++) {
-    title = ((((document.getElementsByClassName("recent")[0]).getElementsByClassName("item"))[i]).getElementsByClassName("movienames")[0].innerText);
+ }
+function itemfix() {
+  let numb = document.getElementsByClassName("recent")[0].childElementCount;
+  let children = document.getElementsByClassName("recent")[0].children;
+  for (let x = 0; x < numb; x ++) {
+    children.item(x).setAttribute("onclick","alldata(this)");
+    (children.item(x)).firstElementChild.setAttribute("onclick","location.href='./movies/dynamic.html'");
+    let a = document.createElement("a");
+    a.innerText = "View Details"
+    a.setAttribute("class","viewdetails");
+    ((children.item(x)).firstElementChild).appendChild(a);
+    let div = document.createElement("div");
+    div.setAttribute("class","star");
+    div.setAttribute("onclick","star(this)");
+    let i = document.createElement("i");
+    i.setAttribute("class","fal fa-star");
+    div.appendChild(i);
+    (children.item(x)).prepend(div);
+  }
+}
+function searchlist() {
+  let numb = (document.getElementsByClassName("recent")[0].childElementCount);
+  let children = document.getElementsByClassName("recent")[0].children;
+  for (let i = 0; i < (numb); i ++) {
+    let title = (children.item(i)).getElementsByClassName("movienames")[0].innerText;
     const li = document.createElement("li");
     const a = document.createElement("a");
     const img = document.createElement("img");
     a.innerText = title;
-    li.setAttribute('onclick','((document.getElementsByClassName("recent")[0]).getElementsByClassName("item"))[' + i + '].click()');
-    img.src = ((((document.getElementsByClassName("recent")[0]).getElementsByClassName("item"))[i]).getElementsByClassName("thumbnail")[0].src);
+    li.setAttribute('onclick','((document.getElementsByClassName("recent")[0]).getElementsByClassName("item")['+i+']).getElementsByTagName("div")[1].click()');
+    img.src = (children.item(i)).getElementsByClassName("thumbnail")[0].src;
     (document.getElementById("myUL").appendChild(li)).appendChild(img);
     (document.getElementById("myUL").appendChild(li)).appendChild(a);
   }
-  result();
- }
+}
 window.onscroll = function() {
   let mybutton = document.getElementsByClassName("topjumper")[0];
   let searchbar = document.getElementsByClassName("search")[0];
@@ -358,6 +385,8 @@ window.onscroll = function() {
   }
 }
 function topFunction() {
+  localStorage.setItem("favorites","");
+  list.splice(0, 1);
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
@@ -367,7 +396,57 @@ function alfabetical (){
 $(".logo").bind("webkitAnimationEnd mozAnimationEnd animationEnd", function(){
   $(this).removeClass("animated")  
 })
-
 $(".logo").hover(function(){
   $(this).addClass("animated");     
 })
+function star(element){
+  element.getElementsByClassName('fa-star')[0].classList.toggle("fa-solid");
+  let parent, name, index;
+  parent = element.parentNode;
+  name = parent.getElementsByClassName("movienames")[0].innerText;
+  if (element.getElementsByClassName("fa-solid")[0]){
+    list.push(name);
+    localStorage.setItem("favorites", JSON.stringify(list));
+  }
+  else {
+    index = list.indexOf(name);
+    list.splice(index, 1);
+    localStorage.setItem("favorites", JSON.stringify(list));
+  }
+}
+if (localStorage.getItem('favorites') == "" || localStorage.getItem('favorites') == undefined ) {
+  var list = new Array();
+}
+else {
+  var list = JSON.parse(localStorage.getItem('favorites'));
+}
+function loadfavorite() {
+  let numb = document.getElementsByClassName("recent")[0].childElementCount;
+  let children = document.getElementsByClassName("recent")[0].children;
+  for (let i = 0; i < numb; i ++) {
+    let title = (children.item(i)).getElementsByClassName("movienames")[0].innerText;
+    if (list.includes(title)) {
+      (children.item(i)).getElementsByClassName('fa-star')[0].classList.toggle("fa-solid")
+    }
+  }
+}
+function loaddb() {
+  loadmovies();
+  itemfix();
+  searchlist();
+  loadfavorite();
+  result();
+}
+function loadmovies() {
+  let iframe = document.getElementById('database');
+  let iframecontent = iframe.contentDocument || iframe.contentWindow.document;
+  let content = (iframecontent.getElementsByTagName("html")[0]).getElementsByTagName("body")[0];
+  if (content.getElementsByTagName('script')[0]) {
+    var ele = content.getElementsByTagName('script')[0];
+  }
+  if(ele.parentNode){
+    ele.parentNode.removeChild(ele);
+  }
+  let movies = document.getElementsByClassName("recent")[0]
+  movies.innerHTML = content.innerHTML;
+}
