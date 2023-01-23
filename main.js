@@ -222,6 +222,9 @@ function quality(element){
   if (localStorage.getItem("last") == "download") {
     (document.getElementById("download")).getElementsByTagName("div")[0]?.remove();
     (document.getElementById("download")).getElementsByTagName("script")[0]?.remove();
+    (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("div")[0]?.remove();
+    (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("script")[0]?.remove();
+    (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("p")[0]?.remove();
     const a = document.createElement("a");
     a.href = localStorage.getItem(element.innerText);
     a.download = true;
@@ -251,6 +254,8 @@ function quality(element){
     script.src = "https://cdn.jsdelivr.net/npm/@webtor/embed-sdk-js/dist/index.min.js";
     script.charset = "utf-8";
     const p = document.createElement("p");
+    const i = document.createElement("i");
+    i.setAttribute("class", "fa fa-info-circle")
     p.innerText = "loading";
     (document.getElementsByClassName("videoplayer")[0].appendChild(video));
     (document.getElementsByClassName("videoplayer")[0].appendChild(script));
@@ -258,11 +263,12 @@ function quality(element){
     document.getElementsByClassName("videoplayer")[0].style.display = "block";
     (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("svg")[0].style.display = "block";
     setTimeout(async function() {
-      (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("p")[0].innerText = "Sometimes it can take a couple of minutes to load, if the movie does not want to load you can lower the resolution, sometimes 4K is not so well supported either. (720p loads the fastest) It's also recommended to install and use an adblocker.";
+      (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("p")[0].innerText = "  Sometimes it can take a couple of minutes to load, if the movie does not want to load you can lower the resolution, sometimes 4K is not so well supported either. (720p loads the fastest) It's also recommended to install and use an adblocker.";
+      p.prepend(i);
       (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("p")[0].style.marginBottom = "10px";
       (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("svg")[0].style.display = "none";
       (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("div")[0].style.display = "block";
-    }, 1800);
+    }, 1900);
   }
 }
 function menu () {
@@ -327,7 +333,10 @@ window.onload = function() {
   localStorage.setItem("genrelast", "");
   localStorage.setItem("qualitylast", "");
   localStorage.setItem("yearlast", "");
- }
+  if (document.title == "Flux - Watchlist") {
+    checkfavorites();
+  }
+}
 function itemfix() {
   let numb = document.getElementsByClassName("recent")[0].childElementCount;
   let children = document.getElementsByClassName("recent")[0].children;
@@ -348,18 +357,35 @@ function itemfix() {
   }
 }
 function searchlist() {
-  let numb = (document.getElementsByClassName("recent")[0].childElementCount);
-  let children = document.getElementsByClassName("recent")[0].children;
-  for (let i = 0; i < (numb); i ++) {
-    let title = (children.item(i)).getElementsByClassName("movienames")[0].innerText;
+  let iframe = document.getElementById('database');
+  let iframecontent = iframe.contentDocument || iframe.contentWindow.document;
+  let content = (iframecontent.getElementsByTagName("html")[0]).getElementsByTagName("body")[0];
+  let childs = content.children;
+  let numb = content.childElementCount;
+  for (let i = 0; i < numb; i ++) {
+    let title = (childs.item(i)).getElementsByClassName("movienames")[0].innerText;
     const li = document.createElement("li");
     const a = document.createElement("a");
     const img = document.createElement("img");
     a.innerText = title;
-    li.setAttribute('onclick','((document.getElementsByClassName("recent")[0]).getElementsByClassName("item")['+i+']).getElementsByTagName("div")[1].click()');
-    img.src = (children.item(i)).getElementsByClassName("thumbnail")[0].src;
+    li.setAttribute('onclick','openitem(this)');
+    img.src = (childs.item(i)).getElementsByClassName("thumbnail")[0].src;
     (document.getElementById("myUL").appendChild(li)).appendChild(img);
     (document.getElementById("myUL").appendChild(li)).appendChild(a);
+  }
+}
+function openitem(element) {
+  let iframe = document.getElementById('database');
+  let iframecontent = iframe.contentDocument || iframe.contentWindow.document;
+  let content = (iframecontent.getElementsByTagName("html")[0]).getElementsByTagName("body")[0];
+  let childs = content.children;
+  let numb = content.childElementCount;
+  let itemtitle = element.innerText.toLowerCase();
+  for (let i = 0; i < numb; i ++) {
+    if (itemtitle == childs.item(i).getElementsByClassName("movienames")[0].innerText.toLowerCase()) {
+      alldata(childs.item(i));
+      location.href='./movies/dynamic.html'
+    }
   }
 }
 window.onscroll = function() {
@@ -385,8 +411,6 @@ window.onscroll = function() {
   }
 }
 function topFunction() {
-  localStorage.setItem("favorites","");
-  list.splice(0, 1);
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
@@ -441,12 +465,56 @@ function loadmovies() {
   let iframe = document.getElementById('database');
   let iframecontent = iframe.contentDocument || iframe.contentWindow.document;
   let content = (iframecontent.getElementsByTagName("html")[0]).getElementsByTagName("body")[0];
-  // if (content.getElementsByTagName('script')[0]) {
-  //   var ele = content.getElementsByTagName('script')[0];
-  // }
-  // if(ele.parentNode){
-  //   ele.parentNode.removeChild(ele);
-  // }
+  if (content.getElementsByTagName('script')[0]) {
+    var ele = content.getElementsByTagName('script')[0];
+  }
+  if(ele.parentNode){
+    ele.parentNode.removeChild(ele);
+  }
   let movies = document.getElementsByClassName("recent")[0]
   movies.innerHTML = content.innerHTML;
+}
+function cleanfavorites() {
+  if (confirm("Are you sure you want to delete all your favorite movies?")) {
+    alert("Your favorite movies are deleted.")
+    localStorage.setItem("favorites","");
+    list.splice(0, 1);
+  }
+  location.reload()
+}
+function checkfavorites() {
+  let iframe = document.getElementById('database');
+  let iframecontent = iframe.contentDocument || iframe.contentWindow.document;
+  let content = (iframecontent.getElementsByTagName("html")[0]).getElementsByTagName("body")[0];
+  if (content.getElementsByTagName('script')[0]) {
+    var ele = content.getElementsByTagName('script')[0];
+  }
+  if(ele.parentNode){
+    ele.parentNode.removeChild(ele);
+  }
+  let childs = content.children;
+  let numb = content.childElementCount;
+  let moviedir = document.getElementsByClassName("recent")[0];
+  for (let i = 0; i < numb; i ++) {
+    let title = ((childs.item(i)).getElementsByClassName("movienames")[0].innerText).toLowerCase();
+    if ((list.toString().toLowerCase()).includes(title)) {
+      let movie = document.createElement("div");
+      movie.setAttribute("class", "item");
+      movie.innerHTML = childs.item(i).innerHTML
+      moviedir.append(movie);
+    }
+  }
+  if (document.getElementsByClassName("recent")[0].childElementCount == 0 ) {
+    document.getElementsByClassName("noresults")[0].style.visibility = "visible"
+    document.getElementsByClassName("noresults")[0].style.opacity = 1
+    document.getElementsByClassName("noresults")[0].style.transform = "translateY(0)"
+  }
+  else {
+    document.getElementsByClassName("noresults")[0].style.visibility = "hidden"
+    document.getElementsByClassName("noresults")[0].style.opacity = 0
+    document.getElementsByClassName("noresults")[0].style.transform = "translateY(50%)"
+  }
+  itemfix();
+  searchlist();
+  loadfavorite();
 }

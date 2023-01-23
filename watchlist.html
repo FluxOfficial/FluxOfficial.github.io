@@ -45,7 +45,7 @@
   z-index: 11;
 }
 </style>
-<body>
+<body onload="checkfavorites()">
 
 <div class="loader">
   <svg class="ring" viewBox="25 25 50 50" stroke-width="5">
@@ -64,9 +64,8 @@
   <p style="margin-bottom: 6px;" class="subtitles">Favorite Movies</p>
   <div class="break-tag"></div>
   <div class="recent" style="top: 30px;">
-    <p style="left: 50%; transform: translateX(-50%); position: absolute; color: white; font-size: 25pt; font-family: 'Roboto'; margin-top: 10px; text-align: center;">Coming soon!</p>
-    <!-- <script src="overview.js"></script> -->
   </div>
+  <div class="noresults">No results found :(</div>
   </div>
   
   <ul id="myUL">
@@ -93,7 +92,6 @@
     <a href="browse.html">Browse</a>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a>
   </div>
-  <button class="topjumper" onclick="topFunction()" title="Go to top"><i class="arrow up"></i></button>
   <a href="index.html" class="title">FL<span style="
   background-image: linear-gradient(5deg, #111010, #ca3025);
   background-size: 100%;
@@ -117,6 +115,10 @@
       <p>donate</p>
     </section>
     </div>
+    <button id="clean" onclick="cleanfavorites()">
+      Delete all favorites
+      <i class="fa fa-trash" aria-hidden="true"></i>
+    </button>
 </div>
 <div id="overlay" onclick="off()"></div>
 <form class="contact"  action="https://formsubmit.co/213153c9e78cadd2bd1a111bc371d0fd" method="POST" target="_blank" >
@@ -129,13 +131,8 @@
   </div>
   <button type="submit">Send</button>
 </form>
-<!-- <script type="text/javascript" src="vanilla-tilt.js"></script>
-<script type="text/javascript">
-	VanillaTilt.init(document.querySelectorAll(".item"), {
-		max: 15,
-		speed: 400
-	});
-</script> -->
+<button class="topjumper" onclick="topFunction()" title="Go to top"><i class="arrow up"></i></button>
+<iframe src="database.html" id="database"></iframe>
 <script>
 $(window).on('load',function(){
   $(".loader").fadeOut(500);
