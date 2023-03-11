@@ -318,6 +318,28 @@ function fetchalldata() {
   document.getElementsByClassName("poster")[0].src = localStorage.getItem("poster");
   document.getElementsByClassName("syp")[0].innerText = localStorage.getItem("sypnosis");
   document.getElementsByClassName("trailer")[0].src = localStorage.getItem("trailer");
+  let name = document.title;
+  let button = document.getElementById("clean");
+  if (localStorage.getItem("favorites") != null || undefined) {
+    if (localStorage.getItem("favorites").includes(name)) {
+      button.innerText = "Unfavorite";
+      let i = document.createElement("i");
+      i.setAttribute("class","fa fa-trash");
+      button.appendChild(i);
+    }
+    else {
+      button.innerText = "Add to favorites";
+      let i = document.createElement("i");
+      i.setAttribute("class","fal fa-star");
+      button.appendChild(i);
+    }
+  }
+  else {
+    button.innerText = "Add to favorites";
+    let i = document.createElement("i");
+    i.setAttribute("class","fal fa-star");
+    button.appendChild(i);
+  }
   for (let i = 0; i < localStorage.getItem("quality").split(" ").length; i ++) {
     const button = document.createElement("button");
     button.classList.add("button");
@@ -423,6 +445,48 @@ $(".logo").bind("webkitAnimationEnd mozAnimationEnd animationEnd", function(){
 $(".logo").hover(function(){
   $(this).addClass("animated");     
 })
+function loadfavbutton() {
+  let name = document.title;
+  let button = document.getElementById("clean");
+  if (localStorage.getItem("favorites") != null || undefined) {
+    if (localStorage.getItem("favorites").includes(name)) {
+      button.innerText = "Unfavorite";
+      let i = document.createElement("i");
+      i.setAttribute("class","fa fa-trash");
+      button.appendChild(i);
+    }
+    else {
+      button.innerText = "Add to favorites";
+      let i = document.createElement("i");
+      i.setAttribute("class","fal fa-star");
+      button.appendChild(i);
+    }
+  }
+  else {
+    button.innerText = "Add to favorites";
+    let i = document.createElement("i");
+    i.setAttribute("class","fal fa-star");
+    button.appendChild(i);
+  }
+}
+function mark(element) {
+  let name, index, moviename;
+  name = document.title;
+  moviename = document.getElementsByClassName("name")[0].innerText;
+  if (element.getElementsByTagName("i")[0].classList.contains("fa-star")) {
+    list.push(name);
+    localStorage.setItem("favorites", JSON.stringify(list));
+    alert(moviename + " is added to your favorites!")
+    loadfavbutton();
+  }
+  else {
+    index = list.indexOf(name);
+    list.splice(index, 1);
+    localStorage.setItem("favorites", JSON.stringify(list));
+    alert(moviename + " is removed from your favorites!")
+    loadfavbutton();
+  }
+}
 function star(element){
   element.getElementsByClassName('fa-star')[0].classList.toggle("fa-solid");
   let parent, name, index;

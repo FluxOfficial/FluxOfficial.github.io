@@ -158,7 +158,7 @@ backdrop-filter: blur(9.6px);
   position: fixed;
   bottom: 90px;
   left: 15px;
-  z-index: 20;
+  z-index: 3;
   text-align: center;
   height: 40px;
   width: 160px;
@@ -174,7 +174,7 @@ backdrop-filter: blur(9.6px);
   cursor: pointer;
 }
 #clean i{
-  margin-left: 2px;
+  margin-left: 4px;
 }
 /*CARDS*/
 .recent {
@@ -369,9 +369,12 @@ padding-bottom: 10px;
   /* backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px); */
 }
-.fa-star {
+.star i {
   font-size: 15pt;
   color: rgb(156, 39, 10);
+}
+.fa-star {
+  
 }
 .fa-solid {
   animation: favorite 400ms;
