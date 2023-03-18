@@ -31,7 +31,10 @@ html {
   /* Change highlight text color to red */
   color: #dddddd;
 }
-
+mark{
+  background: orange;
+  color: black;
+}
 /*HEADER*/
 .banner {
   height: 70px;

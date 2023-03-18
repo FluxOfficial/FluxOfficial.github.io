@@ -8,9 +8,22 @@ function search() {
   ul = document.getElementById("myUL");
   li = ul.getElementsByTagName("li");
   localStorage.count = 0;
+  let context = ul;
+  let instance = new Mark(context);
+  instance.unmark();
+  let options = {
+    "caseSensitive": false
+  }
+  let keyword = input.value;
+
   for (i = 0; i < li.length; i++) {
     a = li[i].getElementsByTagName("a")[0];
     txtValue = a.textContent || a.innerText;
+
+    let context = a;
+    let instance = new Mark(context);
+    instance.mark(keyword , options);
+
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
       li[i].style.display = "";
       localStorage.count = Number(localStorage.count)+1;
@@ -29,7 +42,10 @@ function search() {
 }
 window.onclick = function(e) {
   // should be fixed
- document.getElementById("myUL").style.display = "none";
+  let context = document.getElementById("myUL");
+  let instance = new Mark(context);
+  instance.unmark();
+  document.getElementById("myUL").style.display = "none";
 }
 function keypress(e) {
   if(e.keyCode === 13){
@@ -384,16 +400,27 @@ function searchlist() {
   let content = (iframecontent.getElementsByTagName("html")[0]).getElementsByTagName("body")[0];
   let childs = content.children;
   let numb = content.childElementCount;
+  let ul = document.getElementById("myUL");
+  let sortmovies = [];
   for (let i = 0; i < numb; i ++) {
     let title = (childs.item(i)).getElementsByClassName("movienames")[0].innerText;
-    const li = document.createElement("li");
-    const a = document.createElement("a");
-    const img = document.createElement("img");
-    a.innerText = title;
-    li.setAttribute('onclick','openitem(this)');
-    img.src = (childs.item(i)).getElementsByClassName("thumbnail")[0].src;
-    (document.getElementById("myUL").appendChild(li)).appendChild(img);
-    (document.getElementById("myUL").appendChild(li)).appendChild(a);
+    sortmovies.push(title);
+  }
+  sortmovies = sortmovies.sort();
+  for (let i = 0; i < numb; i ++) {
+    let movielist = content.querySelectorAll('.movienames');
+    for (let x = 0; x < movielist.length; x ++) {
+      if (movielist[x].textContent.toLowerCase().includes(sortmovies[i].toLowerCase())) {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      const img = document.createElement("img");
+      a.innerText = movielist[x].innerText;
+      li.setAttribute('onclick','openitem(this)');
+      img.src = (movielist[x].parentNode).getElementsByClassName("thumbnail")[0].src;
+      (ul.appendChild(li)).appendChild(img);
+      (ul.appendChild(li)).appendChild(a);
+      }
+    }
   }
 }
 function openitem(element) {
@@ -435,9 +462,6 @@ window.onscroll = function() {
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
-}
-function alfabetical (){
-  
 }
 $(".logo").bind("webkitAnimationEnd mozAnimationEnd animationEnd", function(){
   $(this).removeClass("animated")  
@@ -535,8 +559,30 @@ function loadmovies() {
   // if(ele.parentNode){
   //   ele.parentNode.removeChild(ele);
   // }
+
+  let childs = content.children;
+  let numb = content.childElementCount;
   let movies = document.getElementsByClassName("recent")[0]
-  movies.innerHTML = content.innerHTML;
+  let sortmovies = [];
+  if (document.title != "Flux - Home") {
+    for (let i = 0; i < numb; i ++) {
+      let title = (childs.item(i)).getElementsByClassName("movienames")[0].innerText;
+      sortmovies.push(title);
+    }
+    sortmovies = sortmovies.sort();
+    for (let i = 0; i < numb; i ++) {
+      let movielist = content.querySelectorAll('.movienames');
+      for (let x = 0; x < movielist.length; x ++) {
+        if (movielist[x].textContent.toLowerCase().includes(sortmovies[i].toLowerCase())) {
+          let movie = ((movielist[x].parentNode).parentNode).cloneNode(true);
+          movies.appendChild(movie);
+        }
+      }
+    }
+  }
+  else {
+    movies.innerHTML = content.innerHTML;
+  }
 }
 function cleanfavorites() {
   if (confirm("Are you sure you want to delete all your favorite movies?")) {
