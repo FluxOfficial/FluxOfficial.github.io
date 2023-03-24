@@ -547,7 +547,11 @@ function loaddb() {
   itemfix();
   searchlist();
   loadfavorite();
+  const hiddenElements = document.querySelectorAll('.item');
+  hiddenElements.forEach((el) => observer.observe(el));
+  if (document.title == "Flux - Browse") {
   result();
+  }
 }
 function loadmovies() {
   let iframe = document.getElementById('database');

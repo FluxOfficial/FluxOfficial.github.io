@@ -227,27 +227,26 @@ backdrop-filter: blur(9.6px);
   transition: all 200ms;
   cursor: pointer;
   background-color: rgb(26, 26, 26);
-  /* backdrop-filter: blur(6px); */
   padding-top: 4.5%;
   box-shadow: 0 1px 16px rgba(0,0,0,0.5);
   transform: perspective(1000px);
   transform-style: preserve-3d;
+  opacity: 0;
+  filter: blur(5px);
 }
 .item:hover {
   scale: 1.03;
   box-shadow: 0 8px 15px 2px rgba(0,0,0,0.8);
 }
 .show {
-  animation: appear 500ms;
+  animation: appear 400ms forwards;
 }
 @keyframes appear {
-  0% {
-    opacity: 0;
-  }
   100% {
+    filter: blur(0);
     opacity: 1;
   }
-} 
+}
 @media (max-width: 500px) {
   .homebuttons {
     display: none;
@@ -380,13 +379,11 @@ padding-bottom: 10px;
   border-radius: 10px;
   /* backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px); */
+  z-index: 100;
 }
 .star i {
   font-size: 15pt;
   color: rgb(156, 39, 10);
-}
-.fa-star {
-  
 }
 .fa-solid {
   animation: favorite 400ms;

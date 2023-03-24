@@ -19,7 +19,7 @@ document.write(`
     <a href="../browse.html">Browse</a>
   </div>
   <button class="topjumper" onclick="topFunction()" title="Go to top"><i class="arrow up"></i></button>
-  <a href="index.html" class="title">FL<span class="letteru">U</span>X</a>
+  <a href="../index.html" class="title">FL<span class="letteru">U</span>X</a>
 <img class="logo" src="../logo 2.0.png">
 <div class="shadow"></div>
 <div class="bottomcontainer">
