@@ -49,7 +49,6 @@
 }
 </style>
 <body>
-<div class="wrapper"></div>
 
 <div class="loader">
   <svg class="ring" viewBox="25 25 50 50" stroke-width="5">
@@ -152,13 +151,6 @@
 </form>
 <button class="topjumper" onclick="topFunction()" title="Go to top"><i class="arrow up"></i></button>
 <iframe src="database.html" onload="loaddb()" id="database"></iframe>
-<!-- <script type="text/javascript" src="vanilla-tilt.js"></script>
-<script type="text/javascript">
-	VanillaTilt.init(document.querySelectorAll(".item"), {
-		max: 15,
-		speed: 400
-	});
-</script> -->
 <script>
 $(window).on('load',function(){
   $(".loader").fadeOut(500);
