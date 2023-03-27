@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
+  <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
   <script defer src="main.js"></script>
   <script defer src="app.js"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5748530888926660"
@@ -48,6 +49,7 @@
 }
 </style>
 <body>
+<div class="wrapper"></div>
 
 <div class="loader">
   <svg class="ring" viewBox="25 25 50 50" stroke-width="5">
@@ -58,14 +60,38 @@
 <div class="content">
   <div class="container2" style="top:85px">
   <h3 class="welcome" style="margin-bottom: 10px;">Welcome to <span class="shine">FLUX</span></h3>
-  <p class="info" style="margin-bottom: 15px;">A safe place to download and watch all of your favorite movies with your friends and <br> family, it's
-    totally free and safe without any risks!</p>
+  <p class="info" style="margin-bottom: 15px;"><span class="auto-type"></span></p>
+  <script>
+    var typed = new Typed('.auto-type', {
+    strings: [
+    "A safe place to download and watch all of your favorite movies.",
+    "Watch with your friends and family.", 
+    "It's totally free and safe without any risks!", 
+    "Enjoy watching!"
+    ],
+      typeSpeed: generateRandom(),
+      backDelay: 2000,
+      backSpeed: 20,
+      loop: true
+    });
+    function generateRandom(min = 30, max = 60) {
+    // find diff
+    let difference = max - min;
+    // generate random number 
+    let rand = Math.random();
+    // multiply with difference 
+    rand = Math.floor( rand * difference);
+    // add with min value 
+    rand = rand + min;
+    return rand;
+    }
+  </script>
   <p style="margin-bottom: 15px; font-size: 9pt;" class="info">
     <i class="fa fa-info-circle" aria-hidden="true"></i>
     It is recommended to use an ad blocker to avoid pop ups and ads. (ad blockers are free) Click <a href="https://helpcenter.getadblock.com/hc/en-us/articles/9738517413523-How-do-I-install-AdBlock-How-do-I-uninstall-AdBlock-" target="_blank" >here</a> for a guide to install adblocker.
   </p>
-  <p style="text-decoration: underline;font-size: 18pt;" class="info">Coming soon!</p>
-  <img class="coming" src="https://kinepolis.be/nl/sites/kinepolis.be.nl/files/styles/general_item_big/public/general_page/image/avatar_header_nl.png?itok=MUxUSZtn">
+  <!-- <p style="text-decoration: underline;font-size: 18pt;" class="info">Coming soon!</p>
+  <img class="coming" src="https://kinepolis.be/nl/sites/kinepolis.be.nl/files/styles/general_item_big/public/general_page/image/avatar_header_nl.png?itok=MUxUSZtn"> -->
   <p style="margin-bottom: 6px;" class="subtitles">Recently Added</p>
   <div class="break-tag"></div>
   <div class="recent" style="top: 30px;">
