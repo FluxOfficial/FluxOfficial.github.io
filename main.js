@@ -545,14 +545,14 @@ function loadfavorite() {
       (children.item(i)).getElementsByClassName('fa-star')[0].classList.toggle("fa-solid")
     }
   }
+  const hiddenElements = document.querySelectorAll('.item');
+  hiddenElements.forEach((el) => observer.observe(el));
 }
 function loaddb() {
   loadmovies();
   itemfix();
   searchlist();
   loadfavorite();
-  const hiddenElements = document.querySelectorAll('.item');
-  hiddenElements.forEach((el) => observer.observe(el));
   if (document.title == "Flux - Browse") {
   result();
   }
