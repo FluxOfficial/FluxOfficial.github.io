@@ -20,16 +20,6 @@
      crossorigin="anonymous"></script>
 </head>
 <style>
-@media only screen and (max-width: 850px) {
-  #myUL {
-    width: 40% !important;
-  }
-}
-@media only screen and (max-width: 500px) {
-  #myUL {
-    width: 50% !important;
-  }
-}
 .search {
   padding: 10px;
   font-size: 15px;
@@ -37,14 +27,16 @@
   color: silver;
   border-radius: 8px;
   background: #272727;
-  width: 20vw;
   font-family: "Roboto";
+}
+.search:focus {
+  border: 1px solid #ffffff !important;
 }
 #myUL {
   position: fixed;
   top: 58px;
-  right: 1.9%;
-  width: calc(20vw + 6px);
+  right: 2%;
+  width: 300px;
   z-index: 11;
 }
 </style>
@@ -58,8 +50,11 @@
 
 <div class="content">
   <div class="container2" style="top:85px">
-  <h3 class="welcome" style="margin-bottom: 10px;">Welcome to <span class="shine">FLUX</span></h3>
-  <p class="info" style="margin-bottom: 15px;"><span class="auto-type"></span></p>
+  <div class="welcome">
+    <h3 style="font-size: min(12vw, 80pt);font-family: 'Century Gothic';">WELCOME <span>TO</span></h3>
+    <p class="shine">FLUX</p>
+  </div>
+  <p class="info" style="height: 70px;margin-top: 15px;"><span class="auto-type"></span></p>
   <script>
     var typed = new Typed('.auto-type', {
     strings: [
@@ -85,15 +80,24 @@
     return rand;
     }
   </script>
-  <p style="margin-bottom: 15px; font-size: 9pt;" class="info">
-    <i class="fa fa-info-circle" aria-hidden="true"></i>
-    It is recommended to use an ad blocker to avoid pop ups and ads. (ad blockers are free) Click <a href="https://helpcenter.getadblock.com/hc/en-us/articles/9738517413523-How-do-I-install-AdBlock-How-do-I-uninstall-AdBlock-" target="_blank" >here</a> for a guide to install adblocker.
-  </p>
-  <!-- <p style="text-decoration: underline;font-size: 18pt;" class="info">Coming soon!</p>
-  <img class="coming" src="https://kinepolis.be/nl/sites/kinepolis.be.nl/files/styles/general_item_big/public/general_page/image/avatar_header_nl.png?itok=MUxUSZtn"> -->
-  <p style="margin-bottom: 6px;" class="subtitles">Recently Added</p>
-  <div class="break-tag"></div>
-  <div class="recent" style="top: 30px;">
+
+  <!-- <p class="info" style="font-size: min(6vw, 25pt); letter-spacing: 0px;">Upcoming movies</p>
+  <div class="templates">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div> -->
+
+  <div class="recentadd" id="content">
+    <p>Recently Added</p>
+    <p style="margin:10px 0 10px; font-size: 9pt;" class="info">
+      <i class="fa fa-info-circle" aria-hidden="true"></i>
+      It is recommended to use an ad blocker to avoid pop ups and ads. (ad blockers are free) Click <a href="https://helpcenter.getadblock.com/hc/en-us/articles/9738517413523-How-do-I-install-AdBlock-How-do-I-uninstall-AdBlock-" target="_blank" >here</a> for a guide to install adblocker.
+    </p>
+    <div class="break-tag"></div>
+  </div>
+
+  <div class="recent" style="top: 78vh;">
   </div>
   </div>
   
@@ -135,8 +139,13 @@
       <p onclick='showcontact()'>contact</p>
       <p>info</p>
       <p>donate</p>
+      <p>roadmap</p>
     </section>
     </div>
+</div>
+<div class="explore">
+  <p onclick="scroller();">scroll down to explore</p>
+  <img src="triangle-bottom-icon.svg">
 </div>
 <div id="overlay" onclick="off()"></div>
 <form class="contact"  action="https://formsubmit.co/213153c9e78cadd2bd1a111bc371d0fd" method="POST" target="_blank" >

@@ -182,7 +182,10 @@ function off() {
   document.getElementById("overlay").style.background = 'rgba(0, 0, 0, 0.48)'
   document.getElementById("nav-icon4").classList.remove("open");
   document.getElementById("overlay").style.display = "none";
-  document.getElementsByClassName("contact")[0].style.display = "none"
+  // if (document.getElementsByClassName("contact")[0].style.visibility == "visible") {
+  //   // document.getElementsByClassName("contact")[0].style.animation = "contactdisappear 800ms forwards";
+  //   // document.getElementsByClassName("contact")[0].style.animation = "contactdisappear 800ms forwards";
+  // }
   document.getElementsByTagName("html")[0].style.overflowY = "scroll"
   document.getElementsByClassName("dropdown")[0].style.visibility = "hidden"
   document.getElementsByClassName("dropdown")[0].style.opacity = 0
@@ -191,16 +194,15 @@ function off() {
     document.getElementsByClassName("list")[0].innerHTML = '';
     document.getElementsByClassName("list")[0].style.display = "none"
   }
-  // should be fixed
-  document.getElementsByClassName("selector")[0].style.display = "none"
+  if (document.getElementsByClassName("selector")[0]) {
+    document.getElementsByClassName("selector")[0].style.display = "none"
+  }
 }
 function watch() {
   localStorage.setItem("last", "watch");
   document.getElementById("overlay").style.display = "block"
   document.getElementById("overlay").style.background = 'rgba(0, 0, 0, 0.48)'
   document.getElementsByClassName("selector")[0].style.display = "block"
-  document.getElementsByClassName("videoplayer")[0].style.display = "none"
-  document.getElementById("download").style.display = "none"
   document.getElementsByTagName("html")[0].style.overflowY = "hidden"
 }
 function down() {
@@ -208,8 +210,6 @@ function down() {
   document.getElementById("overlay").style.display = "block"
   document.getElementById("overlay").style.background = 'rgba(0, 0, 0, 0.48)'
   document.getElementsByClassName("selector")[0].style.display = "block"
-  document.getElementsByClassName("videoplayer")[0].style.display = "none"
-  document.getElementById("download").style.display = "none"
   document.getElementsByTagName("html")[0].style.overflowY = "hidden"
 }
 function sort(element) {
@@ -227,10 +227,10 @@ function sort(element) {
   }
 }
 function showcontact() {
-  document.getElementById("overlay").style.display = "block"
-  document.getElementById("overlay").style.background = 'rgba(0, 0, 0, 0.48)'
-  document.getElementsByClassName("contact")[0].style.display = "block"
-  document.getElementsByTagName("html")[0].style.overflowY = "hidden"
+  // document.getElementById("overlay").style.display = "block"
+  // document.getElementById("overlay").style.background = 'rgba(0, 0, 0, 0.48)'
+  // document.getElementsByClassName("contact")[0].style.animation = "contactappear 500ms forwards";
+  // document.getElementsByTagName("html")[0].style.overflowY = "hidden"
 }
 function quality(element){
   scrollBy(0,500)
@@ -391,7 +391,10 @@ function itemfix() {
     div.setAttribute("onclick","star(this)");
     let i = document.createElement("i");
     i.setAttribute("class","fal fa-star");
+    let span = document.createElement("span");
+    span.setAttribute("class","texttip");
     div.appendChild(i);
+    div.appendChild(span);
     (children.item(x)).prepend(div);
   }
 }
@@ -444,23 +447,32 @@ function openitem(element) {
 window.onscroll = function() {
   let mybutton = document.getElementsByClassName("topjumper")[0];
   let searchbar = document.getElementsByClassName("search")[0];
+  let banner = document.getElementsByClassName("banner")[0];
   if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
     mybutton.style.display = "block"
   } else {
     mybutton.style.display = "none";
   }
-  if (document.title == "Flux - Browse") {
-    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
-      searchbar.style.position = "fixed";
-      searchbar.style.top = "80px";
-      document.getElementById("myUL").style.position = "fixed";
-      document.getElementById("myUL").style.top = "122px";
-    } else {
-      searchbar.style.position = "absolute";
-      searchbar.style.top = "110px";
-      document.getElementById("myUL").style.position = "absolute";
-      document.getElementById("myUL").style.top = "152px";
-    } 
+  // if (document.title == "Flux - Browse") {
+  //   if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+  //     searchbar.style.position = "fixed";
+  //     searchbar.style.top = "800px";
+  //     document.getElementById("myUL").style.position = "fixed";
+  //     document.getElementById("myUL").style.top = "122px";
+  //   } else {
+  //     searchbar.style.position = "relative";
+  //     searchbar.style.top = "0px";
+  //     document.getElementById("myUL").style.position = "relative";
+  //     document.getElementById("myUL").style.top = "213px";
+  //   } 
+  // }
+  if (document.title == "Flux - Home") {
+  if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+    banner.style.background = "rgba(17, 17, 17, 0.6)";
+  }
+  else {
+    banner.style.background = "rgba(17, 17, 17, 0)";
+  }
   }
 }
 function topFunction() {
@@ -517,14 +529,17 @@ function mark(element) {
 }
 function star(element){
   element.getElementsByClassName('fa-star')[0].classList.toggle("fa-solid");
-  let parent, name, index;
+  let parent, name, index, span;
   parent = element.parentNode;
   name = parent.getElementsByClassName("movienames")[0].innerText;
+  span = element.getElementsByClassName("texttip")[0];
   if (element.getElementsByClassName("fa-solid")[0]){
+    span.textContent = "Unmark as favourite";
     list.push(name);
     localStorage.setItem("favorites", JSON.stringify(list));
   }
   else {
+    span.textContent = "Mark as favourite";
     index = list.indexOf(name);
     list.splice(index, 1);
     localStorage.setItem("favorites", JSON.stringify(list));
@@ -541,8 +556,13 @@ function loadfavorite() {
   let children = document.getElementsByClassName("recent")[0].children;
   for (let i = 0; i < numb; i ++) {
     let title = (children.item(i)).getElementsByClassName("movienames")[0].innerText;
+    let span = (children.item(i)).getElementsByClassName('texttip')[0];
     if (list.includes(title)) {
-      (children.item(i)).getElementsByClassName('fa-star')[0].classList.toggle("fa-solid")
+      (children.item(i)).getElementsByClassName('fa-star')[0].classList.toggle("fa-solid");
+      span.textContent = "Unmark as favourite";
+    }
+    else {
+      span.textContent = "Mark as favourite";
     }
   }
   const hiddenElements = document.querySelectorAll('.item');
@@ -635,4 +655,8 @@ function checkfavorites() {
   itemfix();
   searchlist();
   loadfavorite();
+}
+function scroller() {
+  let content = document.getElementById("content").offsetTop;
+  window.scrollTo({ top: content, behavior: 'smooth'});
 }

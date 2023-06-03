@@ -20,31 +20,11 @@
      crossorigin="anonymous"></script>
 </head>
 <style>
-@media only screen and (max-width: 850px) {
-  #myUL {
-    width: 40% !important;
-  }
-}
-@media only screen and (max-width: 500px) {
-  #myUL {
-    width: 50% !important;
-  }
-}
-.search {
-  padding: 10px;
-  font-size: 15px;
-  border: 1px solid #414141;
-  color: silver;
-  border-radius: 8px;
-  background: #272727;
-  width: 20vw;
-  font-family: "Roboto";
-}
 #myUL {
   position: fixed;
   top: 58px;
   right: 1.9%;
-  width: calc(20vw + 6px);
+  width: 300px;
   z-index: 11;
 }
 </style>
@@ -57,15 +37,17 @@
 </div>
 
 <div class="content">
-  <div class="container2" style="top:85px">
-  <h3 class="welcome" style="margin-bottom: 8px;">My Watchlist</h3>
-  <p class="info" style="margin-bottom: 15px;">All your favorite movies will be listed here!</p>
-  <p style="margin-bottom: 45px; font-size: 9pt;" class="info">
-    <i class="fa fa-info-circle" aria-hidden="true"></i>
-    It is recommended to use an ad blocker to avoid pop ups and ads. (ad blockers are free) Click <a href="https://helpcenter.getadblock.com/hc/en-us/articles/9738517413523-How-do-I-install-AdBlock-How-do-I-uninstall-AdBlock-" target="_blank" >here</a> for a guide to install adblocker.
-  </p>
-  <p style="margin-bottom: 6px;" class="subtitles">Favorite Movies</p>
-  <div class="break-tag"></div>
+  <div class="container2" style="top:80px">
+  <div class="welcome">
+    <h3 style="font-size: min(11vw, 50pt); font-family: 'Arial';">My Watchlist</h3>
+    <h1 class="info" style="opacity: 0; margin-bottom: 15px;">All your favorite movies will be listed here!</h1>
+  </div>
+
+  <div class="recentadd" style="top: 15px;">
+    <p style="font-size: 15pt; margin-bottom:5px;">My favorite movies</p>
+    <div class="break-tag"></div>
+  </div>
+
   <div class="recent" style="top: 30px;">
   </div>
   <div class="noresults">No results found :(</div>
@@ -108,6 +90,7 @@
       <p onclick='showcontact()'>contact</p>
       <p>info</p>
       <p>donate</p>
+      <p>roadmap</p>
     </section>
     </div>
     <button id="clean" onclick="cleanfavorites()">
