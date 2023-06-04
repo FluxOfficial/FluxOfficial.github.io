@@ -18,7 +18,6 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   width: 100%;
   height: 100%;
@@ -31,10 +30,11 @@ body {
 .content {
   display: none;
 }
-html {
+html, body { 
+  -webkit-tap-highlight-color: transparent;
   overflow-x: hidden;
-  overflow-y: scroll;
   scroll-behavior: smooth;
+  overflow-y: scroll;
 }
 ::selection {
   background: rgb(143, 31, 31);
@@ -118,6 +118,7 @@ mark{
   width: 100%;
   transform:translateX(-50%);
   text-align: center;
+  display: none;
 }
 .explore img {
   margin-top: -5px;
@@ -284,19 +285,6 @@ mark{
   -ms-user-select: none;
   user-select: none;
 }
-/* .recent[class*="show"] {
-  animation: moviecontainer 1s forwards;
-}
-@keyframes moviecontainer {
-  0% {
-    transform: translateY(1%) translateX(-50%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0%) translateX(-50%) ;
-    opacity: 1;
-  }
-} */
 .movienames {
   position: relative;
   top: 1px;
@@ -320,7 +308,6 @@ mark{
   padding-top: 4.5%;
   box-shadow: 0 0px 15px 5px black;
   opacity: 0;
-  filter: blur(5px);
 }
 .item:focus {
   outline: none;
@@ -355,7 +342,7 @@ mark{
     margin-bottom: 80px !important;
   }
   .recent {
-    grid-template-columns: repeat( auto-fit, 240px);
+    grid-template-columns: repeat( auto-fit, 250px);
   }
   #clean {
     bottom: 75px;
@@ -1000,7 +987,7 @@ margin-bottom: 50px;
   cursor: pointer;
   display: inline-block;
   margin: 10px 20px 10px 20px;
-  zoom: 1.1;
+  transform: scale(1.10);
 }
 .listcontainer {
   visibility: hidden;
