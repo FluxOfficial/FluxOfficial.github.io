@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html onmousedown="musicPlay() , document.getElementById('flicker').style.visibility = 'visible'">
+<style>
+    * {
+        margin: 0;
+    }
+    html {
+        cursor: url(https://cdn.custom-cursor.com/db/17410/32/among-us-pink-gum-character-cursor.png) , default !important;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+    }
+    button {
+        border-radius: 5px;
+        background-color: black;
+        position: absolute;
+        border: none;
+        color: white;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 50%;
+        width: 250px;
+        height: 40px;
+        cursor: pointer;
+    }
+    img {
+        visibility: hidden;
+    }
+</style>
+<body>
+    <button>
+        Klik hier om bijlage te downloaden
+    </button>
+    <img id="flicker" style="height: 100vh; width: 100vw" src="https://37.media.tumblr.com/9f02757efbb7b5f9a54a9c81d3b96fd1/tumblr_na36awUzaA1qjrwyno1_1280.gif">
+    <audio id="amongus" autoplay loop>
+    <source src="https://cdn.freesound.org/previews/690/690434_14601869-lq.mp3" type="audio/mpeg">
+    </audio>
+</body>
+<script>
+function musicPlay() {
+    document.getElementById('amongus').play();
+    toggleFullScreen();
+}
+function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+}}
+</script>
+</html>

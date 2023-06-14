@@ -96,13 +96,13 @@ mark{
 }
 .title {
   position: fixed;
-  top: 12px;
-  left: 58px;
+  top: 14px;
+  left: 60px;
   /* font-family: 'Bubbler One'; */
   /* font-family: 'Londrina Shadow'; */
   /* font-family: 'Faster One'; */
   /* font-family: 'Rubik Glitch'; */
-  font-family: 'Montserrat';
+  font-family: arial;
   font-size: 23pt;
   /* letter-spacing: 1px; */
   font-weight: bold;
@@ -121,15 +121,15 @@ mark{
   display: none;
 }
 .explore img {
-  margin-top: -5px;
+  margin-top: -13px;
   width: 40px;
   height: 40px;
-  transform: scale(0.5);
+  transform: scale(0.3);
 }
 .explore p{
   text-transform: uppercase;
   color: white;
-  font-size: 10pt;
+  font-size: 8pt;
   letter-spacing: 1.5px;
   cursor: pointer;
   user-select: none;
@@ -762,6 +762,7 @@ margin-bottom: 50px;
 .welcome h3 {
   opacity: 0;
   animation: slidein 1s;
+  animation-delay: 300ms;
   animation-fill-mode: forwards;
   color: silver;
   letter-spacing: 2px;
@@ -769,13 +770,13 @@ margin-bottom: 50px;
   position: relative;
   text-align: center;
   left: 50%;
-  /* background-image: linear-gradient(60deg, #2e2a2b, #ff0000, #fa6a0a);
+}
+.welcometext {
+  font-size: min(12vw, 80pt);
+  font-family: 'Century Gothic';
+  background: -webkit-linear-gradient(70deg, white, #2e2e2e);
   -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  -moz-text-fill-color: transparent;
-  color: transparent; */
+  -webkit-text-fill-color: transparent;
 }
 .welcome h1 {
   animation: slidein 1.2s;
@@ -787,7 +788,7 @@ margin-bottom: 50px;
   opacity: 0;
   animation: slidein 1.3s, shine 4s linear infinite;
   animation-fill-mode: forwards;
-  animation-delay: 500ms;
+  animation-delay: 600ms;
   position: relative;
   text-align: center;
   left: 50%;
