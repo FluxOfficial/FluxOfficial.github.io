@@ -23,7 +23,11 @@ body {
   height: 100%;
   /* background-color: #111111; */
   background-color: #161616;
-
+  /* background-image: url('https://lp.simplified.com/63197b051906e0bea6f6f26f/6319a87d2f87cf762aaf4ee2_bg-mesh-01%201.png');
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat; */
   /* background-color: #000000; */
   /* background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23bfbfbf' fill-opacity='0.04' fill-rule='evenodd'/%3E%3C/svg%3E"); */
 }
@@ -52,7 +56,7 @@ mark{
   top: 0px;
   left: 0px;
   z-index: 10;
-  background: rgba(17, 17, 17,0.6);
+  background: rgba(17, 17, 17,0);
   backdrop-filter: blur(9.6px);
   -webkit-backdrop-filter: blur(9.6px);
 }
@@ -65,6 +69,7 @@ mark{
   left:12px; 
   height: 40px; 
   width: 40px;
+  transform: scale(0.95);
   /* border: 1px solid white; */
 }
 .logo.animated { 
@@ -96,16 +101,12 @@ mark{
 }
 .title {
   position: fixed;
-  top: 14px;
-  left: 60px;
-  /* font-family: 'Bubbler One'; */
-  /* font-family: 'Londrina Shadow'; */
-  /* font-family: 'Faster One'; */
-  /* font-family: 'Rubik Glitch'; */
-  font-family: arial;
+  top: 13px;
+  left: 57px;
+  font-family: 'montserrat';
   font-size: 23pt;
-  /* letter-spacing: 1px; */
-  font-weight: bold;
+  letter-spacing: 3px;
+  /* font-weight: bold; */
   text-decoration: none;
   z-index: 10;
   color: white;
@@ -119,6 +120,7 @@ mark{
   transform:translateX(-50%);
   text-align: center;
   display: none;
+  filter: drop-shadow(0 0 20px rgb(255, 255, 255));
 }
 .explore img {
   margin-top: -13px;
@@ -137,6 +139,13 @@ mark{
 .explore p:hover{
   text-decoration: underline;
 }
+.gif {
+  position: relative;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
 .letteru {
   background-image: linear-gradient(5deg, #111010, #ca3025);
   background-size: 100%;
@@ -148,13 +157,14 @@ mark{
 }
 .progress {
   position: fixed;
-  top: 43px;
-  left: 61px;
+  top: 44px;
+  left: 60px;
   font-family: quicksand;
-  font-size: 10pt;
+  font-size: 9pt;
   text-decoration: none;
   z-index: 10;
   color: white;
+  opacity: 0.4;
 }
 .homebuttons {
   position: fixed;
@@ -171,7 +181,7 @@ mark{
   user-select: none;
 }
 .homebuttons a {
-  margin-top: 3px;
+  margin-top: 1px;
   color: silver;
   font-family: quicksand;
   font-size: 12pt;
@@ -480,7 +490,12 @@ padding-bottom: 10px;
 }
 .star i {
   font-size: 15pt;
-  color: rgb(156, 39, 10);
+  /* color: rgb(156, 39, 10); */
+  background: linear-gradient(130deg, #a02222 0%, #ff0000 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .star .texttip {
   opacity: 0;
@@ -738,7 +753,7 @@ margin-bottom: 50px;
   border: 1px solid #414141;
   color: silver;
   border-radius: 8px;
-  width: 300px;
+  width: 330px;
   font-family: "Roboto";
   left: 50%;
   transform: translateX(-50%);
@@ -989,6 +1004,11 @@ margin-bottom: 50px;
   display: inline-block;
   margin: 10px 20px 10px 20px;
   transform: scale(1.10);
+}
+.fa-sort {
+  float: right;
+  margin: 3px 7px 0 0;
+  filter: brightness(0.5);
 }
 .listcontainer {
   visibility: hidden;
@@ -1329,6 +1349,7 @@ margin-bottom: 50px;
   transform: translateX(-50%);
 }
 .contact {
+  animation: contactdisappear 500ms forwards;
   visibility: hidden;
   opacity: 0;
   position: fixed;
@@ -1343,6 +1364,9 @@ margin-bottom: 50px;
   color: white;
   font-family: arial;
   transition: 200ms all;
+}
+.appearc {
+  animation: contactappear 500ms forwards;
 }
 @keyframes contactappear {
   0% {

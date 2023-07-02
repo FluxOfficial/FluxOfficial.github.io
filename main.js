@@ -182,10 +182,9 @@ function off() {
   document.getElementById("overlay").style.background = 'rgba(0, 0, 0, 0.48)'
   document.getElementById("nav-icon4").classList.remove("open");
   document.getElementById("overlay").style.display = "none";
-  // if (document.getElementsByClassName("contact")[0].style.visibility == "visible") {
-  //   // document.getElementsByClassName("contact")[0].style.animation = "contactdisappear 800ms forwards";
-  //   // document.getElementsByClassName("contact")[0].style.animation = "contactdisappear 800ms forwards";
-  // }
+  if (document.getElementsByClassName("contact")[0].classList.contains('appearc')) {
+    document.getElementsByClassName("contact")[0].classList.remove('appearc');
+  }
   document.getElementsByTagName("html")[0].style.overflowY = "scroll"
   document.getElementsByClassName("dropdown")[0].style.visibility = "hidden"
   document.getElementsByClassName("dropdown")[0].style.opacity = 0
@@ -227,10 +226,10 @@ function sort(element) {
   }
 }
 function showcontact() {
-  // document.getElementById("overlay").style.display = "block"
-  // document.getElementById("overlay").style.background = 'rgba(0, 0, 0, 0.48)'
-  // document.getElementsByClassName("contact")[0].style.animation = "contactappear 500ms forwards";
-  // document.getElementsByTagName("html")[0].style.overflowY = "hidden"
+  document.getElementById("overlay").style.display = "block"
+  document.getElementById("overlay").style.background = 'rgba(0, 0, 0, 0.48)'
+  document.getElementsByClassName("contact")[0].classList.add("appearc");
+  document.getElementsByTagName("html")[0].style.overflowY = "hidden"
 }
 function quality(element){
   scrollBy(0,500)
@@ -468,7 +467,7 @@ window.onscroll = function() {
   // }
   if (document.title == "Flux - Home") {
   if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-    banner.style.background = "rgba(17, 17, 17, 0.6)";
+    banner.style.background = "rgba(17, 17, 17, 0.3)";
   }
   else {
     banner.style.background = "rgba(17, 17, 17, 0)";
@@ -581,12 +580,12 @@ function loadmovies() {
   let iframe = document.getElementById('database');
   let iframecontent = iframe.contentDocument || iframe.contentWindow.document;
   let content = (iframecontent.getElementsByTagName("html")[0]).getElementsByTagName("body")[0];
-  // if (content.getElementsByTagName('script')[0]) {
-  //   var ele = content.getElementsByTagName('script')[0];
-  // }
-  // if(ele.parentNode){
-  //   ele.parentNode.removeChild(ele);
-  // }
+  if (content.getElementsByTagName('script')[0]) {
+    var ele = content.getElementsByTagName('script')[0];
+  }
+  if(ele.parentNode){
+    ele.parentNode.removeChild(ele);
+  }
 
   let childs = content.children;
   let numb = content.childElementCount;
@@ -624,12 +623,12 @@ function checkfavorites() {
   let iframe = document.getElementById('database');
   let iframecontent = iframe.contentDocument || iframe.contentWindow.document;
   let content = (iframecontent.getElementsByTagName("html")[0]).getElementsByTagName("body")[0];
-  // if (content.getElementsByTagName('script')[0]) {
-  //   var ele = content.getElementsByTagName('script')[0];
-  // }
-  // if(ele.parentNode){
-  //   ele.parentNode.removeChild(ele);
-  // }
+  if (content.getElementsByTagName('script')[0]) {
+    var ele = content.getElementsByTagName('script')[0];
+  }
+  if(ele.parentNode){
+    ele.parentNode.removeChild(ele);
+  }
   let childs = content.children;
   let numb = content.childElementCount;
   let moviedir = document.getElementsByClassName("recent")[0];
