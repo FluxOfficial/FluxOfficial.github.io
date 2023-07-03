@@ -580,12 +580,12 @@ function loadmovies() {
   let iframe = document.getElementById('database');
   let iframecontent = iframe.contentDocument || iframe.contentWindow.document;
   let content = (iframecontent.getElementsByTagName("html")[0]).getElementsByTagName("body")[0];
-  if (content.getElementsByTagName('script')[0]) {
-    var ele = content.getElementsByTagName('script')[0];
-  }
-  if(ele.parentNode){
-    ele.parentNode.removeChild(ele);
-  }
+  // if (content.getElementsByTagName('script')[0]) {
+  //   var ele = content.getElementsByTagName('script')[0];
+  // }
+  // if(ele.parentNode){
+  //   ele.parentNode.removeChild(ele);
+  // }
 
   let childs = content.children;
   let numb = content.childElementCount;
@@ -623,12 +623,12 @@ function checkfavorites() {
   let iframe = document.getElementById('database');
   let iframecontent = iframe.contentDocument || iframe.contentWindow.document;
   let content = (iframecontent.getElementsByTagName("html")[0]).getElementsByTagName("body")[0];
-  if (content.getElementsByTagName('script')[0]) {
-    var ele = content.getElementsByTagName('script')[0];
-  }
-  if(ele.parentNode){
-    ele.parentNode.removeChild(ele);
-  }
+  // if (content.getElementsByTagName('script')[0]) {
+  //   var ele = content.getElementsByTagName('script')[0];
+  // }
+  // if(ele.parentNode){
+  //   ele.parentNode.removeChild(ele);
+  // }
   let childs = content.children;
   let numb = content.childElementCount;
   let moviedir = document.getElementsByClassName("recent")[0];
