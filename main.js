@@ -467,7 +467,7 @@ window.onscroll = function() {
   // }
   if (document.title == "Flux - Home") {
   if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-    banner.style.background = "rgba(17, 17, 17, 0.3)";
+    banner.style.background = "rgba(17, 17, 17, 0.6)";
   }
   else {
     banner.style.background = "rgba(17, 17, 17, 0)";
@@ -659,3 +659,8 @@ function scroller() {
   let content = document.getElementById("content").offsetTop;
   window.scrollTo({ top: content, behavior: 'smooth'});
 }
+const scrollContainer = document.querySelector(".wrapper");
+scrollContainer.addEventListener("wheel", (evt) => {
+    evt.preventDefault();
+    scrollContainer.scrollLeft += evt.deltaY;
+});

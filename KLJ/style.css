@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+html {
+    scroll-behavior: smooth;
+    /* overflow-x: hidden;
+    overflow-y: scroll; */
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+body {
+    background-color: brown;
+    height: 10000px;
+}
+.banner {
+    position: fixed;
+    background-color: beige;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 120px;
+    width: 100%;
+    box-shadow: 0 1px 30px black;
+    z-index: 1;
+}
+.logo {
+    position: fixed;
+    top: 8px;
+    left: 1%;
+    width: 100px;
+    z-index: 1;
+}
+@media screen and (max-width: 500px) {
+    .logo {
+      width: 60px;
+    }
+    .banner {
+        height: 80px;
+    }
+    .nav {
+        top: 32px !important;
+    }
+    .subtitles p {
+        padding-top: 110px !important;
+    }
+  }
+.welcome {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 300px;
+    width: 100%;
+    text-align: center;
+}
+.welcome p {
+    color: beige;
+    font-size: min(20vw, 120pt);
+    font-family: 'Belanosima';
+    filter: drop-shadow(6px 6px black);
+    letter-spacing: 3px;
+}
+.welcome span {
+    position: relative;
+    top: 0px;
+    color: beige;
+    font-size: min(3.2vw, 15pt);
+    font-family: Arial;
+}
+.nav {
+    position: fixed;
+    display: flex;
+    gap: 2.5vw;
+    top: 42px;
+    right: 3%;
+    user-select: none;
+    z-index: 1;
+}
+.nav a {
+    font-family: arial;
+    font-size: min(3.5vw, 18pt);
+    color: rgb(49, 49, 49);
+    background-color: transparent;
+    padding-bottom: 2px;
+    transition: 200ms;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+}
+.nav a:hover {
+    color: rgb(202, 52, 52);
+    border-bottom: 4px solid brown ;
+}
+.subtitles {
+    top: 800px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.subtitles p {
+    position: relative;
+    padding-top: 160px;
+    font-family: 'Handlee';
+    font-weight: bold;
+    color: beige;
+    font-size: min(12vw, 55pt);
+    text-align: center;
+}
+.gallerij {
+    position: relative;
+}
+.kamp {
+    position: relative;
+    top: 800px;
+}
+.uniform {
+    position: relative;
+    top: 1800px;
+}
+.contact {
+    position: relative;
+    top: 2800px;
+}
+.contact p:nth-of-type(2) {
+    color: beige;
+    font-family: arial;
+    font-size: min(5vw, 20pt) !important;
+    margin-top: -100px;
+}
+iframe {
+    border-radius: 15px;
+    border: 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+}
