@@ -13,25 +13,36 @@ html {
     -webkit-tap-highlight-color: transparent;
 }
 body {
-    background-color: brown;
+    background-color: white;
     height: 10000px;
 }
 .banner {
     position: fixed;
-    background-color: beige;
+    background-color: white;
     left: 50%;
     transform: translateX(-50%);
-    height: 120px;
+    height: 80px;
     width: 100%;
     box-shadow: 0 1px 30px black;
     z-index: 1;
 }
+.title {
+    position: fixed;
+    top: 26px;
+    left: 5%;
+    font-size: min(20vw, 18pt);
+    font-family: helvetica;
+    letter-spacing: 3px;
+    z-index: 2;
+}
 .logo {
     position: fixed;
-    top: 8px;
+    top: 10px;
     left: 1%;
-    width: 100px;
+    width: 60px;
     z-index: 1;
+    border-radius: 50%;
+    border: 1px solid gray;
 }
 @media screen and (max-width: 500px) {
     .logo {
@@ -51,36 +62,46 @@ body {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    top: 300px;
-    width: 100%;
+    top: 200px;
+    width: 90%;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+}
+.welcome div {
+    margin-top: 20px;
+}
+.welcome h1 {
+    font-size: min(20vw, 50pt);
+    font-family: 'Belanosima';
+    letter-spacing: 3px;
+    line-height: 60px;
 }
 .welcome p {
-    color: beige;
-    font-size: min(20vw, 120pt);
-    font-family: 'Belanosima';
-    filter: drop-shadow(6px 6px black);
-    letter-spacing: 3px;
-}
-.welcome span {
-    position: relative;
-    top: 0px;
-    color: beige;
     font-size: min(3.2vw, 15pt);
     font-family: Arial;
+}
+.welcome button {
+    border: none;
+    padding: 15px 0 15px 0;
+    width: 120px;
+    font-size: 12pt;
+    border-radius: 5px;
+    transition: 200ms;
 }
 .nav {
     position: fixed;
     display: flex;
     gap: 2.5vw;
-    top: 42px;
+    top: 33px;
     right: 3%;
     user-select: none;
     z-index: 1;
 }
 .nav a {
     font-family: arial;
-    font-size: min(3.5vw, 18pt);
+    font-size: min(3.5vw, 10pt);
     color: rgb(49, 49, 49);
     background-color: transparent;
     padding-bottom: 2px;
@@ -100,23 +121,30 @@ body {
     left: 50%;
     transform: translateX(-50%);
 }
-.subtitles p {
+.subtitles > div > p:first-of-type {
     position: relative;
-    padding-top: 160px;
+    padding-top: 140px;
     font-family: 'Handlee';
     font-weight: bold;
-    color: beige;
+    color: black;
     font-size: min(12vw, 55pt);
     text-align: center;
 }
+.evenementen {
+    position: relative;
+}
+.updates {
+    position: relative;
+    top: 800px;
+}
 .gallerij {
     position: relative;
+    top: 1800px;
 }
 .gcontainer {
     background-color: #ddd;
     height: 700px;
     margin-top: 10px;
-
     border-radius: 15px;
     position: relative;
     left: 50%;
@@ -129,33 +157,61 @@ body {
     /* left: 6%;
     width: 100%; */
 }
-.kamp {
-    position: relative;
-    top: 800px;
-}
-.uniform {
-    position: relative;
-    top: 1800px;
-}
 .contact {
     position: relative;
     top: 2800px;
 }
-.contact p:nth-of-type(2) {
-    color: beige;
+.contact .container p {
     font-family: arial;
-    font-size: min(5vw, 20pt) !important;
-    margin-top: -100px;
+    font-weight: lighter;
+    font-size: min(5vw, 15pt) !important;
+    text-align: center;
+    margin-bottom: 40px;
 }
-.contact iframe {
-    border-radius: 15px;
-    border: 0;
+.contact .center {
+    margin-top: 20px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
 }
-.flip-entries {
-    background-color: red;
-    margin-left: 100px;
+.vl {
+    border-left: 1px solid black;
+    height: 450px;
+  }
+.contact iframe {
+    border-radius: 15px;
+    border: 0;
+}
+.contact .container {
+  text-align: center;
+}
+.contact .myUL {
+    display: inline-block;
+    text-align: left;
+    list-style: none;
+}
+.contact li{
+    height: 60px;
+}
+.contact li img {
+    float: left;
+    scale: 1.1;
+}
+.contact li div {
+    height: 40px;
+    float: left;
+    position: relative;
+    top: -5px;
+    line-height: 18px;
+    margin-left: 10px;
+    font-family: arial;
+}
+.contact li div span:nth-of-type(2){
+    font-size: 10pt;
+    opacity: 0.6;
 }

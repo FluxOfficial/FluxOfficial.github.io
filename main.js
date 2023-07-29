@@ -200,14 +200,14 @@ function off() {
 function watch() {
   localStorage.setItem("last", "watch");
   document.getElementById("overlay").style.display = "block"
-  document.getElementById("overlay").style.background = 'rgba(0, 0, 0, 0.48)'
+  document.getElementById("overlay").style.background = 'rgba(0, 0, 0, 0.65)'
   document.getElementsByClassName("selector")[0].style.display = "block"
   document.getElementsByTagName("html")[0].style.overflowY = "hidden"
 }
 function down() {
   localStorage.setItem("last", "download");
   document.getElementById("overlay").style.display = "block"
-  document.getElementById("overlay").style.background = 'rgba(0, 0, 0, 0.48)'
+  document.getElementById("overlay").style.background = 'rgba(0, 0, 0, 0.65)'
   document.getElementsByClassName("selector")[0].style.display = "block"
   document.getElementsByTagName("html")[0].style.overflowY = "hidden"
 }
@@ -234,6 +234,8 @@ function showcontact() {
 function quality(element){
   scrollBy(0,500)
   off();
+  let quality = element.innerHTML.toString().toLowerCase().replaceAll('&nbsp;', '');
+  quality = (quality.slice(6)).slice(0, -7);
   if (localStorage.getItem("last") == "download") {
     (document.getElementById("download")).getElementsByTagName("div")[0]?.remove();
     (document.getElementById("download")).getElementsByTagName("script")[0]?.remove();
@@ -241,7 +243,7 @@ function quality(element){
     (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("script")[0]?.remove();
     (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("p")[0]?.remove();
     const a = document.createElement("a");
-    a.href = localStorage.getItem(element.innerText);
+    a.href = localStorage.getItem(quality);
     a.download = true;
     const script = document.createElement("script");
     script.src = "https://cdn.jsdelivr.net/npm/@webtor/embed-sdk-js/dist/index.min.js";
@@ -263,7 +265,7 @@ function quality(element){
     (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("script")[0]?.remove();
     (document.getElementsByClassName("videoplayer")[0]).getElementsByTagName("p")[0]?.remove();
     const video = document.createElement("video");
-    video.src = localStorage.getItem(element.innerText);
+    video.src = localStorage.getItem(quality);
     video.controls = true;
     const script = document.createElement("script");
     script.src = "https://cdn.jsdelivr.net/npm/@webtor/embed-sdk-js/dist/index.min.js";
@@ -317,10 +319,19 @@ function alldata(element) {
   hd = (element.getElementsByClassName("720p")[0].innerText);
   fullhd = (element.getElementsByClassName("1080p")[0].innerText);
   qhd = (element.getElementsByClassName("4K")[0].innerText);
+  hdweb = (element.getElementsByClassName("720pweb")[0].innerText);
+  fullhdweb = (element.getElementsByClassName("1080pweb")[0].innerText);
+  qhdweb = (element.getElementsByClassName("4Kweb")[0].innerText);
   localStorage.setItem("quality", quality);
+  
   localStorage.setItem("720p", hd);
   localStorage.setItem("1080p", fullhd);
-  localStorage.setItem("4K", qhd);
+  localStorage.setItem("4k", qhd);
+
+  localStorage.setItem("720pweb", hdweb);
+  localStorage.setItem("1080pweb", fullhdweb);
+  localStorage.setItem("4kweb", qhdweb);
+
   localStorage.setItem("moviename", moviename);
   localStorage.setItem("genre", genre);
   localStorage.setItem("poster", poster);
@@ -362,7 +373,7 @@ function fetchalldata() {
     button.setAttribute('onclick',"quality(this)");
     const span = document.createElement("span");
     span.innerText = (localStorage.getItem("quality").split(" "))[i];
-    (document.getElementsByClassName("selector")[0].appendChild(button)).appendChild(span);
+    ((document.getElementsByClassName("selector")[0]).getElementsByClassName("qcontainer")[0].appendChild(button)).appendChild(span);
   }
 }
 window.onload = function() {
@@ -580,12 +591,12 @@ function loadmovies() {
   let iframe = document.getElementById('database');
   let iframecontent = iframe.contentDocument || iframe.contentWindow.document;
   let content = (iframecontent.getElementsByTagName("html")[0]).getElementsByTagName("body")[0];
-  // if (content.getElementsByTagName('script')[0]) {
-  //   var ele = content.getElementsByTagName('script')[0];
-  // }
-  // if(ele.parentNode){
-  //   ele.parentNode.removeChild(ele);
-  // }
+  if (content.getElementsByTagName('script')[0]) {
+    var ele = content.getElementsByTagName('script')[0];
+  }
+  if(ele.parentNode){
+    ele.parentNode.removeChild(ele);
+  }
 
   let childs = content.children;
   let numb = content.childElementCount;
@@ -623,12 +634,12 @@ function checkfavorites() {
   let iframe = document.getElementById('database');
   let iframecontent = iframe.contentDocument || iframe.contentWindow.document;
   let content = (iframecontent.getElementsByTagName("html")[0]).getElementsByTagName("body")[0];
-  // if (content.getElementsByTagName('script')[0]) {
-  //   var ele = content.getElementsByTagName('script')[0];
-  // }
-  // if(ele.parentNode){
-  //   ele.parentNode.removeChild(ele);
-  // }
+  if (content.getElementsByTagName('script')[0]) {
+    var ele = content.getElementsByTagName('script')[0];
+  }
+  if(ele.parentNode){
+    ele.parentNode.removeChild(ele);
+  }
   let childs = content.children;
   let numb = content.childElementCount;
   let moviedir = document.getElementsByClassName("recent")[0];
@@ -659,8 +670,8 @@ function scroller() {
   let content = document.getElementById("content").offsetTop;
   window.scrollTo({ top: content, behavior: 'smooth'});
 }
-const scrollContainer = document.querySelector(".wrapper");
-scrollContainer.addEventListener("wheel", (evt) => {
-    evt.preventDefault();
-    scrollContainer.scrollLeft += evt.deltaY;
-});
+// const scrollContainer = document.querySelector(".wrapper");
+// scrollContainer.addEventListener("wheel", (evt) => {
+//     evt.preventDefault();
+//     scrollContainer.scrollLeft += evt.deltaY;
+// });
