@@ -170,7 +170,7 @@ body {
 }
 .gcontainer {
     background-color: #ddd;
-    height: 580px;
+    height: 75vh;
     margin-top: 5px;
     border-radius: 15px;
     position: relative;
@@ -259,7 +259,7 @@ body {
 .socials a:nth-of-type(2) i {
   font-size: 37pt;
   position: relative;
-  top: -3px;
+  top: -2.2px;
   padding: 1px;
   background: -moz-linear-gradient(top, #e72c83 0%, #da1bb0 100%);
   background: -webkit-linear-gradient(top, #e72c83 0%, #a742c6 100%);
