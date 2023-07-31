@@ -7,14 +7,14 @@
 }
 html {
     scroll-behavior: smooth;
-    /* overflow-x: hidden;
-    overflow-y: scroll; */
+    overflow-x: hidden;
+    overflow-y: scroll;
     width: 100%;
     -webkit-tap-highlight-color: transparent;
 }
 body {
     background-color: white;
-    height: 10000px;
+    height: auto;
 }
 .banner {
     position: fixed;
@@ -28,17 +28,17 @@ body {
 }
 .title {
     position: fixed;
-    top: 26px;
-    left: 5%;
-    font-size: min(20vw, 18pt);
-    font-family: helvetica;
-    letter-spacing: 3px;
+    top: 30px;
+    left: 85px;
+    font-size: min(20vw,15pt);
+    font-family: arial;
+    letter-spacing: 0px;
     z-index: 2;
 }
 .logo {
     position: fixed;
     top: 10px;
-    left: 1%;
+    left: 10px;
     width: 60px;
     z-index: 1;
     border-radius: 50%;
@@ -54,9 +54,6 @@ body {
     .nav {
         top: 32px !important;
     }
-    .subtitles p {
-        padding-top: 110px !important;
-    }
   }
 .welcome {
     position: relative;
@@ -67,28 +64,62 @@ body {
     text-align: center;
     display: flex;
     flex-direction: row;
-    gap: 200px;
+    gap: 70px;
+    padding-bottom: 400px;
 }
 .welcome div {
-    margin-top: 20px;
+    margin-top: 5px;
 }
 .welcome h1 {
-    font-size: min(20vw, 50pt);
+    font-size: min(15vw, 50pt);
     font-family: 'Belanosima';
     letter-spacing: 3px;
     line-height: 60px;
 }
 .welcome p {
-    font-size: min(3.2vw, 15pt);
+    font-size: min(4vw, 20pt);
     font-family: Arial;
 }
-.welcome button {
-    border: none;
-    padding: 15px 0 15px 0;
-    width: 120px;
-    font-size: 12pt;
-    border-radius: 5px;
+.welcome p span { 
+    font-weight: bold;
+    font-family: 'Handlee';
+    font-size:min(5vw, 20pt);
+}
+.welcome a {
+    margin: 0 8px 0 8px;
+    padding: 15px 20px 15px 20px;
+    font-size: 14pt;
+    border-radius: 7px;
     transition: 200ms;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: Arial;
+    background-color:rgb(211, 22, 22) ;
+}
+.welcome a:hover {
+    background-color: rgb(170, 2, 2);
+}
+@media screen and (max-width: 1300px) {
+    .title {
+      display: none;
+    }
+    .welcome {
+        top: 100px;
+        flex-direction: column;
+    }
+    .vl {
+        display: none;
+    }
+    .center {
+        flex-direction: column !important;
+        width: 85% !important;
+    }
+    .center iframe {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 .nav {
     position: fixed;
@@ -101,7 +132,7 @@ body {
 }
 .nav a {
     font-family: arial;
-    font-size: min(3.5vw, 10pt);
+    font-size: min(3.5vw, 12pt);
     color: rgb(49, 49, 49);
     background-color: transparent;
     padding-bottom: 2px;
@@ -116,35 +147,31 @@ body {
     border-bottom: 4px solid brown ;
 }
 .subtitles {
-    top: 800px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
 }
 .subtitles > div > p:first-of-type {
     position: relative;
-    padding-top: 140px;
+    padding-top: 110px;
     font-family: 'Handlee';
     font-weight: bold;
     color: black;
-    font-size: min(12vw, 55pt);
+    font-size: min(12vw, 50pt);
     text-align: center;
-}
-.evenementen {
-    position: relative;
 }
 .updates {
     position: relative;
-    top: 800px;
+    padding-bottom: 800px;
 }
 .gallerij {
     position: relative;
-    top: 1800px;
+    padding-bottom: 800px;
 }
 .gcontainer {
     background-color: #ddd;
-    height: 700px;
-    margin-top: 10px;
+    height: 580px;
+    margin-top: 5px;
     border-radius: 15px;
     position: relative;
     left: 50%;
@@ -154,19 +181,21 @@ body {
 .gallerij iframe {
     height: inherit;
     position: relative;
-    /* left: 6%;
-    width: 100%; */
+    width: 100%;
 }
 .contact {
     position: relative;
-    top: 2800px;
+    padding-bottom: 500px;
 }
-.contact .container p {
+.contact .container p:first-child {
     font-family: arial;
-    font-weight: lighter;
     font-size: min(5vw, 15pt) !important;
     text-align: center;
     margin-bottom: 40px;
+}
+.contact .container p:nth-of-type(2) {
+    font-family: arial;
+    font-size: min(5vw, 15pt) !important;
 }
 .contact .center {
     margin-top: 20px;
@@ -186,23 +215,21 @@ body {
 .contact iframe {
     border-radius: 15px;
     border: 0;
-}
-.contact .container {
-  text-align: center;
+    width: min(85vw, 600px);
 }
 .contact .myUL {
     display: inline-block;
     text-align: left;
     list-style: none;
 }
-.contact li{
+.myUL li{
     height: 60px;
 }
-.contact li img {
+.myUL li img {
     float: left;
     scale: 1.1;
 }
-.contact li div {
+.myUL li div {
     height: 40px;
     float: left;
     position: relative;
@@ -211,7 +238,48 @@ body {
     margin-left: 10px;
     font-family: arial;
 }
-.contact li div span:nth-of-type(2){
+.myUL li div span:nth-of-type(2){
     font-size: 10pt;
     opacity: 0.6;
+}
+.socials {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    position: relative;
+    top: -15px;
+}
+.socials a i {
+    cursor: pointer;
+    font-size: 35pt;
+}
+.socials a:nth-of-type(1) i {
+    color: rgb(83, 108, 253);
+}
+.socials a:nth-of-type(2) i {
+  font-size: 37pt;
+  position: relative;
+  top: -3px;
+  padding: 1px;
+  background: -moz-linear-gradient(top, #e72c83 0%, #da1bb0 100%);
+  background: -webkit-linear-gradient(top, #e72c83 0%, #a742c6 100%);
+  background: linear-gradient(to bottom, #e72c83 0%, #a742c6 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.socials a i:before {
+  display: inline;
+}
+.container ul:nth-of-type(2) li {
+    height: 20px;
+    font-family: arial;
+    position: relative;
+    left: 15px;
+    top: 10px;
+    font-weight: 200;
+}
+.inschrijvingen {
+
 }
