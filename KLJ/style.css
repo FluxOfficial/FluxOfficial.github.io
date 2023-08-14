@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -7,46 +8,55 @@
 }
 html {
     scroll-behavior: smooth;
-    /* overflow-x: hidden;
-    overflow-y: scroll; */
+    overflow-x: hidden;
+    overflow-y: scroll;
     width: 100%;
     -webkit-tap-highlight-color: transparent;
 }
 body {
     background-color: brown;
-    height: 10000px;
 }
 .banner {
     position: fixed;
     background-color: beige;
     left: 50%;
     transform: translateX(-50%);
-    height: 120px;
+    height: 80px;
     width: 100%;
     box-shadow: 0 1px 30px black;
     z-index: 1;
 }
 .logo {
     position: fixed;
-    top: 8px;
-    left: 1%;
-    width: 100px;
+    left: 10px;
+    width: 80px;
     z-index: 1;
 }
 @media screen and (max-width: 500px) {
-    .logo {
+    /* .logo {
       width: 60px;
-    }
-    .banner {
-        height: 80px;
-    }
+    } */
     .nav {
         top: 32px !important;
     }
-    .subtitles p {
-        padding-top: 110px !important;
+    .pa-gallery-player-widget {
+        height: 300px !important;
+    }   
+}
+@media screen and (max-width: 1300px) {
+    .vl {
+        display: none;
     }
-  }
+    .center {
+        flex-direction: column !important;
+        width: 85% !important;
+    }
+    .center iframe {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
 .welcome {
     position: relative;
     left: 50%;
@@ -54,13 +64,16 @@ body {
     top: 300px;
     width: 100%;
     text-align: center;
+    padding-bottom: 800px;
 }
 .welcome p {
+    position: relative;
     color: beige;
     font-size: min(20vw, 120pt);
     font-family: 'Belanosima';
     filter: drop-shadow(6px 6px black);
     letter-spacing: 3px;
+    z-index: 2;
 }
 .welcome span {
     position: relative;
@@ -68,19 +81,28 @@ body {
     color: beige;
     font-size: min(3.2vw, 15pt);
     font-family: Arial;
+    z-index: 2;
+}
+.welcome img {
+    position: absolute;
+    transform: translateX(-50%);
+    top: -200px;
+    left: 80%;
+    z-index: 1;
+    width: 10vw;
 }
 .nav {
     position: fixed;
     display: flex;
     gap: 2.5vw;
-    top: 42px;
+    top: 33px;
     right: 3%;
     user-select: none;
     z-index: 1;
 }
 .nav a {
     font-family: arial;
-    font-size: min(3.5vw, 18pt);
+    font-size: min(3.5vw, 12pt);
     color: rgb(49, 49, 49);
     background-color: transparent;
     padding-bottom: 2px;
@@ -95,22 +117,22 @@ body {
     border-bottom: 4px solid brown ;
 }
 .subtitles {
-    top: 800px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
 }
-.subtitles p {
+.subtitles > div > p:first-of-type {
     position: relative;
-    padding-top: 160px;
+    padding-top: 110px;
     font-family: 'Handlee';
     font-weight: bold;
     color: beige;
-    font-size: min(12vw, 55pt);
+    font-size: min(12vw, 50pt);
     text-align: center;
 }
 .gallerij {
     position: relative;
+    padding-bottom: 800px;
 }
 .gcontainer {
     background-color: #ddd;
@@ -126,36 +148,124 @@ body {
 .gallerij iframe {
     height: inherit;
     position: relative;
-    /* left: 6%;
-    width: 100%; */
 }
 .kamp {
     position: relative;
-    top: 800px;
+    padding-bottom: 800px;
 }
 .uniform {
     position: relative;
-    top: 1800px;
+    padding-bottom: 800px;
 }
 .contact {
     position: relative;
-    top: 2800px;
 }
-.contact p:nth-of-type(2) {
-    color: beige;
-    font-family: arial;
-    font-size: min(5vw, 20pt) !important;
-    margin-top: -100px;
+.contact > p:first-child {
+    top: 150px;
+    color: black !important;
 }
-.contact iframe {
-    border-radius: 15px;
-    border: 0;
+.color {
+    background-color: beige;
+    border-radius: 40px 40px 0 0 ;
+    padding: 150px 0 350px 0;
+}
+.color > p:first-of-type {
+    font-family: 'Roboto';
+    text-align: center;
+    font-size: 30pt;
+    margin-top: 40px;
+}
+.contact .container p {
+    font-family: 'Roboto';
+    font-size: min(5vw, 15pt) !important;
+    margin-bottom: 30px;
+    color: rgb(19, 19, 19);
+    font-weight:bold;
+}
+.contact .center {
+    margin-top: 20px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
 }
-.flip-entries {
-    background-color: red;
-    margin-left: 100px;
+.vl {
+    border-left: 1px solid black;
+    height: 450px;
+  }
+.contact iframe {
+    border-radius: 15px;
+    border: 0;
+    width: min(85vw, 600px);
+    /* border: 1px solid white; */
+}
+.contact .myUL {
+    display: inline-block;
+    text-align: left;
+    list-style: none;
+    margin-left: 10px;
+}
+.myUL li{
+    height: 60px;
+}
+.myUL li img {
+    float: left;
+    scale: 0.8;
+    filter: brightness(0.2);
+}
+.myUL li div {
+    height: 40px;
+    float: left;
+    position: relative;
+    top: -5px;
+    line-height: 18px;
+    margin-left: 10px;
+    font-family: arial;
+}
+.myUL li div span:nth-of-type(2){
+    font-size: 10pt;
+    opacity: 0.6;
+}
+.socials {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    position: relative;
+    top: -12px;
+    margin-left: 10px;
+}
+.socials a i {
+    cursor: pointer;
+    font-size: 35pt;
+}
+.socials a:nth-of-type(1) i {
+    color: rgb(83, 108, 253);
+}
+.socials a:nth-of-type(2) i {
+  font-size: 37pt;
+  position: relative;
+  top: -2.2px;
+  padding: 1px;
+  background: -moz-linear-gradient(top, #e72c83 0%, #da1bb0 100%);
+  background: -webkit-linear-gradient(top, #e72c83 0%, #a742c6 100%);
+  background: linear-gradient(to bottom, #e72c83 0%, #a742c6 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.socials a i:before {
+  display: inline;
+}
+.container ul:nth-of-type(2) li {
+    height: 20px;
+    font-family: arial;
+    position: relative;
+    left: 15px;
+    top: 10px;
+    font-weight: 200;
 }

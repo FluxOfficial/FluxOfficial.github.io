@@ -54,6 +54,9 @@ body {
     .nav {
         top: 32px !important;
     }
+    .pa-gallery-player-widget {
+        height: 300px !important;
+    }   
   }
 .welcome {
     position: relative;
@@ -169,14 +172,19 @@ body {
     padding-bottom: 800px;
 }
 .gcontainer {
-    background-color: #ddd;
-    height: 75vh;
-    margin-top: 5px;
-    border-radius: 15px;
+    margin-top: 40px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
+    width: 60%;
+    max-width: 1000px;
+    min-width: 380px;
+}
+.pa-gallery-player-widget {
+    height: 60vh;
+}
+.gcontainer iframe {
+    border-radius: 10px;
 }
 .gallerij iframe {
     height: inherit;
