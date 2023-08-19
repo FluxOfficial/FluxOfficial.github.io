@@ -26,22 +26,125 @@ body {
     box-shadow: 0 1px 30px black;
     z-index: 1;
 }
-.logo {
-    position: fixed;
+.banner img {
+    position: relative;
     left: 10px;
     width: 80px;
     z-index: 1;
 }
-@media screen and (max-width: 500px) {
-    /* .logo {
-      width: 60px;
-    } */
+.browsebutton {
+    visibility: hidden;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#nav-icon4 {
+    width: 60px;
+    height: 56px;
+    position: fixed;
+    scale: 1.1;
+    right: 2%;
+    top: 18px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg) scale(0.45);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+  }
+  #nav-icon4:focus {
+    outline: none;
+  }
+  #nav-icon4 span {
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background: black;
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .2s ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+    transition: 0.2s ease-in-out;
+  }
+  
+  #nav-icon4 span:nth-child(1) {
+    top: 0px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+  
+  #nav-icon4 span:nth-child(2) {
+    top: 18px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+  
+  #nav-icon4 span:nth-child(3) {
+    top: 35px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+  
+  #nav-icon4.open span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: -3px;
+    left: 8px;
+  }
+  
+  #nav-icon4.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+  }
+  
+  #nav-icon4.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 39px;
+    left: 8px;
+  }
+@media screen and (max-width: 550px) {
     .nav {
-        top: 32px !important;
+        visibility: hidden;
+    }
+    .browsebutton {
+        visibility: visible;
     }
     .pa-gallery-player-widget {
         height: 300px !important;
-    }   
+    }
+    .welcome {
+        top: 180px !important;
+    } 
+    .welcome p {
+        letter-spacing: 0 !important;
+    }
 }
 @media screen and (max-width: 1300px) {
     .vl {
@@ -56,6 +159,9 @@ body {
         left: 50%;
         transform: translateX(-50%);
     }
+    .welcome img {
+        display: none;
+    }
 }
 .welcome {
     position: relative;
@@ -65,8 +171,9 @@ body {
     width: 100%;
     text-align: center;
     padding-bottom: 800px;
+    transition: 400ms;
 }
-.welcome p {
+.welcome > p:first-of-type {
     position: relative;
     color: beige;
     font-size: min(20vw, 120pt);
@@ -86,11 +193,54 @@ body {
 .welcome img {
     position: absolute;
     transform: translateX(-50%);
-    top: -200px;
-    left: 80%;
+    top: -130px;
+    margin-left: 140px;
     z-index: 1;
-    width: 10vw;
+    width: 250px;
+    filter: drop-shadow(2px 5px 2px rgb(0, 0, 0));
 }
+.collapse {
+    position: relative;
+    display: block;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(75vw, 800px);
+}
+.collapsible {
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 250ms;
+    width: 100%;
+  }
+  .active, .collapsible:hover {
+    background-color: rgb(0, 0, 0,0.1);
+  }
+  .collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  .active:after {
+    content: "\2212";
+  }
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
 .nav {
     position: fixed;
     display: flex;
@@ -106,7 +256,6 @@ body {
     color: rgb(49, 49, 49);
     background-color: transparent;
     padding-bottom: 2px;
-    transition: 200ms;
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 600;
@@ -115,6 +264,31 @@ body {
 .nav a:hover {
     color: rgb(202, 52, 52);
     border-bottom: 4px solid brown ;
+}
+.mobile {
+    gap: 25px;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    visibility: visible !important;
+    cursor: pointer;
+}
+.mobile a {
+    transition: 200ms;
+    font-size: 25pt;
+    color: white;
+    padding: 20px;
+    font-weight: lighter;
+}
+.mobile a:first-of-type {
+    margin-top: 10vh;
 }
 .subtitles {
     position: relative;
@@ -172,8 +346,8 @@ body {
 .color > p:first-of-type {
     font-family: 'Roboto';
     text-align: center;
-    font-size: 30pt;
-    margin-top: 40px;
+    font-size: min(6vw, 25pt);
+    margin: 40px 0 40px 0;
 }
 .contact .container p {
     font-family: 'Roboto';
@@ -201,7 +375,6 @@ body {
     border-radius: 15px;
     border: 0;
     width: min(85vw, 600px);
-    /* border: 1px solid white; */
 }
 .contact .myUL {
     display: inline-block;
@@ -225,6 +398,7 @@ body {
     line-height: 18px;
     margin-left: 10px;
     font-family: arial;
+    width: 250px;
 }
 .myUL li div span:nth-of-type(2){
     font-size: 10pt;
@@ -268,4 +442,38 @@ body {
     left: 15px;
     top: 10px;
     font-weight: 200;
+}
+.leiding {
+    text-align: left;
+    list-style: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+}
+.leiding li{
+    background-color: white;
+    border-radius: 40px;
+    height: 150px;
+    width: min(85vw, 550px);
+    padding: 20px;
+    margin-bottom: 10%;
+}
+.leiding li img {
+    float: left;
+    width: 150px;
+    border-radius: 15px;
+}
+.leiding li div {
+    float: left;
+    position: relative;
+    margin-left: 18px;
+    width: min(42vw, 370px);
+    font-family: arial;
+    border: 1px solid;
+}
+.leiding li div p {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px;
 }

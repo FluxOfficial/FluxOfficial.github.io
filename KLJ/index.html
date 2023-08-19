@@ -9,7 +9,9 @@
 <script defer src="main.js"></script>
 </head>
 <body>
-    <div class="banner" id="home"></div>
+    <div class="banner" id="home">
+        <a href="#top"><img src="logo.png"></a>
+    </div>
     <nav class="nav">
         <a href="#top">Home</a>
         <a href="#gallerij">Gallerij</a>
@@ -17,20 +19,38 @@
         <a href="#uniform">Uniform</a>
         <a href="#contact">Contact</a>
     </nav>
-    <img class="logo" src="logo.png">
+    <div class="browsebutton">
+        <div id="nav-icon4" onclick="menu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+    </div>
     <div class="welcome">
         <p>KLJ Putte</p>
         <span>"Vrijdagavond boordevol plezier hier bij ons op de KLJ! ;)"</span>
         <img src="logo.png">
+        <div class="collapse">
+
+        <button class="collapsible">Wat is KLJ?</button>
+        <div class="content">
+            <p>ssd moet ik nog verzinnen</p>
+        </div>
         
+        <button class="collapsible">Hoe kan ik mij inschrijven?</button>
+        <div class="content">
+            <p>NIET</p>
+        </div>
+
+        </div>
     </div>
     <div class="subtitles">
         <div class="gallerij">
             <p id="gallerij">Gallerij</p>
             <!-- <iframe src="https://drive.google.com/embeddedfolderview?id=1KESfyaMD_bQK_lcIrFhyCmEonkdreh7r#list" width="600" height="500" frameborder="0"></iframe> -->
-            <div class="gcontainer">
+            <!-- <div class="gcontainer">
                 <iframe src="https://drive.google.com/embeddedfolderview?id=1KESfyaMD_bQK_lcIrFhyCmEonkdreh7r#grid" width="500" frameborder="0"></iframe>
-            </div>
+            </div> -->
         </div>
         <div class="kamp">
             <p id="kamp">Kamp</p>
@@ -64,12 +84,28 @@
                     </ul>
                     <p>Websites en sociale links:</p>
                     <div class="socials">
-                        <a href="https://www.facebook.com/profile.php?id=100083549733435" target="_blank"><i class='fa fa-facebook-square' title="Facebook"></i></a>
-                        <a><i class='fa fa-instagram'  title="Instagram"></i></a>
+                        <a href="https://www.facebook.com/KLJPutte" target="_blank"><i class='fa fa-facebook-square' title="Facebook"></i></a>
+                        <a href="https://www.instagram.com/kljputte/" target="_blank"><i class='fa fa-instagram'  title="Instagram"></i></a>
                     </div>
                 </div> 
             </div>
             <p>Contact met ons opnemen?<br>Dit is onze leiding:</p>
+            <ul class="leiding">
+                <li>
+                    <img src="https://th.bing.com/th/id/OIG.CO2sHWK_IEYIwzXsC2hX">
+                    <div>
+                        <p>Ella Geerts</p>
+                        <span>bla bla bla</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://th.bing.com/th/id/OIG.CO2sHWK_IEYIwzXsC2hX">
+                    <div>
+                        <p>Tine Meuris</p>
+                        <span>bla bla bla</span>
+                    </div>
+                </li>
+            </ul>
             </div>
         </div>
     </div>
