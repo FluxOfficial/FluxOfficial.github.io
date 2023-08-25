@@ -41,11 +41,12 @@ function search() {
   }
 }
 window.onclick = function(e) {
-  // should be fixed
+  if (document.getElementById("myUL")) {
   let context = document.getElementById("myUL");
   let instance = new Mark(context);
   instance.unmark();
   document.getElementById("myUL").style.display = "none";
+}
 }
 function keypress(e) {
   if(e.keyCode === 13){
@@ -591,12 +592,12 @@ function loadmovies() {
   let iframe = document.getElementById('database');
   let iframecontent = iframe.contentDocument || iframe.contentWindow.document;
   let content = (iframecontent.getElementsByTagName("html")[0]).getElementsByTagName("body")[0];
-  // if (content.getElementsByTagName('script')[0]) {
-  //   var ele = content.getElementsByTagName('script')[0];
-  // }
-  // if(ele.parentNode){
-  //   ele.parentNode.removeChild(ele);
-  // }
+  if (content.getElementsByTagName('script')[0]) {
+    var ele = content.getElementsByTagName('script')[0];
+  }
+  if(ele.parentNode){
+    ele.parentNode.removeChild(ele);
+  }
 
   let childs = content.children;
   let numb = content.childElementCount;
@@ -634,12 +635,12 @@ function checkfavorites() {
   let iframe = document.getElementById('database');
   let iframecontent = iframe.contentDocument || iframe.contentWindow.document;
   let content = (iframecontent.getElementsByTagName("html")[0]).getElementsByTagName("body")[0];
-  // if (content.getElementsByTagName('script')[0]) {
-  //   var ele = content.getElementsByTagName('script')[0];
-  // }
-  // if(ele.parentNode){
-  //   ele.parentNode.removeChild(ele);
-  // }
+  if (content.getElementsByTagName('script')[0]) {
+    var ele = content.getElementsByTagName('script')[0];
+  }
+  if(ele.parentNode){
+    ele.parentNode.removeChild(ele);
+  }
   let childs = content.children;
   let numb = content.childElementCount;
   let moviedir = document.getElementsByClassName("recent")[0];
@@ -670,8 +671,17 @@ function scroller() {
   let content = document.getElementById("content").offsetTop;
   window.scrollTo({ top: content, behavior: 'smooth'});
 }
-// const scrollContainer = document.querySelector(".wrapper");
-// scrollContainer.addEventListener("wheel", (evt) => {
-//     evt.preventDefault();
-//     scrollContainer.scrollLeft += evt.deltaY;
-// });
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}

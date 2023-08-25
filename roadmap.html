@@ -4,31 +4,29 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> -->
 <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css">
 <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/sharp-solid.css">
 
 <head>
   <link rel="icon" type="image/x-icon" href="/images/logo 2.0.ico">
-  <title>Flux - Watchlist</title>
+  <title>Flux - Roadmap</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
+  <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
   <script defer src="main.js"></script>
   <script defer src="app.js"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5748530888926660"
      crossorigin="anonymous"></script>
 </head>
 <style>
-#myUL {
-  position: fixed;
-  top: 58px;
-  right: 1.9%;
-  width: 330px;
-  z-index: 11;
+  @media (max-width: 550px) {
+  .welcome .info {
+    margin-top: 15px;
+  }
 }
 </style>
-<body onload="checkfavorites()">
+<body>
 
 <div class="loader">
   <svg class="ring" viewBox="25 25 50 50" stroke-width="5">
@@ -37,33 +35,61 @@
 </div>
 
 <div class="content">
-  <div class="container2" style="top:80px">
-  <div class="welcome">
-    <h3 style="font-size: min(11vw, 50pt); font-family: 'Arial';">My Watchlist</h3>
-    <h1 class="info" style="opacity: 0; margin-bottom: 15px;">All your favorite movies will be listed here!</h1>
+  <div class="container2" style="top:60px">
+    <div class="welcome">
+        <h3 class="welcometext">Roadmap</h3>
+        <h1 class="info" style="opacity: 0; font-size: min(7vw, 30pt); top: -20px;">2023</h1>
+    </div>
+
+    <div class="quarters">
+      <div>
+        <p>Q1</p>
+        <ul>
+          <li>tset</li>
+          <li>tset</li>
+          <li>tset</li>
+          <li>tset</li>
+        </ul>
+      </div>
+
+      <div>
+        <p>Q2</p>
+        <ul>
+          <li>tset</li>
+          <li>tset</li>
+          <li>tset</li>
+          <li>tset</li>
+        </ul>
+      </div>
+
+      <div>
+        <p>Q3</p>
+        <ul>
+          <li>tset</li>
+          <li>tset</li>
+          <li>tset</li>
+          <li>tset</li>
+        </ul>
+      </div>
+
+      <div>
+        <p>Q4</p>
+        <ul>
+          <li>tset</li>
+          <li>tset</li>
+          <li>tset</li>
+          <li>tset</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
-  <div class="recentadd" style="top: 15px;">
-    <p style="font-size: 15pt; margin-bottom:5px;">My favorite movies</p>
-    <div class="break-tag"></div>
-  </div>
-
-  <div class="recent" style="top: 55px;">
-  </div>
-  <div class="noresults">No results found :(</div>
-  </div>
-  
-  <ul id="myUL">
-    <div id="notfound">No Results</div>
-  </ul>
   <div class="banner"></div>
   <nav class="homebuttons">
     <a href="index.html">Home</a>
+    <a href="watchlist.html">Watchlist</a>
     <a href="browse.html">Browse</a>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a>
-    <form autocomplete="off" onSubmit="return false;">
-      <input id="myInput" class="search" onkeyup="search()" onkeypress="keypress(event)" type="text" placeholder="search">
-    </form>
   </nav>
   <div class="browsebutton">
     <div id="nav-icon4" onclick="menu()">
@@ -74,9 +100,11 @@
   </div>
   <div class="dropdown">
     <a href="index.html">Home</a>
+    <a href="watchlist.html">Watchlist</a>
     <a href="browse.html">Browse</a>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a>
   </div>
+  
   <a href="index.html" class="title">FL<span class="letteru">U</span>X</a>
   <p class="progress">Under Progress</p>
   <img class="logo" src="/images/logo 2.0.png">
@@ -93,10 +121,6 @@
       <a href="roadmap.html">roadmap</a>
     </section>
     </div>
-    <button id="clean" onclick="cleanfavorites()">
-      Delete all favorites
-      <i class="fa fa-trash" aria-hidden="true"></i>
-    </button>
 </div>
 <div id="overlay" onclick="off()"></div>
 <form class="contact"  action="https://formsubmit.co/213153c9e78cadd2bd1a111bc371d0fd" method="POST" target="_blank" >
@@ -110,11 +134,11 @@
   <button type="submit">Send</button>
 </form>
 <button class="topjumper" onclick="topFunction()" title="Go to top"><i class="arrow up"></i></button>
-<iframe src="database.html" id="database"></iframe>
 <script>
 $(window).on('load',function(){
   $(".loader").fadeOut(500);
   $(".content").fadeIn(1000);
+  $(".topjumper").fadeIn(1000);
 });
 </script>
 </body>

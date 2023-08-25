@@ -20,17 +20,17 @@ document.write(`
   </div>
   <button class="topjumper" onclick="topFunction()" title="Go to top"><i class="arrow up"></i></button>
   <a href="../index.html" class="title">FL<span class="letteru">U</span>X</a>
-<img class="logo" src="../logo 2.0.png">
+<img class="logo" src="../images/logo 2.0.png">
 <div class="shadow"></div>
 <div class="bottomcontainer">
     <a class="form" href="https://docs.google.com/forms/d/e/1FAIpQLSeDwzTaWZXFKM8wFAJj5uINJbr0LSCCy9lbH4nnpviGJeCoNw/viewform?usp=sf_link" target="_blank">
     Feedback</a>
     <footer class="footer">&copy;Copyright 2022 RT-Productions</footer>
     <section>
-      <p onclick='showcontact()'>contact</p>
-      <p>info</p>
-      <p>donate</p>
-      <p>roadmap</p>
+      <a onclick='showcontact()'>contact</a>
+      <a>about</a>
+      <a>donate</a>
+      <a href="roadmap.html">roadmap</a>
     </section>
     </div>
     <form class="contact"  action="https://formsubmit.co/213153c9e78cadd2bd1a111bc371d0fd" method="POST" target="_blank" >
