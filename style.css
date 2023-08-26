@@ -1445,55 +1445,34 @@ margin-bottom: 50px;
 .closebtn:hover {
   color: black;
 }
-
-/* details {
-  user-select: none;
-  border: 1px solid purple;
-  color: white;
-  width: 500px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
-details>summary img.icon {
-  width: 15px;
-  transition: all 0.3s;
-  margin-left: auto;
-}
-details[open] summary img.icon {
-  transform: rotate(180deg);
-}
-summary {
-  display: flex;
-  cursor: pointer;
-}
-summary::-webkit-details-marker {
-  display: none;
-} */
-
 .collapse {
   position: relative;
   display: block;
-  top: 60px;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: min(75vw, 800px);
+  width: min(85vw, 800px);
 }
 .collapsible {
   background-color: transparent;
   color: white;
   cursor: pointer;
-  padding: 18px;
+  padding: 15px;
   border: none;
   text-align: left;
   outline: none;
   font-size: 15px;
   transition: 250ms;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 7px;
+  font-family: arial;
 }
 .active, .collapsible:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgb(43, 43, 43);
+}
+.collapsible.active {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .collapsible:after {
   content: '\002B';
@@ -1506,13 +1485,18 @@ summary::-webkit-details-marker {
   content: "\2212";
 }
 .details {
-  padding: 0 18px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
-  /* border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px; */
+  background-color: rgb(43, 43, 43);
+  color: white;
+  font-family: arial;
+  font-size: 11pt;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.details p {
+  padding:8px 13px 13px 13px;
 }
 .quarters {
   position: relative;
@@ -1525,7 +1509,6 @@ summary::-webkit-details-marker {
   grid-template-columns: repeat( auto-fit, 300px);
   gap: 80px;
   color: white;
-  border: purple 1px solid;
   padding-bottom: 200px;
   text-align: center;
   font-family: arial;
@@ -1537,4 +1520,47 @@ summary::-webkit-details-marker {
 .quarters ul {
   margin-top: 10px;
   list-style-type: none;
+}
+.quarters div p {
+  opacity: 0;
+  animation: fadedown 1s;
+  animation-fill-mode: forwards !important;
+}
+.quarters div ul li {
+  opacity: 0;
+  animation: fadeleft 1s;
+  animation-fill-mode: forwards !important;
+  font-size: 18pt;
+}
+.quarters div:nth-of-type(1) p {
+  animation-delay: 400ms;
+}
+.quarters div:nth-of-type(2) p {
+  animation-delay: 700ms;
+}
+.quarters div:nth-of-type(3) p {
+  animation-delay: 1s;
+}
+.quarters div:nth-of-type(4) p {
+  animation-delay: 1.3s;
+}
+@keyframes fadedown {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes fadeleft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }

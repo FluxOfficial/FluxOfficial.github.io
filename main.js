@@ -671,12 +671,28 @@ function scroller() {
   let content = document.getElementById("content").offsetTop;
   window.scrollTo({ top: content, behavior: 'smooth'});
 }
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
+if (document.title == "Flux - Roadmap") {
+  const animatedItems = (document.getElementsByClassName('quarters')[0]).getElementsByTagName('li');
+  const animatedArray = Array.from(animatedItems);
+  animatedArray.forEach((item, index) => {
+    item.style.animationDelay = `${index * 100 + 1000}ms`; // Voeg vertraging toe op basis van index
+  });
+}
+if (document.title == "Flux - Home") {
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  var previous = undefined;
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
+    if (previous != undefined && previous != this) {
+      previous.classList.toggle("active");
+      previous.nextElementSibling.style.maxHeight = null;
+    }
+    else if (previous != undefined) {
+      previous.classList.toggle("active");
+    }
     this.classList.toggle("active");
+    previous = this;
     var content = this.nextElementSibling;
     if (content.style.maxHeight){
       content.style.maxHeight = null;
@@ -684,4 +700,5 @@ for (i = 0; i < coll.length; i++) {
       content.style.maxHeight = content.scrollHeight + "px";
     } 
   });
+}
 }

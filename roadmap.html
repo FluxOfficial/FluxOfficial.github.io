@@ -20,10 +20,13 @@
      crossorigin="anonymous"></script>
 </head>
 <style>
-  @media (max-width: 550px) {
+@media (max-width: 550px) {
   .welcome .info {
     margin-top: 15px;
   }
+}
+.welcometext {
+  font-size: min(16vw, 80pt) !important;
 }
 </style>
 <body>
@@ -35,10 +38,10 @@
 </div>
 
 <div class="content">
-  <div class="container2" style="top:60px">
+  <div class="container2" style="top:80px">
     <div class="welcome">
         <h3 class="welcometext">Roadmap</h3>
-        <h1 class="info" style="opacity: 0; font-size: min(7vw, 30pt); top: -20px;">2023</h1>
+        <h1 class="info" style="opacity: 0; font-size: min(7vw, 30pt); top: -20px;">2024</h1>
     </div>
 
     <div class="quarters">
@@ -138,7 +141,6 @@
 $(window).on('load',function(){
   $(".loader").fadeOut(500);
   $(".content").fadeIn(1000);
-  $(".topjumper").fadeIn(1000);
 });
 </script>
 </body>
