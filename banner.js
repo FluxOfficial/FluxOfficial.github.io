@@ -28,9 +28,9 @@ document.write(`
     <footer class="footer">&copy;Copyright 2022 RT-Productions</footer>
     <section>
       <a onclick='showcontact()'>contact</a>
-      <a>about</a>
+      <a href="../about.html">about</a>
       <a>donate</a>
-      <a href="roadmap.html">roadmap</a>
+      <a href="../roadmap.html">roadmap</a>
     </section>
     </div>
     <form class="contact"  action="https://formsubmit.co/213153c9e78cadd2bd1a111bc371d0fd" method="POST" target="_blank" >

@@ -696,8 +696,15 @@ for (i = 0; i < coll.length; i++) {
     var content = this.nextElementSibling;
     if (content.style.maxHeight){
       content.style.maxHeight = null;
+      this.style.borderRadius = "7px"
+      if (this.classList.contains('active')) {
+        this.classList.toggle("active");
+        previous = undefined;
+      }
     } else {
       content.style.maxHeight = content.scrollHeight + "px";
+      this.style.borderBottomLeftRadius = "0"; 
+      this.style.borderBottomRightRadius = "0";
     } 
   });
 }

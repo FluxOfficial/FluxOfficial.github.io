@@ -7,14 +7,56 @@
 <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css">
 <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/sharp-solid.css">
 <head>
-  <link rel="icon" type="image/x-icon" href="../logo 2.0.ico">
+  <link rel="icon" type="image/x-icon" href="../images/logo 2.0.ico">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="../main.js"></script>
   <link rel="stylesheet" href="../style.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5748530888926660"
      crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+      var previous = undefined;
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          if (previous != undefined && previous != this) {
+            previous.classList.toggle("active");
+            previous.nextElementSibling.style.maxHeight = null;
+          }
+          else if (previous != undefined) {
+            previous.classList.toggle("active");
+          }
+          this.classList.toggle("active");
+          previous = this;
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight){
+            content.style.maxHeight = null;
+            this.style.borderRadius = "7px"
+            if (this.classList.contains('active')) {
+              this.classList.toggle("active");
+              previous = undefined;
+            }
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            this.style.borderBottomLeftRadius = "0"; 
+            this.style.borderBottomRightRadius = "0"; 
+          } 
+        });
+      }
+    });
+  </script>
 </head>
-
+<style>
+  .collapse {
+    width: 90% !important;
+    top: 0;
+    margin-bottom: 20px;
+  }
+  .details p {
+    text-align: left;
+  }
+</style>
 <body onload="fetchalldata()">
   <div class="loader">
     <svg class="ring" viewBox="25 25 50 50" stroke-width="5">
@@ -25,27 +67,27 @@
   <div class="content">
     <div id="overlay" onclick="off()">
     </div>
-    <div class="selector" onclick="off()">
-      <div class="selectorcontainer">
+    <div class="selector">
         <p>Select your preffered quality</p>
         <div class="qcontainer"></div>
-      </div>
-      <br>
-      <p>
-          WEBRip Quality:
-          <br><br>
-          Movies labeled with "WEB" after the title are in WEBRip quality.
-          A WEBRip is a video file obtained by capturing or ripping the content directly from a streaming service (like Netflix, Amazon Prime, etc.).
-          While WEBRips offer good quality and convenience, they might not match the superior video and audio clarity of Blu-ray.
-          <br><br>
-          Blu-ray Quality:
-          <br><br>
-          Movies with no additional label after the title are in Blu-ray quality.
-          Blu-ray discs are known for their exceptional video and audio fidelity, providing the best possible home entertainment experience.
-          With Blu-ray, you'll enjoy crystal-clear visuals, immersive sound, and high-definition details that truly bring movies to life.
-          <br><br>
-          We hope this explanation helps you choose the perfect movie experience for your enjoyment. Happy streaming!
-      </p>
+        <div class="collapse">
+
+          <button class="collapsible">Understanding Film Qualities</button>
+          <div class="details">
+              <p>
+                <strong style="font-size: 12pt;">WEBRip Quality:</strong>
+                <br><br>
+                Movies marked with "WEB" in the title are in WEBRip quality. WEBRips are captured from streaming services like Netflix, Amazon Prime, etc. While offering good quality and convenience, they may not match Blu-ray's superior video and audio clarity.
+                <br><br>
+                <strong style="font-size: 12pt;">Blu-ray Quality:</strong>
+                <br><br>
+                Movies without additional labels are in Blu-ray quality. Blu-ray discs offer exceptional video and audio fidelity, providing the ultimate home entertainment experience. With Blu-ray, you'll enjoy crystal-clear visuals, immersive sound, and HD details that truly bring movies to life.
+                <br><br>
+                We hope this guide helps you pick the perfect movie experience. Enjoy streaming!
+              </p>
+          </div>
+
+        </div>
       </div>
     </div>
 
