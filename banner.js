@@ -13,11 +13,13 @@ document.write(`
       <span></span>
     </div>
   </div>
-  <div class="dropdown">
-    <a href="../index.html">Home</a>
-    <a href="../watchlist.html">Watchlist</a>
-    <a href="../browse.html">Browse</a>
-  </div>
+  <ul class="dropdown">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../watchlist.html">Watchlist</a></li>
+    <li><a href="../browse.html">Browse</a></li>
+    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a></li>
+    <li><button class="signin" onclick="window.location.href = '../signin.html';">Sign In</button></li>
+  </ul>
   <button class="topjumper" onclick="topFunction()" title="Go to top"><i class="arrow up"></i></button>
   <a href="../index.html" class="title">FL<span class="letteru">U</span>X</a>
 <img class="logo" src="../images/logo 2.0.png">

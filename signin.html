@@ -5,9 +5,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css">
+
 <head>
   <link rel="icon" type="image/x-icon" href="/images/logo 2.0.ico">
-  <title>Flux - About</title>
+  <title>Flux - Sign In</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
@@ -19,10 +20,38 @@
 </head>
 <style>
   .homebuttons {
-  border-right: 1px solid gray;
-  padding-right: 50px;
-  right: 100px;
-}
+    right: 40px;
+  }
+  @media (max-width: 1100px) {
+    .wr {
+      display: none;
+    }
+    .register > p {
+      display: none;
+    }
+    .welcome {
+      left: 50% !important;
+      margin: 0 !important;
+      transform: translateX(-50%);
+      top: 20px;
+    }
+    .register {
+      bottom: -100px;
+    }
+  }
+  .wr {
+    position: unset !important;
+    transform: none !important;
+    left: unset;
+  }
+  .welcome {
+    left: 20%;
+    margin: 110px 0 50px 0;
+    width: max-content;
+  }
+  .banner {
+    display: none;
+  }
 </style>
 <body>
 
@@ -31,15 +60,41 @@
     <circle cx="50" cy="50" r="20" />
   </svg>
 </div>
-
 <div class="content">
   <div class="container2" style="top:90px">
     <div class="welcome">
-        <h3 style="font-size: min(12vw, 50pt);">About</h3>
+        <h4>Sign In</h4>
     </div>
-
+    <div class="wrapper">
+      <div class="wr">
+        <h1>Welcome back!</h1>
+        <p>Sign in to your account to enjoy a world of movie entertainment. Whether you're into classics, action, romance, or thrillers, we've got a wide selection just for you. Your next movie night starts here.
+          <br><br>
+          Don't have an account yet? No worries. Click the "Sign Up" link to create your free account and start exploring our movie collection.
+        </p>
+      </div>
+      <form class="register">
+          <p>SIGN IN</p>
+          <div class="inputcontainer" style="margin: 0;">
+              <p>Username Or E-mail</p>
+              <div class="input-container">
+                <i class="fa fa-user"></i>
+                <input type="text" id="username" name="Username" placeholder="Username/E-mail" required>
+              </div>
+              <p>Password</p>
+              <div class="input-container">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" name="Password" placeholder="Password" required>
+              </div>
+          </div>
+          <button type="submit">Sign in</button>
+          <div class="alracc">
+            <p>Not a member?</p>
+            <a href="signup.html">Sign up →</a>
+          </div>
+      </form>
+    </div>
   </div>
-
   <div class="banner"></div>
   <nav class="homebuttons">
     <a href="index.html">Home</a>
@@ -47,7 +102,6 @@
     <a href="browse.html">Browse</a>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a>
   </nav>
-  <button class="signin" onclick="window.location.href = 'signin.html';">Sign In</button>
   <div class="browsebutton">
     <div id="nav-icon4" onclick="menu()">
       <span></span>

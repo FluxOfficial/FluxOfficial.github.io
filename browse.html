@@ -5,7 +5,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css">
-<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/sharp-solid.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <head>
   <link rel="icon" type="image/x-icon" href="/images/logo 2.0.ico">
@@ -19,23 +19,25 @@
      crossorigin="anonymous"></script>
 </head>
 <style>
-  #myUL {
-    /* top: 213px; */
-    z-index: 11;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 330px;
+  @media (max-width: 880px) {
+    .searchbar.mobile {
+      display: block !important;
+    }
+    .welcome {
+      margin-bottom: 70px;
+    }
   }
-  .search {
-    z-index: 5;
-    position: relative;
+  .searchbar.mobile {
+    width: 280px;
+    display: none;
+    height: 35px;
     left: 50%;
     transform: translateX(-50%);
-    margin: 10px 0 10px;
+    margin: 30px 0 10px 0;
+    position: absolute;
+    top: 135px;
   }
 </style>
-
 <body>
   <div class="loader">
     <svg class="ring" viewBox="25 25 50 50" stroke-width="5">
@@ -45,25 +47,10 @@
 
 <div class="content">
 
-  <!-- <ul id="myUL">
-    <div id="notfound">No Results</div>
-  </ul> -->
-  <!-- <form class="search" autocomplete="off">
-    <input id="myInput" onkeyup="search()" type="text" placeholder="search">
-  </form> -->
-
-  <div class="container2" style="top: 80px;">
+  <div class="container2" style="top: 70px;">
     <div class="welcome">
-      <h3 style="font-size: min(15vw, 50pt);font-family: Arial;">Browse</h3>
+      <h3 style="font-size: min(15vw, 50pt);">Browse</h3>
     </div>
-
-    <form class="search" autocomplete="off">
-      <input id="myInput" onkeyup="search()" type="text" placeholder="search">
-    </form>
-    
-    <ul id="myUL">
-      <div id="notfound">No Results</div>
-    </ul>
 
     <p id="browseres">Results for:</p>
     <div class="container">
@@ -147,8 +134,14 @@
   <nav class="homebuttons">
     <a href="index.html">Home</a>
     <a href="watchlist.html">Watchlist</a>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a> 
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a>
+    <button class="searchbar" onclick="showsearchbar()">
+      <i class="fa fa-search"></i>
+      <p>Search</p>
+      <div>Ctrl + K</div>
+    </button>
   </nav>
+  <button class="signin" onclick="window.location.href = 'signin.html';">Sign In</button>
   <div class="browsebutton">
     <div id="nav-icon4" onclick="menu()">
       <span></span>
@@ -156,11 +149,12 @@
       <span></span>
     </div>
   </div>
-  <div class="dropdown">
-    <a href="index.html">Home</a>
-    <a href="watchlist.html">Watchlist</a>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a>
-  </div>
+  <ul class="dropdown">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="watchlist.html">Watchlist</a></li>
+    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a></li>
+    <li><button class="signin" onclick="window.location.href = 'signin.html';">Sign In</button></li>
+  </ul>
   <a href="index.html" class="title">FL<span class="letteru">U</span>X</a>
     <p class="progress">Under Progress</p>
   <img class="logo" src="/images/logo 2.0.png">
@@ -183,6 +177,16 @@
 <div id="overlay" onclick="off()"></div>
 <div class="list" onclick="off()">
 </div>
+<form class="search" autocomplete="off">
+  <input id="myInput" onkeyup="search()" type="text" placeholder="Search">
+</form>
+<ul id="myUL">
+  <div id="notfound">No Results</div>
+</ul>
+<button class="searchbar mobile" onclick="showsearchbar()">
+  <i class="fa fa-search"></i>
+  <p>Search</p>
+</button>
 <form class="contact"  action="https://formsubmit.co/213153c9e78cadd2bd1a111bc371d0fd" method="POST" target="_blank" >
     <h1>Contact Us</h1>
     <p>We'd Love To Hear From You!</p>

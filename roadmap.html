@@ -5,7 +5,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css">
-<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/sharp-solid.css">
 
 <head>
   <link rel="icon" type="image/x-icon" href="/images/logo 2.0.ico">
@@ -25,8 +24,10 @@
     margin-top: 15px;
   }
 }
-.welcometext {
-  font-size: min(16vw, 80pt) !important;
+.homebuttons {
+  border-right: 1px solid gray;
+  padding-right: 50px;
+  right: 100px;
 }
 </style>
 <body>
@@ -40,7 +41,7 @@
 <div class="content">
   <div class="container2" style="top:80px; padding-bottom: 250px;">
     <div class="welcome">
-        <h3 class="welcometext">Roadmap</h3>
+        <h3 style="font-size: min(16vw, 80pt)">Roadmap</h3>
         <h1 class="info" style="opacity: 0; font-size: min(7vw, 30pt); top: -20px;">2024</h1>
     </div>
 
@@ -48,8 +49,8 @@
       <div>
         <p>Q1</p>
         <ul>
-          <li><strong>Sticky Search Bar:</strong> Easily find your favorites! Our fixed search bar on the browse page ensures quick navigation, so you never miss a film.</li>
-          <li><strong>Results Per Page Filter:</strong> Customize your experience! A 'Results Per Page' filter lets you choose how many titles to view at once, maximizing your search efficiency.</li>
+          <li style="text-decoration: line-through;"><i class="fa fa-check-square"></i><strong>Upgrading Mobile Menu:</strong> Navigate with ease! We're enhancing the mobile menu for effortless browsing on the go, ensuring a seamless and user-friendly experience.</li>
+          <li style="text-decoration: line-through;"><i class="fa fa-check-square"></i><strong>Revamped Search: Discover with Style✨</strong> Experience our enhanced search system with a fresh look. Find what you love effortlessly and explore content with a touch of elegance.</li>
           <li><strong>About Page Creation:</strong> Get to know us better! We're crafting an engaging About page to share our story and values with you.</li>
           <li><strong>Connect with Us:</strong> Have a question or feedback? We're upgrading our contact page to make it easy for you to reach out. Your thoughts matter, and we're here to listen!</li>
         </ul>
@@ -101,6 +102,7 @@
     <a href="browse.html">Browse</a>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a>
   </nav>
+  <button class="signin" onclick="window.location.href = 'signin.html';">Sign In</button>
   <div class="browsebutton">
     <div id="nav-icon4" onclick="menu()">
       <span></span>
@@ -108,18 +110,17 @@
       <span></span>
     </div>
   </div>
-  <div class="dropdown">
-    <a href="index.html">Home</a>
-    <a href="watchlist.html">Watchlist</a>
-    <a href="browse.html">Browse</a>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a>
-  </div>
-  
+  <ul class="dropdown">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="watchlist.html">Watchlist</a></li>
+    <li><a href="browse.html">Browse</a></li>
+    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a></li>
+    <li><button class="signin" onclick="window.location.href = 'signin.html';">Sign In</button></li>
+  </ul>
   <a href="index.html" class="title">FL<span class="letteru">U</span>X</a>
   <p class="progress">Under Progress</p>
   <img class="logo" src="/images/logo 2.0.png">
   <div class="shadow"></div>
-  
   <div class="bottomcontainer">
     <a class="form" href="https://docs.google.com/forms/d/e/1FAIpQLSeDwzTaWZXFKM8wFAJj5uINJbr0LSCCy9lbH4nnpviGJeCoNw/viewform?usp=sf_link" target="_blank">
     Feedback</a>

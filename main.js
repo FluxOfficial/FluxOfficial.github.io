@@ -1,5 +1,4 @@
 function search() {
-  document.getElementById("myUL").style.display = "block";
   var input, filter, ul, li, a, i, txtValue;
   var empty = 0;
   input = document.getElementById("myInput");
@@ -15,15 +14,12 @@ function search() {
     "caseSensitive": false
   }
   let keyword = input.value;
-
   for (i = 0; i < li.length; i++) {
     a = li[i].getElementsByTagName("a")[0];
     txtValue = a.textContent || a.innerText;
-
     let context = a;
     let instance = new Mark(context);
     instance.mark(keyword , options);
-
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
       li[i].style.display = "";
       localStorage.count = Number(localStorage.count)+1;
@@ -31,35 +27,49 @@ function search() {
       li[i].style.display = "none";
       empty += 1;
     }
-    if (empty === li.length) {
-      document.getElementById("notfound").style.display = "block";
-      document.getElementById("myUL").style.height = "70px";
-    }else{
-      document.getElementById("notfound").style.display = "none";
-      document.getElementById("myUL").style.height = "40vh";
-    }
+    
+  }
+  select();
+  if (empty === li.length) {
+    document.getElementById("notfound").style.display = "block";
+    document.getElementById("myUL").style.height = "70px";
+  }else{
+    document.getElementById("notfound").style.display = "none";
+    document.getElementById("myUL").style.height = "40vh";
   }
 }
-window.onclick = function(e) {
-  if (document.getElementById("myUL")) {
-  let context = document.getElementById("myUL");
-  let instance = new Mark(context);
-  instance.unmark();
-  document.getElementById("myUL").style.display = "none";
-}
+function select() {
+  if (document.title != "Flux - Browse") {
+  var results = Array.from(document.getElementById("myUL").getElementsByTagName("li"));
+  var firstVisibleResult = null;
+  results.forEach(result => {
+    result.classList.remove("selected");
+  });
+  for (var i = 0; i < results.length; i++) {
+    if (results[i].style.display !== "none") {
+      firstVisibleResult = results[i];
+      break;
+    }
+  }
+  if (firstVisibleResult) {
+    firstVisibleResult.classList.add("selected");
+  }
+  }
 }
 function keypress(e) {
   if(e.keyCode === 13){
     var ul , li;
     ul = document.getElementById("myUL");
     li = ul.getElementsByTagName('li');
+    let input = document.getElementById('myInput');
     for (i = 0; i < li.length; i++) {
-      if (li[i].style.display != "none") {
+      if (li[i].style.display !== "none") {
         let el = li[i].getElementsByTagName("a")[0];
         el.click();
         break;
       }
-  } 
+    }
+  
 }
 }
 function result(filter, type) {
@@ -180,16 +190,18 @@ window.onblur = function() {
   off();
 }
 function off() {
-  document.getElementById("overlay").style.background = 'rgba(0, 0, 0, 0.48)'
+  let dropdown = document.getElementsByClassName("dropdown")[0];
+  const animatedArray = Array.from(dropdown.getElementsByTagName('li'));
+  animatedArray.forEach((item) => {
+    item.style.transitionDelay = 'initial';
+  });
   document.getElementById("nav-icon4").classList.remove("open");
   document.getElementById("overlay").style.display = "none";
   if (document.getElementsByClassName("contact")[0].classList.contains('appearc')) {
     document.getElementsByClassName("contact")[0].classList.remove('appearc');
   }
   document.getElementsByTagName("html")[0].style.overflowY = "scroll"
-  document.getElementsByClassName("dropdown")[0].style.visibility = "hidden"
-  document.getElementsByClassName("dropdown")[0].style.opacity = 0
-  document.getElementsByClassName("dropdown")[0].style.transform = "translateY(-100%)"
+  dropdown.classList.remove('show');
   if(document.getElementsByClassName("list")[0]){
     document.getElementsByClassName("list")[0].innerHTML = '';
     document.getElementsByClassName("list")[0].style.display = "none"
@@ -197,18 +209,20 @@ function off() {
   if (document.getElementsByClassName("selector")[0]) {
     document.getElementsByClassName("selector")[0].style.display = "none"
   }
+  if (document.getElementsByClassName("search")[0]) {
+    document.getElementsByClassName("search")[0].style.display = "none"
+    document.getElementById("myUL").style.display = "none"
+  }
 }
 function watch() {
   localStorage.setItem("last", "watch");
   document.getElementById("overlay").style.display = "block"
-  document.getElementById("overlay").style.background = 'rgba(0, 0, 0, 0.65)'
   document.getElementsByClassName("selector")[0].style.display = "block"
   document.getElementsByTagName("html")[0].style.overflowY = "hidden"
 }
 function down() {
   localStorage.setItem("last", "download");
   document.getElementById("overlay").style.display = "block"
-  document.getElementById("overlay").style.background = 'rgba(0, 0, 0, 0.65)'
   document.getElementsByClassName("selector")[0].style.display = "block"
   document.getElementsByTagName("html")[0].style.overflowY = "hidden"
 }
@@ -225,12 +239,6 @@ function sort(element) {
       document.getElementsByClassName("list")[0].append(p);
     }
   }
-}
-function showcontact() {
-  document.getElementById("overlay").style.display = "block"
-  document.getElementById("overlay").style.background = 'rgba(0, 0, 0, 0.48)'
-  document.getElementsByClassName("contact")[0].classList.add("appearc");
-  document.getElementsByTagName("html")[0].style.overflowY = "hidden"
 }
 function quality(element){
   scrollBy(0,500)
@@ -291,22 +299,20 @@ function quality(element){
   }
 }
 function menu () {
-  if (document.getElementsByClassName("dropdown")[0].style.visibility == "hidden" || document.getElementsByClassName("dropdown")[0].style.visibility == ""){
-  document.getElementsByClassName("dropdown")[0].style.visibility = "visible"
-  document.getElementsByClassName("dropdown")[0].style.opacity = 1
-  document.getElementsByClassName("dropdown")[0].style.transform = "translateY(0)"
-  document.getElementById("overlay").style.display = "block"
-  if (document.getElementById("overlay").style.background != 'rgba(0, 0, 0, 0.8)') {
-    document.getElementById("overlay").style.background = 'rgba(0, 0, 0, 0.48)'
-  }
-  // else {
-    
-  // }
-  document.getElementsByTagName("html")[0].style.overflowY = "hidden"
-  document.getElementById("nav-icon4").classList.add("open");
+  let dropdown = document.getElementsByClassName("dropdown")[0];
+  if (dropdown.classList.contains('show')){
+    off();
   }
   else {
-  off();
+    document.getElementById("overlay").style.display = "block"
+    const animatedItems = dropdown.getElementsByTagName('li');
+    const animatedArray = Array.from(animatedItems);
+    animatedArray.forEach((item, index) => {
+      item.style.transitionDelay = `${index * 100}ms`;
+    });
+    document.getElementsByTagName("html")[0].style.overflowY = "hidden"
+    document.getElementById("nav-icon4").classList.add("open");
+    dropdown.classList.add('show');
   }
 }
 function alldata(element) {
@@ -379,12 +385,50 @@ function fetchalldata() {
 }
 window.onload = function() {
   document.getElementsByClassName('logo')[0].classList.add("animated");
-  document.getElementById("myUL").style.display = "none";
   localStorage.setItem("genrelast", "");
   localStorage.setItem("qualitylast", "");
   localStorage.setItem("yearlast", "");
+  localStorage.setItem("input", "");
   if (document.title == "Flux - Watchlist") {
     checkfavorites();
+  }
+  if (document.title == "Flux - Roadmap") {
+    const animatedItems = (document.getElementsByClassName('quarters')[0]).getElementsByTagName('li');
+    const animatedArray = Array.from(animatedItems);
+    animatedArray.forEach((item, index) => {
+      item.style.animationDelay = `${index * 100 + 1000}ms`; // Voeg vertraging toe op basis van index
+    });
+  }
+  if (document.title == "Flux - Home") {
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    var previous = undefined;
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      if (previous != undefined && previous != this) {
+        previous.classList.toggle("active");
+        previous.nextElementSibling.style.maxHeight = null;
+      }
+      else if (previous != undefined) {
+        previous.classList.toggle("active");
+      }
+      this.classList.toggle("active");
+      previous = this;
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+        this.style.borderRadius = "7px"
+        if (this.classList.contains('active')) {
+          this.classList.toggle("active");
+          previous = undefined;
+        }
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        this.style.borderBottomLeftRadius = "0"; 
+        this.style.borderBottomRightRadius = "0";
+      } 
+    });
+  }
   }
 }
 function itemfix() {
@@ -393,6 +437,7 @@ function itemfix() {
   for (let x = 0; x < numb; x ++) {
     children.item(x).setAttribute("onclick","alldata(this)");
     (children.item(x)).firstElementChild.setAttribute("onclick","location.href='./movies/dynamic.html'");
+    children.item(x).getElementsByTagName('img')[0].setAttribute("loading","lazy");
     let a = document.createElement("a");
     a.innerText = "View Details"
     a.setAttribute("class","viewdetails");
@@ -457,33 +502,20 @@ function openitem(element) {
 }
 window.onscroll = function() {
   let mybutton = document.getElementsByClassName("topjumper")[0];
-  let searchbar = document.getElementsByClassName("search")[0];
-  let banner = document.getElementsByClassName("banner")[0];
   if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
     mybutton.style.display = "block"
   } else {
     mybutton.style.display = "none";
   }
-  // if (document.title == "Flux - Browse") {
-  //   if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
-  //     searchbar.style.position = "fixed";
-  //     searchbar.style.top = "800px";
-  //     document.getElementById("myUL").style.position = "fixed";
-  //     document.getElementById("myUL").style.top = "122px";
-  //   } else {
-  //     searchbar.style.position = "relative";
-  //     searchbar.style.top = "0px";
-  //     document.getElementById("myUL").style.position = "relative";
-  //     document.getElementById("myUL").style.top = "213px";
-  //   } 
-  // }
-  if (document.title == "Flux - Home") {
-  if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-    banner.style.background = "rgba(17, 17, 17, 0.6)";
-  }
-  else {
-    banner.style.background = "rgba(17, 17, 17, 0)";
-  }
+  if (document.title == "Flux - Browse") {
+    let searchbar = document.getElementsByClassName("mobile")[0];
+    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+      searchbar.style.position = "fixed";
+      searchbar.style.top = "60px";
+    } else {
+      searchbar.style.position = "absolute";
+      searchbar.style.top = "135px";
+    } 
   }
 }
 function topFunction() {
@@ -539,6 +571,7 @@ function mark(element) {
   }
 }
 function star(element){
+  event.stopPropagation();
   element.getElementsByClassName('fa-star')[0].classList.toggle("fa-solid");
   let parent, name, index, span;
   parent = element.parentNode;
@@ -592,12 +625,12 @@ function loadmovies() {
   let iframe = document.getElementById('database');
   let iframecontent = iframe.contentDocument || iframe.contentWindow.document;
   let content = (iframecontent.getElementsByTagName("html")[0]).getElementsByTagName("body")[0];
-  // if (content.getElementsByTagName('script')[0]) {
-  //   var ele = content.getElementsByTagName('script')[0];
-  // }
-  // if(ele.parentNode){
-  //   ele.parentNode.removeChild(ele);
-  // }
+  if (content.getElementsByTagName('script')[0]) {
+    var ele = content.getElementsByTagName('script')[0];
+  }
+  if(ele.parentNode){
+    ele.parentNode.removeChild(ele);
+  }
 
   let childs = content.children;
   let numb = content.childElementCount;
@@ -635,12 +668,12 @@ function checkfavorites() {
   let iframe = document.getElementById('database');
   let iframecontent = iframe.contentDocument || iframe.contentWindow.document;
   let content = (iframecontent.getElementsByTagName("html")[0]).getElementsByTagName("body")[0];
-  // if (content.getElementsByTagName('script')[0]) {
-  //   var ele = content.getElementsByTagName('script')[0];
-  // }
-  // if(ele.parentNode){
-  //   ele.parentNode.removeChild(ele);
-  // }
+  if (content.getElementsByTagName('script')[0]) {
+    var ele = content.getElementsByTagName('script')[0];
+  }
+  if(ele.parentNode){
+    ele.parentNode.removeChild(ele);
+  }
   let childs = content.children;
   let numb = content.childElementCount;
   let moviedir = document.getElementsByClassName("recent")[0];
@@ -671,41 +704,24 @@ function scroller() {
   let content = document.getElementById("content").offsetTop;
   window.scrollTo({ top: content, behavior: 'smooth'});
 }
-if (document.title == "Flux - Roadmap") {
-  const animatedItems = (document.getElementsByClassName('quarters')[0]).getElementsByTagName('li');
-  const animatedArray = Array.from(animatedItems);
-  animatedArray.forEach((item, index) => {
-    item.style.animationDelay = `${index * 100 + 1000}ms`; // Voeg vertraging toe op basis van index
-  });
+function signin() {
 }
-if (document.title == "Flux - Home") {
-  var coll = document.getElementsByClassName("collapsible");
-  var i;
-  var previous = undefined;
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    if (previous != undefined && previous != this) {
-      previous.classList.toggle("active");
-      previous.nextElementSibling.style.maxHeight = null;
-    }
-    else if (previous != undefined) {
-      previous.classList.toggle("active");
-    }
-    this.classList.toggle("active");
-    previous = this;
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-      this.style.borderRadius = "7px"
-      if (this.classList.contains('active')) {
-        this.classList.toggle("active");
-        previous = undefined;
-      }
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-      this.style.borderBottomLeftRadius = "0"; 
-      this.style.borderBottomRightRadius = "0";
-    } 
-  });
+function showsearchbar() {
+  document.getElementById("overlay").style.display = "block"
+  document.getElementById("myUL").style.display = "block";
+  let search = document.getElementsByClassName('search')[0];
+  let input = document.getElementById('myInput');
+  search.style.display = "block";
+  input.readOnly = false;
+  input.focus();
+  select();
 }
-}
+document.body.addEventListener('keydown', function(event) {
+  if (event.ctrlKey && event.key === 'k') {
+    event.preventDefault();
+    showsearchbar();
+  }
+});
+// document.getElementsByClassName('dropdown')[0].addEventListener('click', function() {
+//   off();
+// });

@@ -5,7 +5,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css">
-<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/sharp-solid.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <head>
   <link rel="icon" type="image/x-icon" href="/images/logo 2.0.ico">
@@ -19,27 +19,6 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5748530888926660"
      crossorigin="anonymous"></script>
 </head>
-<style>
-.search {
-  padding: 10px;
-  font-size: 15px;
-  border: 1px solid #414141;
-  color: silver;
-  border-radius: 8px;
-  background: #272727;
-  font-family: "Roboto";
-}
-.search:focus {
-  border: 1px solid #ffffff !important;
-}
-#myUL {
-  position: fixed;
-  top: 58px;
-  right: 2%;
-  width: 330px;
-  z-index: 11;
-}
-</style>
 <body>
 
 <div class="loader">
@@ -51,7 +30,7 @@
 <div class="content">
   <div class="container2" style="top:90px">
   <div class="welcome">
-    <h3 class="welcometext">WELCOME TO</h3>
+    <h3 style="font-size: min(12vw, 80pt);">WELCOME TO</h3>
     <p class="shine">FLUX</p>
   </div>
   <p class="info" style="height: 70px;"><span class="auto-type"></span></p>
@@ -122,19 +101,19 @@
   <div class="recent" style="top: 76vh;">
   </div>
   </div>
-  
-  <ul id="myUL">
-    <div id="notfound">No Results</div>
-  </ul>
+
   <div class="banner"></div>
   <nav class="homebuttons">
     <a href="watchlist.html">Watchlist</a>
     <a href="browse.html">Browse</a>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a>
-    <form autocomplete="off" onSubmit="return false;">
-      <input id="myInput" class="search" onkeyup="search()" onkeypress="keypress(event)" type="text" placeholder="search">
-    </form>
+    <button class="searchbar" onclick="showsearchbar()">
+      <i class="fa fa-search"></i>
+      <p>Search</p>
+      <div>Ctrl + K</div>
+    </button>
   </nav>
+  <button class="signin" onclick="window.location.href = 'signin.html';">Sign In</button>
   <div class="browsebutton">
     <div id="nav-icon4" onclick="menu()">
       <span></span>
@@ -142,17 +121,16 @@
       <span></span>
     </div>
   </div>
-  <div class="dropdown">
-    <a href="watchlist.html">Watchlist</a>
-    <a href="browse.html">Browse</a>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a>
-  </div>
-  
+  <ul class="dropdown">
+    <li><a href="watchlist.html">Watchlist</a></li>
+    <li><a href="browse.html">Browse</a></li>
+    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdzEgol-sxPErk3VISbWtyme0CJLHpy1vfXYljVY49jxgmhCA/viewform?usp=sf_link" target="_blank">Requests</a></li>
+    <li><button class="signin" onclick="window.location.href = 'signin.html';">Sign In</button></li>
+  </ul>
   <a href="index.html" class="title">FL<span class="letteru">U</span>X</a>
   <p class="progress">Under Progress</p>
   <img class="logo" src="/images/logo 2.0.png">
   <div class="shadow"></div>
-  
   <div class="bottomcontainer">
     <a class="form" href="https://docs.google.com/forms/d/e/1FAIpQLSeDwzTaWZXFKM8wFAJj5uINJbr0LSCCy9lbH4nnpviGJeCoNw/viewform?usp=sf_link" target="_blank">
     Feedback</a>
@@ -170,6 +148,17 @@
   <img src="/images/triangle.svg">
 </div>
 <div id="overlay" onclick="off()"></div>
+
+<form class="search" autocomplete="off" onSubmit="return false;">
+  <input id="myInput" onkeyup="search()" onkeypress="keypress(event)" type="text" placeholder="Search">
+  <div>Enter /
+    <i class="material-icons">keyboard_return</i>
+  </div>
+</form>
+<ul id="myUL">
+  <div id="notfound">No Results</div>
+</ul>
+
 <form class="contact"  action="https://formsubmit.co/213153c9e78cadd2bd1a111bc371d0fd" method="POST" target="_blank" >
   <h1>Contact Us</h1>
   <p>We'd Love To Hear From You!</p>
@@ -181,28 +170,12 @@
   <button type="submit">Send</button>
 </form>
 <button class="topjumper" onclick="topFunction()" title="Go to top"><i class="arrow up"></i></button>
-<div class="alert">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-  <strong>Note:</strong> This website is still under heavy construction. Some functions are not yet working properly.
-</div>
-<script>
-  var close = document.getElementsByClassName("closebtn");
-  var i;
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function(){
-      var div = this.parentElement;
-      div.style.opacity = "0";
-      setTimeout(function(){ div.style.display = "none"; }, 600);
-    }
-  }
-</script>
 <iframe src="database.html" onload="loaddb()" id="database"></iframe>
 <script>
 $(window).on('load',function(){
   $(".loader").fadeOut(500);
   $(".content").fadeIn(1000);
   $(".explore").fadeIn(1000);
-  $(".alert").fadeTo(500, 1);
 });
 </script>
 </body>
